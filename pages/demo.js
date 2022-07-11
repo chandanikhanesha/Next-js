@@ -2,11 +2,12 @@ import React from "react";
 import styles from "../styles/Demo.module.css";
 
 import FavoriteIcon from "@mui/icons-material/Favorite";
+
 export default function Helllo() {
   return (
     <div>
       <p className={styles.logo}>
-        I <FavoriteIcon style={{ color: "red", fontSize: "30px" }} /> Next.js
+        I <FavoriteIcon style={{ color: "red", fontSize: "45px" }} /> Compress
       </p>
       <div style={{ display: "flex" }}>
         <p className={styles.header_text}>
@@ -19,10 +20,7 @@ export default function Helllo() {
           images.
         </p>
       </div>
-      //https://imagecompressor.com/
-      <div>
-        <button>Upload filew</button>
-      </div>
+  
     </div>
   );
 }
