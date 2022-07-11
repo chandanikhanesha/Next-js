@@ -1,0 +1,9 @@
+.header_text {
+    line-height: 1.4;
+    font-size: 1.07em;
+}
+
+.logo{
+    font-size: 35px;
+   display: flex;
+}
