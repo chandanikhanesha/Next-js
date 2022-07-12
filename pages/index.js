@@ -38,7 +38,8 @@ import DropZone from "../components/DropZone";
 import styles from "../styles/Home.module.css";
 import styles2 from "../styles/Process.module.css";
 import Helllo from "./demo";
-import { Route, Switch } from "react-router-dom";
+import Image from "next/image";
+
 export default function Home() {
   // reducer function to handle state changes
   const reducer = (state, action) => {
@@ -58,7 +59,7 @@ export default function Home() {
     fileList: [],
   });
 
-  const isCompress = localStorage.getItem("isCompress");
+  // const isCompress = localStorage.getItem("isCompress");
   return (
     <div className={styles.container}>
       <Head>
@@ -68,17 +69,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main} id="mainPage">
-        {isCompress === "true" && (
-          <div className={styles2.mainContainer}>
-            <svg width="200" height="200" id="svg" className={styles2.svg}>
-              <circle id="dot1" className={styles2.shape} />
-              <circle id="dot2" className={styles2.shape} />
-              <circle id="dot3" className={styles2.shape} />
-              <circle id="dot4" className={styles2.shape} />
-            </svg>
-          </div>
-        )}
-        <Helllo />
+        <div className={styles.logodiv}>
+        <Image src="/Logo.jpg"  alt="Logo"
+                    width={190}
+                    height={63}></Image>
+        </div>
+    
+       
+       
 
         {/* <h1 className={styles.title}>Drag And Drop File Upload</h1> */}
         {/* Pass state data and dispatch to the DropZone component */}
@@ -91,3 +89,4 @@ export default function Home() {
     </div>
   );
 }
+// https://www.figma.com/file/rJ8qjq5fqn1LZqCJw3RZez/image-compressor?node-id=4%3A6

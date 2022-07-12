@@ -60,12 +60,11 @@ const DropZone = ({ data, dispatch }) => {
     // get files from event on the input element as an array
     let files = [...e.target.files];
 
-    // ensure a file or files are selected
+    
     if (files && files.length > 0) {
-      // loop over existing files
+    
       const existingFiles = data.fileList.map((f) => f.name);
-      // check if file already exists, if so, don't add to fileList
-      // this is to prevent duplicates
+      
       files = files.filter((f) => !existingFiles.includes(f.name));
 
       // dispatch action to add selected file or files to fileList
@@ -95,8 +94,18 @@ const DropZone = ({ data, dispatch }) => {
         onDragEnter={(e) => handleDragEnter(e)}
         onDragLeave={(e) => handleDragLeave(e)}
       >
-        <Image src="/upload.svg" alt="upload" height={50} width={50} />
 
+        <p className={styles.headerText}>Image Compressor </p>
+        <p className={styles.headerNote}>Select up to 20 JPG or JPEG images from you device. Or drag files to the drop area. Wait for the compression to finish.</p>
+        <Image src="/upload.svg" alt="upload" height={50} width={50} />
+<div>
+ <p className={styles.btnLineText}> Drag Your</p>
+  <div className={styles.btnjpg}>.jpg</div>
+  <div className={styles.btnjpeg}>.JPEG</div>
+
+  <div className={styles.btnpng}>.png</div>
+<p className={styles.btnLineText}>File Here</p>
+</div>
         <input
           id="fileSelect"
           type="file"
@@ -106,9 +115,7 @@ const DropZone = ({ data, dispatch }) => {
         />
         <label htmlFor="fileSelect">You can select multiple Files</label>
 
-        <h3 className={styles.uploadMessage}>
-          or drag &amp; drop your files here
-        </h3>
+     
       </div>
       {/* Pass the selectect or dropped files as props */}
       <FilePreview fileData={data} />

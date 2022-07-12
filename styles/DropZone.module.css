@@ -1,14 +1,13 @@
 .dropzone {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  border: dashed 3px #ccc;
-  border-radius: 1rem;
-  padding: 2rem;
-  width: 100%;
-  margin: 40px;
+  width: 980px;
+  height: 420px;
+  left: 230px;
+  top: 234px;
+  
+  background: #FFFFFF;
+  box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.16);
+  border-radius: 10px;
 }
 
 .active {
@@ -62,4 +61,131 @@
   cursor: pointer;
   padding: 0.75rem;
   text-align: center;
+}
+.headerText{
+  position: absolute;
+  width: 283px;
+  height: 38px;
+  left: 579px;
+  top: 282px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: 0.02em;
+
+color: #192033;
+}
+.headerNote{
+  position: absolute;
+width: 577px;
+height: 42px;
+left: 432px;
+top: 346px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+letter-spacing: 0.02em;
+
+color: #192033;
+}
+.btnjpg{
+  position: absolute;
+width: 84.99px;
+height: 38.28px;
+left: 595px;
+top: 414px;
+
+background: #E9E5FD;
+border-radius: 9px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+text-transform: capitalize;
+letter-spacing: 0.02em;
+}
+.btnjpeg{
+  position: absolute;
+width: 84.99px;
+height: 38.28px;
+left: 691.99px;
+top: 414px;
+
+background: #FDE5E5;
+border-radius: 9px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+text-transform: capitalize;
+letter-spacing: 0.02em;
+
+color: #C43C3C;
+}
+.btnpng{
+  position: absolute;
+width: 84.99px;
+height: 38.28px;
+left: 788.98px;
+top: 414px;
+
+background: #D3E8FD;
+border-radius: 9px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+text-transform: capitalize;
+letter-spacing: 0.02em;
+
+color: #0C3F9F;
+}
+
+.btnLineText{
+  position: absolute;
+width: 83px;
+height: 21px;
+left: 500px;
+top: 423px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: 0.02em;
+
+color: #192033;
 }
