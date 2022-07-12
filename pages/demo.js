@@ -1,14 +1,16 @@
 import React from "react";
 import styles from "../styles/Demo.module.css";
-
+import Card from "@mui/material/Card";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
 
 export default function Helllo() {
   return (
     <div>
-      <p className={styles.logo}>
+      {/* <p className={styles.logo}>
         I <FavoriteIcon style={{ color: "red", fontSize: "45px" }} /> Compress
-      </p>
+      </p> */}
       <div style={{ display: "flex" }}>
         <p className={styles.header_text}>
           This online image optimizer uses a smart combination of the best
@@ -20,7 +22,6 @@ export default function Helllo() {
           images.
         </p>
       </div>
-  
     </div>
   );
 }

@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import FilePreview from "./FilePreview";
 import styles from "../styles/DropZone.module.css";
-
+import Button from "@mui/material/Button";
+import CompressIcon from "@mui/icons-material/Compress";
+import Router from "next/router";
+import { useRouter } from "next/router";
 const DropZone = ({ data, dispatch }) => {
   // onDragEnter sets inDropZone to true
   const handleDragEnter = (e) => {
@@ -72,29 +75,17 @@ const DropZone = ({ data, dispatch }) => {
 
   // to handle file uploads
   const uploadFiles = async () => {
-    // get the files from the fileList as an array
-    let files = data.fileList;
-    // initialize formData object
-    const formData = new FormData();
-    // loop over files and add to formData
-    files.forEach((file) => formData.append("files", file));
-
-    // Upload the files as a POST request to the server using fetch
-    // Note: /api/fileupload is not a real endpoint, it is just an example
-    const response = await fetch("/api/fileupload", {
-      method: "POST",
-      body: formData,
-    });
-
-    //successful file upload
-    if (response.ok) {
-      alert("Files uploaded successfully");
-    } else {
-      // unsuccessful file upload
-      alert("Error uploading files");
-    }
+    localStorage.setItem("isCompress", "true");
+    // const { pathname } = Router;
+    // if (pathname == "/") {
+    //   router.push({
+    //     pathname: "/process",
+    //   });
+    // }
+    document.getElementById("root").style.filter = "opacity(0.7)";
   };
 
+  const router = useRouter();
   return (
     <>
       <div
@@ -123,9 +114,13 @@ const DropZone = ({ data, dispatch }) => {
       <FilePreview fileData={data} />
       {/* Only show upload button after selecting atleast 1 file */}
       {data.fileList.length > 0 && (
-        <button className={styles.uploadBtn} onClick={uploadFiles}>
-          Upload
-        </button>
+        <Button
+          onClick={uploadFiles}
+          variant="contained"
+          endIcon={<CompressIcon />}
+        >
+          Compress Image
+        </Button>
       )}
     </>
   );

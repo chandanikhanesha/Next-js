@@ -3,6 +3,7 @@
   margin-top: 1rem;
   gap: 1rem;
   width: 400px;
+  flex-direction: column;
 }
 
 .fileContainer {

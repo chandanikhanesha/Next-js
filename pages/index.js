@@ -22,7 +22,7 @@
 //           target="_blank"
 //           rel="noopener noreferrer"
 //         >
-          
+
 //         Like it? Share it!
 //           <span className={styles.logo}>
 //             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
@@ -36,8 +36,9 @@ import React, { useReducer } from "react";
 import Head from "next/head";
 import DropZone from "../components/DropZone";
 import styles from "../styles/Home.module.css";
+import styles2 from "../styles/Process.module.css";
 import Helllo from "./demo";
-
+import { Route, Switch } from "react-router-dom";
 export default function Home() {
   // reducer function to handle state changes
   const reducer = (state, action) => {
@@ -57,6 +58,7 @@ export default function Home() {
     fileList: [],
   });
 
+  const isCompress = localStorage.getItem("isCompress");
   return (
     <div className={styles.container}>
       <Head>
@@ -65,18 +67,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-      <Helllo />
+      <main className={styles.main} id="mainPage">
+        {isCompress === "true" && (
+          <div className={styles2.mainContainer}>
+            <svg width="200" height="200" id="svg" className={styles2.svg}>
+              <circle id="dot1" className={styles2.shape} />
+              <circle id="dot2" className={styles2.shape} />
+              <circle id="dot3" className={styles2.shape} />
+              <circle id="dot4" className={styles2.shape} />
+            </svg>
+          </div>
+        )}
+        <Helllo />
 
-        <h1 className={styles.title}>Drag And Drop File Upload</h1>
+        {/* <h1 className={styles.title}>Drag And Drop File Upload</h1> */}
         {/* Pass state data and dispatch to the DropZone component */}
         <DropZone data={data} dispatch={dispatch} />
-      
-
       </main>
 
       <footer className={styles.footer}>
-        <div>{new Date().getFullYear()}</div>
+        <div>Like It ! Share It {new Date().getFullYear()}</div>
       </footer>
     </div>
   );
