@@ -2,19 +2,7 @@ import React from "react";
 import styles from "../styles/FilePreview.module.css";
 import Image from "next/image";
 const FilePreview = ({ fileData }) => {
-  function download(source) {
-    console.log(source);
-    source.filter((sourceData) => {
-      const filePreview = URL.createObjectURL(sourceData);
-      const fileName = filePreview.split("/").pop();
-      var el = document.createElement("a");
-      el.setAttribute("href", filePreview);
-      el.setAttribute("download", `compress-${fileName}`);
-      document.body.appendChild(el);
-      el.click();
-      el.remove();
-    });
-  }
+
 
   function bytesToSize(bytes) {
     var sizes = ["Bytes", "KB", "MB", "GB", "TB"];
@@ -52,9 +40,7 @@ const FilePreview = ({ fileData }) => {
           );
         })}
 
-        <button onClick={() => download(fileData.fileList)}>
-          download img
-        </button>
+  
       </div>
     </div>
   );

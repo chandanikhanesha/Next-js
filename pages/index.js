@@ -71,7 +71,7 @@ export default function Home() {
 
       <main className={styles.main} id="mainPage">
         <div className={styles.logodiv}>
-          {/* <Image src="/Logo.jpg" alt="Logo" width={190} height={63}></Image> */}
+          <Image src="/Logo.jpg" alt="Logo" width={190} height={63}></Image>
         </div>
 
         {/* <h1 className={styles.title}>Drag And Drop File Upload</h1> */}
@@ -80,7 +80,9 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <div>Like It ! Share It {new Date().getFullYear()}</div>
+        <div className={styles.likeText}>Like It ! Share It</div>
+        <div className={styles.footerText}>All uploaded data is deleted after 1 hour</div>
+        <div className={styles.copyrightText}>Copyright @ compressssor {new Date().getFullYear()}. All Rights Reserved.</div>
       </footer>
     </div>
   );
