@@ -33,6 +33,7 @@
 //   );
 // }
 import React, { useReducer } from "react";
+
 import Head from "next/head";
 import DropZone from "../components/DropZone";
 import styles from "../styles/Home.module.css";
@@ -70,13 +71,8 @@ export default function Home() {
 
       <main className={styles.main} id="mainPage">
         <div className={styles.logodiv}>
-        <Image src="/Logo.jpg"  alt="Logo"
-                    width={190}
-                    height={63}></Image>
+          {/* <Image src="/Logo.jpg" alt="Logo" width={190} height={63}></Image> */}
         </div>
-    
-       
-       
 
         {/* <h1 className={styles.title}>Drag And Drop File Upload</h1> */}
         {/* Pass state data and dispatch to the DropZone component */}
@@ -89,4 +85,3 @@ export default function Home() {
     </div>
   );
 }
-// https://www.figma.com/file/rJ8qjq5fqn1LZqCJw3RZez/image-compressor?node-id=4%3A6

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import FilePreview from "./FilePreview";
 import styles from "../styles/DropZone.module.css";
@@ -6,7 +6,13 @@ import Button from "@mui/material/Button";
 import CompressIcon from "@mui/icons-material/Compress";
 import Router from "next/router";
 import { useRouter } from "next/router";
+import imageCompression from "browser-image-compression";
 const DropZone = ({ data, dispatch }) => {
+  const [compressFiles, setcompressFiles] = useState([]);
+  useEffect(() => {
+    handleImageUpload();
+  }, [data]);
+
   // onDragEnter sets inDropZone to true
   const handleDragEnter = (e) => {
     e.preventDefault();
@@ -60,28 +66,74 @@ const DropZone = ({ data, dispatch }) => {
     // get files from event on the input element as an array
     let files = [...e.target.files];
 
-    
     if (files && files.length > 0) {
-    
       const existingFiles = data.fileList.map((f) => f.name);
-      
+
       files = files.filter((f) => !existingFiles.includes(f.name));
 
       // dispatch action to add selected file or files to fileList
       dispatch({ type: "ADD_FILE_TO_LIST", files });
     }
   };
+  const handleImageUpload = async (files) => {
+    await data.fileList.map((files) => {
+      const imageFile = files;
+      console.log("originalFile instanceof Blob", imageFile instanceof Blob); // true
+      console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
 
+      const options = {
+        maxWidthOrHeight: 1920,
+        useWebWorker: true,
+      };
+      imageCompression(imageFile, options)
+        .then(function (compressedFile) {
+          console.log(compressedFile, "compressedFile");
+          setcompressFiles(...compressFiles, compressedFile);
+        })
+        .catch(function (error) {
+          console.log(error.message); // output: I just want to stop
+        });
+    });
+  };
   // to handle file uploads
   const uploadFiles = async () => {
-    localStorage.setItem("isCompress", "true");
-    // const { pathname } = Router;
-    // if (pathname == "/") {
-    //   router.push({
-    //     pathname: "/process",
-    //   });
-    // }
-    document.getElementById("root").style.filter = "opacity(0.7)";
+    let sendOrignal = [];
+    let sendCompress = [];
+    console.log(compressFiles, "compressFiles");
+    await Promise.all([
+      data.fileList.map(async (f) => {
+        sendOrignal.push({
+          imgName: f.name,
+          size: f.size,
+        });
+      }),
+
+      compressFiles.map((fp) => {
+        sendCompress.push({
+          name: fp.name,
+          size: fp.size,
+          type: fp.type,
+        });
+      }),
+    ]);
+    setTimeout(() => {
+      console.log(sendCompress, "sendCompress", sendOrignal);
+
+      const { pathname } = Router;
+      if (pathname == "/") {
+        router.push(
+          {
+            pathname: "/success",
+            query: {
+              orignalData: JSON.stringify(sendOrignal),
+              compressData: JSON.stringify(sendCompress),
+            },
+          },
+          "/success",
+          { shallow: true }
+        );
+      }
+    }, 1500);
   };
 
   const router = useRouter();
@@ -94,18 +146,20 @@ const DropZone = ({ data, dispatch }) => {
         onDragEnter={(e) => handleDragEnter(e)}
         onDragLeave={(e) => handleDragLeave(e)}
       >
-
         <p className={styles.headerText}>Image Compressor </p>
-        <p className={styles.headerNote}>Select up to 20 JPG or JPEG images from you device. Or drag files to the drop area. Wait for the compression to finish.</p>
+        <p className={styles.headerNote}>
+          Select up to 20 JPG or JPEG images from you device. Or drag files to
+          the drop area. Wait for the compression to finish.
+        </p>
         <Image src="/upload.svg" alt="upload" height={50} width={50} />
-<div>
- <p className={styles.btnLineText}> Drag Your</p>
-  <div className={styles.btnjpg}>.jpg</div>
-  <div className={styles.btnjpeg}>.JPEG</div>
+        <div>
+          <p className={styles.btnLineText}> Drag Your</p>
+          <div className={styles.btnjpg}>.jpg</div>
+          <div className={styles.btnjpeg}>.JPEG</div>
 
-  <div className={styles.btnpng}>.png</div>
-<p className={styles.btnLineText}>File Here</p>
-</div>
+          <div className={styles.btnpng}>.png</div>
+          <p className={styles.btnLineText}>File Here</p>
+        </div>
         <input
           id="fileSelect"
           type="file"
@@ -114,8 +168,6 @@ const DropZone = ({ data, dispatch }) => {
           onChange={(e) => handleFileSelect(e)}
         />
         <label htmlFor="fileSelect">You can select multiple Files</label>
-
-     
       </div>
       {/* Pass the selectect or dropped files as props */}
       <FilePreview fileData={data} />
