@@ -9,8 +9,7 @@ import imageCompression from "browser-image-compression";
 let sendOrignal = [];
 let sendCompress = [];
 const DropZone = ({ data, dispatch }) => {
-
-const [isLoad, setisLoad] = useState(true)
+  const [isLoad, setisLoad] = useState(true);
   // onDragEnter sets inDropZone to true
   const handleDragEnter = (e) => {
     e.preventDefault();
@@ -61,8 +60,7 @@ const [isLoad, setisLoad] = useState(true)
 
   // handle file selection via input element
   const handleFileSelect = (e) => {
-
-      // get files from event on the input element as an array
+    // get files from event on the input element as an array
     let files = [...e.target.files];
 
     if (files && files.length > 0) {
@@ -77,11 +75,7 @@ const [isLoad, setisLoad] = useState(true)
 
   // to handle file uploads
   const uploadFiles = async () => {
- 
-   
-
     await data.fileList.map(async (f) => {
-   
       const imageFile = f;
       // console.log("originalFile instanceof Blob", imageFile instanceof Blob); // true
       // console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
@@ -91,43 +85,35 @@ const [isLoad, setisLoad] = useState(true)
         useWebWorker: true,
       };
       imageCompression(imageFile, options)
-        .then(function (compressedFile,a) {
+        .then(function (compressedFile, a) {
           const filePreview = URL.createObjectURL(compressedFile);
           sendCompress.push({
-            name:filePreview,
+            name: filePreview,
             size: compressedFile.size,
             type: compressedFile.type,
           });
 
-          console.log(sendCompress.length,"sendCompress");
-          if(sendCompress.length===data.fileList.length){
-            console.log("true-----------------------");
-            setisLoad(false)
+          console.log(sendCompress.length, "sendCompress");
+          if (sendCompress.length === data.fileList.length) {
+            setisLoad(false);
           }
         })
         .catch(function (error) {
           console.log(error.message); // output: I just want to stop
         });
-        const filePreview = URL.createObjectURL(f);
+      const filePreview = URL.createObjectURL(f);
 
       sendOrignal.push({
-        name:filePreview,
+        name: filePreview,
         size: f.size,
       });
     });
-
-   
-  
-  
-
-   
- 
   };
 
   const router = useRouter();
-  if(isLoad===false){
+  if (isLoad === false) {
     console.log(sendCompress, "sendCompress", sendOrignal);
-  
+
     const { pathname } = Router;
     if (pathname == "/") {
       router.push(
@@ -152,51 +138,49 @@ const [isLoad, setisLoad] = useState(true)
         onDragEnter={(e) => handleDragEnter(e)}
         onDragLeave={(e) => handleDragLeave(e)}
       >
-        <p className={styles.headerText}>Image Compressor </p>
-        <p className={styles.headerNote}>
-          Select up to 20 JPG or JPEG images from you device. Or drag files to
-          the drop area. Wait for the compression to finish.
-        </p>
-     
-        <div>
-          <p className={styles.btnLineText}> Drag Your</p>
-          <div className={styles.btnjpg}>.JPG</div>
-          <div className={styles.btnjpeg}>.JPEG</div>
+        <div className={styles.mainCard}>
+          <p className={styles.headerText}>Image Compressor </p>
+          <p className={styles.headerNote}>
+            Select up to 20 JPG or JPEG images from you device. Or drag files to
+            the drop area. Wait for the compression to finish.
+          </p>
 
-          <div className={styles.btnpng}>.PNG</div>
-          <p className={styles.btnLineText2}>File Here !</p>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <p className={styles.btnLineText}> Drag Your</p>
+            <div className={styles.btnjpg}>.JPG</div>
+            <div className={styles.btnjpeg}>.JPEG</div>
+
+            <div className={styles.btnpng}>.PNG</div>
+            <p className={styles.btnLineText2}>File Here !</p>
+          </div>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <div className={styles.line1}></div>
+            <p className={styles.lineCenterText}>
+              Up to 20 images, max 5 MB Each
+            </p>
+            <div className={styles.line2}></div>
+          </div>
+          <div className={styles.uploadBtn}>
+            <input
+              id="fileSelect"
+              type="file"
+              multiple
+              className={styles.files}
+              onChange={(e) => handleFileSelect(e)}
+            />
+            <label htmlFor="fileSelect">Upload your files</label>
+          </div>
         </div>
-        <div>
-          <div className={styles.line1}></div>
-          <p className={styles.lineCenterText}>Up to 20 images, max 5 MB Each</p>
-          <div  className={styles.line2}></div>
-          
-        </div>
-        <div className={styles.uploadBtn}>
-        <input
-          id="fileSelect"
-          type="file"
-          multiple
-          className={styles.files}
-          onChange={(e) => handleFileSelect(e)}
-        />
-        <label htmlFor="fileSelect">Upload your files</label>
-        </div>
-      
       </div>
       {/* Pass the selectect or dropped files as props */}
       <FilePreview fileData={data} />
       {/* Only show upload button after selecting atleast 1 file */}
       {data.fileList.length > 0 && (
         <button
-          onClick={async()=>{
-             
-            
-            uploadFiles()
+          onClick={async () => {
+            uploadFiles();
           }}
-        
           className={styles.compressBtn}
-        
         >
           Compress Image
         </button>

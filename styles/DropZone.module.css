@@ -2,8 +2,8 @@
 
   width: 980px;
   height: 420px;
-  left: 230px;
-  top: 234px;
+  /* left: 230px;
+  top: 234px; */
   
   background: #FFFFFF;
   box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.16);
@@ -13,7 +13,13 @@
 .active {
   border: dashed 3px dodgerblue;
 }
-
+.mainCard{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
 .uploadMessage h3 {
   margin-top: 1rem;
 }
@@ -54,11 +60,11 @@ align-items: center;
 
 
 .headerText{
-  position: absolute;
+  /* position: absolute; */
   width: 283px;
   height: 38px;
-  left: 579px;
-  top: 175px;
+  /* left: 579px;
+  top: 175px; */
 
 font-family: 'Roboto';
 font-style: normal;
@@ -74,11 +80,11 @@ letter-spacing: 0.02em;
 color: #192033;
 }
 .headerNote{
-  position: absolute;
+  /* position: absolute; */
 width: 577px;
 height: 42px;
-left: 432px;
-top: 245px;
+/* left: 432px;
+top: 245px; */
 
 font-family: 'Roboto';
 font-style: normal;
@@ -93,11 +99,11 @@ letter-spacing: 0.02em;
 color: #192033;
 }
 .btnjpg{
-  position: absolute;
+  /* position: absolute; */
 width: 84.99px;
 height: 38.28px;
-left: 595px;
-top: 325px;
+/* left: 595px;
+top: 325px; */
 
 background: #E9E5FD;
 border-radius: 9px;
@@ -114,11 +120,11 @@ text-transform: capitalize;
 letter-spacing: 0.02em;
 }
 .btnjpeg{
-  position: absolute;
+  /* position: absolute; */
 width: 84.99px;
 height: 38.28px;
-left: 691.99px;
-top: 325px;
+/* left: 691.99px;
+top: 325px; */
 
 background: #FDE5E5;
 border-radius: 9px;
@@ -137,11 +143,11 @@ letter-spacing: 0.02em;
 color: #C43C3C;
 }
 .btnpng{
-  position: absolute;
+  /* position: absolute; */
 width: 84.99px;
 height: 38.28px;
-left: 788.98px;
-top: 325px;
+/* left: 788.98px;
+top: 325px; */
 
 background: #D3E8FD;
 border-radius: 9px;
@@ -161,11 +167,11 @@ color: #0C3F9F;
 }
 
 .btnLineText{
-  position: absolute;
+  /* position: absolute; */
 width: 83px;
 height: 21px;
-left: 500px;
-top: 315px;
+/* left: 500px;
+top: 315px; */
 
 font-family: 'Roboto';
 font-style: normal;
@@ -182,11 +188,11 @@ color: #192033;
 }
 
 .btnLineText2{
-  position: absolute;
+  /* position: absolute; */
   width: 87px;
 height: 21px;
-left: 885.97px;
-top: 315px;
+/* left: 885.97px;
+top: 315px; */
 
 font-family: 'Roboto';
 font-style: normal;
@@ -203,29 +209,29 @@ color: #192033;
 }
 
 .line1{
-  position: absolute;
+  /* position: absolute; */
   width: 98px;
   height: 0px;
-  left: 478px;
-  top: 400px;
+  /* left: 478px;
+  top: 400px; */
   
   border: 1px solid #ACACB4;  
 }
 .line2{
-  position: absolute;
+  /* position: absolute; */
   width: 98px;
   height: 0px;
-  left: 864px;
-  top: 400px;
+  /* left: 864px;
+  top: 400px; */
   
   border: 1px solid #ACACB4;
 }
 .lineCenterText{
-  position: absolute;
+  /* position: absolute; */
 width: 276px;
 height: 21px;
-left: 582px;
-top: 372px;
+/* left: 582px;
+top: 372px; */
 
 font-family: 'Roboto';
 font-style: normal;
@@ -243,11 +249,11 @@ color: #ACACB4;
 }
 
 .uploadBtn{
-  position: absolute;
+  /* position: absolute; */
 width: 193px;
 height: 50px;
-left: 624px;
-top: 450px;
+/* left: 624px;
+top: 450px; */
 font-family: 'Roboto';
 font-style: normal;
 background: #192033;
