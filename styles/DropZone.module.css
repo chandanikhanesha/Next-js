@@ -118,6 +118,7 @@ text-align: center;
 align-items: center;
 text-transform: capitalize;
 letter-spacing: 0.02em;
+margin-right: 15px;
 }
 .btnjpeg{
   /* position: absolute; */
@@ -139,7 +140,7 @@ text-align: center;
 align-items: center;
 text-transform: capitalize;
 letter-spacing: 0.02em;
-
+margin-right: 15px;
 color: #C43C3C;
 }
 .btnpng{
@@ -148,7 +149,7 @@ width: 84.99px;
 height: 38.28px;
 /* left: 788.98px;
 top: 325px; */
-
+margin-right: 15px;
 background: #D3E8FD;
 border-radius: 9px;
 font-family: 'Roboto';
@@ -179,7 +180,7 @@ font-weight: 500;
 font-size: 18px;
 line-height: 21px;
 /* identical to box height */
-
+margin-right: 15px;
 display: flex;
 align-items: flex-end;
 letter-spacing: 0.02em;
@@ -193,7 +194,7 @@ color: #192033;
 height: 21px;
 /* left: 885.97px;
 top: 315px; */
-
+margin-right: 15px;
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
@@ -214,6 +215,7 @@ color: #192033;
   height: 0px;
   /* left: 478px;
   top: 400px; */
+  background-color:#ACACB4 ;
   
   border: 1px solid #ACACB4;  
 }
@@ -223,7 +225,7 @@ color: #192033;
   height: 0px;
   /* left: 864px;
   top: 400px; */
-  
+  background-color:#ACACB4 ;
   border: 1px solid #ACACB4;
 }
 .lineCenterText{
@@ -232,7 +234,8 @@ width: 276px;
 height: 21px;
 /* left: 582px;
 top: 372px; */
-
+margin-left: 10px;
+margin-right: 10px;
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
@@ -263,7 +266,7 @@ border-radius: 9px;
 
 }
 
-.compressBtn{
+.compressBtn , .downloadBtn{
   font-family: 'Roboto';
   font-style: normal;
   background: #192033;
@@ -276,4 +279,6 @@ border-radius: 9px;
   color: white;
   align-items: center;
   font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

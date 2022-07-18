@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  width: fit-content;
 }
 
 .main {
@@ -167,5 +168,12 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 100%;
+  
   }
 }

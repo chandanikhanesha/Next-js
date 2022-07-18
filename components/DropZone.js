@@ -6,6 +6,8 @@ import styles from "../styles/DropZone.module.css";
 import Router from "next/router";
 import { useRouter } from "next/router";
 import imageCompression from "browser-image-compression";
+
+
 let sendOrignal = [];
 let sendCompress = [];
 const DropZone = ({ data, dispatch }) => {
@@ -173,7 +175,7 @@ const DropZone = ({ data, dispatch }) => {
         </div>
       </div>
       {/* Pass the selectect or dropped files as props */}
-      <FilePreview fileData={data} />
+      <FilePreview fileData={data} dispatch={dispatch} />
       {/* Only show upload button after selecting atleast 1 file */}
       {data.fileList.length > 0 && (
         <button
