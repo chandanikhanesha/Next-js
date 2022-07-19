@@ -85,7 +85,7 @@ export default function success() {
                     />
           <ImageListItemBar
             title={bytesToSize(item.size)}
-            subtitle={item.name}
+            subtitle={item.orignalName}
             actionIcon={
               <IconButton
                 sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
@@ -127,7 +127,7 @@ export default function success() {
                     />
           <ImageListItemBar
             title={bytesToSize(item.size)}
-            subtitle={item.name}
+            subtitle={item.orignalName}
             actionIcon={
               <IconButton
                 sx={{ color: 'rgba(255, 255, 255, 0.54)' }}

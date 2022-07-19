@@ -13,6 +13,9 @@ export default function Home() {
         return { ...state, inDropZone: action.inDropZone };
       case "ADD_FILE_TO_LIST":
         return { ...state, fileList: state.fileList.concat(action.files) };
+        case "REMOVE_FILE_TO_LIST":
+
+          return {...state ,fileList:state.fileList.filter((f,index)=> index !==action.i)}
       default:
         return state;
     }

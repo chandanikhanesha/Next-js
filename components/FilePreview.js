@@ -16,9 +16,11 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import CardHeader from '@mui/material/CardHeader';
-import CancelSharpIcon from '@mui/icons-material/CancelSharp';
+import ClearIcon from '@mui/icons-material/Clear';
 const FilePreview = ({ fileData,dispatch }) => {
   const [file, setfile] = useState([])
+
+  const [show, setShow] = useState(false)
   function bytesToSize(bytes) {
     var sizes = ["Bytes", "KB", "MB", "GB", "TB"];
     if (bytes == 0) return "0 Byte";
@@ -27,39 +29,41 @@ const FilePreview = ({ fileData,dispatch }) => {
   }
   useEffect(() => {
     setfile(fileData.fileList)
-    console.log(fileData.fileList,"fileData.fileList");
+   
 
   }, [fileData])
   
 
  const deleteImage=async(i)=>{
- console.log(file,"filehdbbiuijdoijijfidfbeuhfi");
 
   setfile(file.filter((d,index)=> index !==i));
  
-
-  
+  dispatch({ type: "REMOVE_FILE_TO_LIST", i});
 
  }
   return (
     <div className={styles.fileList}>
-      <Box sx={{ flexGrow: 1 }}>
+   
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
         >
           {file!==undefined &&file.length>0&&file.map((f, index) => {
-            console.log(index,"index");
+        
             const size = bytesToSize(f.size);
             const filePreview = URL.createObjectURL(f);
           
-           return <Grid item xs={2} sm={3} md={3} key={index}>
+           return <Grid  key={index}>
             
-                <Card sx={{ maxWidth: 350 }} >
-                <CardHeader style={{height:"0px"}}  action={
-          <IconButton aria-label="settings" style={{marginTop:"-15px"}}   onClick={()=>deleteImage(index) } >
-            <CancelSharpIcon />
+                <Card sx={{ maxWidth: 350 }} style={{width:"220px",margin:"30px 20px 10px 0px" ,height:"320px"}} onMouseOver={() => setShow(true)} onMouseOut={()=> setShow(false)}>
+                <CardHeader style={{position:"absolute",zIndex:'99',width:"inherit"}} action={
+       <IconButton aria-label="settings"  onClick={()=>deleteImage(index) } style={{backgroundColor:"white",height:"30px",width:"30px",  boxShadow:" 0px 16px 40px #19203330"
+      }} >
+            <ClearIcon style={{fontSize:"17px"}} />
           </IconButton>
         }>
                   
@@ -86,7 +90,7 @@ const FilePreview = ({ fileData,dispatch }) => {
             </Grid>;
           })}
         </Grid>
-      </Box>
+ 
     </div>
   );
 };

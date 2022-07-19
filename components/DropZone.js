@@ -79,9 +79,6 @@ const DropZone = ({ data, dispatch }) => {
   const uploadFiles = async () => {
     await data.fileList.map(async (f) => {
       const imageFile = f;
-      // console.log("originalFile instanceof Blob", imageFile instanceof Blob); // true
-      // console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
-
       const options = {
         maxWidthOrHeight: 1920,
         useWebWorker: true,
@@ -93,6 +90,7 @@ const DropZone = ({ data, dispatch }) => {
             name: filePreview,
             size: compressedFile.size,
             type: compressedFile.type,
+            orignalName:compressedFile.name
           });
 
           console.log(sendCompress.length, "sendCompress");
@@ -108,6 +106,7 @@ const DropZone = ({ data, dispatch }) => {
       sendOrignal.push({
         name: filePreview,
         size: f.size,
+        orignalName:f.name
       });
     });
   };
