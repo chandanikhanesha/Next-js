@@ -7,13 +7,12 @@ import { useRouter } from "next/router";
 
 import Router from "next/router";
 
-
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import ListSubheader from '@mui/material/ListSubheader';
-import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import ListSubheader from "@mui/material/ListSubheader";
+import IconButton from "@mui/material/IconButton";
+import InfoIcon from "@mui/icons-material/Info";
 export default function success() {
   const [compressData, setcompressData] = useState([]);
   const [orignalData, setorignalData] = useState([]);
@@ -61,94 +60,90 @@ export default function success() {
 
   console.log(compressData, "compressData", orignalData);
   return (
-    <div style={{display:"flex"}}>
-
-<ImageList sx={{ width: 500, height: 450 }}>
-      <ImageListItem key="Subheader" cols={2}>
-        <ListSubheader component="div"></ListSubheader>
-      </ImageListItem>
-      {compressData.length>0 &&compressData.map((item) => {
-     
-        return(
-       <>
-        <ImageListItem key={item.name}><>
-       
-
+    <div style={{ display: "flex" }}>
+      <ImageList sx={{ width: 500, height: 450 }}>
+        <ImageListItem key="Subheader" cols={2}>
+          <ListSubheader component="div"></ListSubheader>
+        </ImageListItem>
+        {compressData.length > 0 &&
+          compressData.map((item) => {
+            return (
+              <>
+                <ImageListItem key={item.name}>
+                  <>
                     <Image
-                        src={item.name}
-                       
-                       alt={item.name}
-                       loading="lazy"
+                      src={item.name}
+                      alt={item.name}
+                      loading="lazy"
                       width={500}
                       height={500}
-                   
                     />
-          <ImageListItemBar
-            title={bytesToSize(item.size)}
-            subtitle={item.orignalName}
-            actionIcon={
-              <IconButton
-                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                aria-label={`info about ${item.type}`}
-              >
-                <InfoIcon />
-              </IconButton>
-            }
-          />
-          </>
+                    <ImageListItemBar
+                      title={bytesToSize(item.size)}
+                      subtitle={item.orignalName}
+                      actionIcon={
+                        <IconButton
+                          sx={{ color: "rgba(255, 255, 255, 0.54)" }}
+                          aria-label={`info about ${item.type}`}
+                        >
+                          <InfoIcon />
+                        </IconButton>
+                      }
+                    />
+                  </>
+                </ImageListItem>
+              </>
+            );
+          })}
+      </ImageList>
+      {compressData.length > 0 && (
+        <button
+          onClick={() => download(compressData)}
+          className={styles.downloadBtn}
+        >
+          download img
+        </button>
+      )}
+      <ImageList sx={{ width: 500, height: 450 }}>
+        <ImageListItem key="Subheader" cols={2}>
+          <ListSubheader component="div"></ListSubheader>
         </ImageListItem>
-        </>
-      )}
-      
-      )}
-    </ImageList>
-    {compressData.length > 0 && (
-          <button onClick={() => download(compressData)} className={styles.downloadBtn}>download img</button>
-        )}
-    <ImageList sx={{ width: 500, height: 450 }}>
-      <ImageListItem key="Subheader" cols={2}>
-        <ListSubheader component="div"></ListSubheader>
-      </ImageListItem>
-      {orignalData.length>0 &&orignalData.map((item) => {
-     
-        return(
-       <>
-        <ImageListItem key={item.name}><>
-       
-
+        {orignalData.length > 0 &&
+          orignalData.map((item) => {
+            return (
+              <>
+                <ImageListItem key={item.name}>
+                  <>
                     <Image
-                        src={item.name}
-                       
-                       alt={item.name}
-                       loading="lazy"
+                      src={item.name}
+                      alt={item.name}
+                      loading="lazy"
                       width={500}
                       height={500}
-                   
                     />
-          <ImageListItemBar
-            title={bytesToSize(item.size)}
-            subtitle={item.orignalName}
-            actionIcon={
-              <IconButton
-                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                aria-label={`info about ${item.type}`}
-              >
-                <InfoIcon />
-              </IconButton>
-            }
-          />
-          </>
-        </ImageListItem>
-        </>
-      )}
-      
-      )}
-    </ImageList>
-      
+                    <ImageListItemBar
+                      title={bytesToSize(item.size)}
+                      subtitle={item.orignalName}
+                      actionIcon={
+                        <IconButton
+                          sx={{ color: "rgba(255, 255, 255, 0.54)" }}
+                          aria-label={`info about ${item.type}`}
+                        >
+                          <InfoIcon />
+                        </IconButton>
+                      }
+                    />
+                  </>
+                </ImageListItem>
+              </>
+            );
+          })}
+      </ImageList>
     </div>
   );
 }
-{/* <div className={styles.fileContainer}>
+{
+  /* <div className={styles.fileContainer}>
        
         {compressData.length > 0 &&
           compressData.map((f) => {
@@ -199,4 +194,5 @@ export default function success() {
               </>
             );
           })}
-      </div> */}
+      </div> */
+}

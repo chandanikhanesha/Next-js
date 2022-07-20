@@ -12,6 +12,7 @@
   align-items: center;
   padding-top: 1.5em;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 .logodiv{
