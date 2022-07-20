@@ -19,7 +19,7 @@ import ClearIcon from "@mui/icons-material/Clear";
 const FilePreview = ({ fileData, dispatch }) => {
   const [file, setfile] = useState([]);
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState([]);
   function bytesToSize(bytes) {
     var sizes = ["Bytes", "KB", "MB", "GB", "TB"];
     if (bytes == 0) return "0 Byte";
@@ -60,8 +60,8 @@ const FilePreview = ({ fileData, dispatch }) => {
                     margin: "30px 20px 10px 0px",
                     height: "320px",
                   }}
-                  onMouseOver={() => setShow(true, index)}
-                  onMouseOut={() => setShow(false, index)}
+                  onMouseOver={() => setShow([...show, index])}
+                  onMouseOut={() => setShow(show.filter((s) => s !== index))}
                 >
                   <CardHeader
                     style={{
@@ -70,7 +70,7 @@ const FilePreview = ({ fileData, dispatch }) => {
                       width: "inherit",
                     }}
                     action={
-                      show === true && (
+                      show.includes(index) && (
                         <IconButton
                           aria-label="settings"
                           onClick={() => deleteImage(index)}
