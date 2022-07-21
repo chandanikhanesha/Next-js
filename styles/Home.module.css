@@ -12,7 +12,7 @@
   align-items: center;
   padding-top: 1.5em;
   flex-direction: column;
-  margin-bottom: 100px;
+
 }
 
 .logodiv{
@@ -31,6 +31,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .likeText{
@@ -177,4 +178,25 @@
     width: 100%;
   
   }
+}
+.downloadBtn{
+  font-family: 'Roboto';
+  font-style: normal;
+  background: #192033;
+  display: flex;
+  justify-content: center;
+  border-radius: 9px;
+  width: 193px;
+  height: 50px;
+  border: none;
+  color: white;
+  align-items: center;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.imageContainer{
+  min-height: 450px;
+  display: flex;
+ 
 }
