@@ -12,14 +12,13 @@ let sendOrignal = [];
 let sendCompress = [];
 const DropZone = ({ data, dispatch }) => {
   const [isLoad, setisLoad] = useState();
-  // onDragEnter sets inDropZone to true
+
   const handleDragEnter = (e) => {
     e.preventDefault();
     e.stopPropagation();
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: true });
   };
 
-  // onDragLeave sets inDropZone to false
   const handleDragLeave = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -27,22 +26,19 @@ const DropZone = ({ data, dispatch }) => {
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: false });
   };
 
-  // onDragOver sets inDropZone to true
+ 
   const handleDragOver = (e) => {
     e.preventDefault();
     e.stopPropagation();
 
-    // set dropEffect to copy i.e copy of the source item
     e.dataTransfer.dropEffect = "copy";
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: true });
   };
 
-  // onDrop sets inDropZone to false and adds files to fileList
+
   const handleDrop = (e) => {
     e.preventDefault();
     e.stopPropagation();
-
-    // get files from event on the dataTransfer object as an array
     let files = [...e.dataTransfer.files];
 
     if (files && files.length > 0) {
@@ -70,7 +66,7 @@ const DropZone = ({ data, dispatch }) => {
 
   // to handle file uploads
   const uploadFiles = async () => {
-    await data.fileList.map(async (f) => {
+    await data.fileList.map(async (f,index) => {
       const imageFile = f;
       const options = {
         maxWidthOrHeight: 1920,
@@ -80,6 +76,7 @@ const DropZone = ({ data, dispatch }) => {
         .then(function (compressedFile, a) {
           const filePreview = URL.createObjectURL(compressedFile);
           sendCompress.push({
+            id:index,
             name: filePreview,
             size: compressedFile.size,
             type: compressedFile.type,
@@ -97,6 +94,7 @@ const DropZone = ({ data, dispatch }) => {
       const filePreview = URL.createObjectURL(f);
 
       sendOrignal.push({
+        id:index,
         name: filePreview,
         size: f.size,
         orignalName: f.name,

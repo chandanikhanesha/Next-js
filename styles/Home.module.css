@@ -6,7 +6,7 @@
 .main {
   height: 100%;
   width: 100%;
-  max-width: 970px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -179,6 +179,15 @@
   
   }
 }
+
+
+.flexClass{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .downloadBtn{
   font-family: 'Roboto';
   font-style: normal;

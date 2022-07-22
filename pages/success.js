@@ -10,14 +10,6 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-
-import IconButton from "@mui/material/IconButton";
-import InfoIcon from "@mui/icons-material/Info";
-import CardHeader from "@mui/material/CardHeader";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
-import ListSubheader from "@mui/material/ListSubheader";
 export default function success() {
   const [compressData, setcompressData] = useState([]);
   const [orignalData, setorignalData] = useState([]);
@@ -30,7 +22,7 @@ export default function success() {
       const fileName = filePreview.split("/").pop();
       var el = document.createElement("a");
       el.setAttribute("href", filePreview);
-      el.setAttribute("download", `compress-${fileName}`);
+      el.setAttribute("download", `compress-${sourceData.orignalName}`);
       document.body.appendChild(el);
       el.click();
       el.remove();
@@ -56,14 +48,14 @@ export default function success() {
     setcompressData(cdata);
 
     const { pathname } = Router;
-    // if (query.query.compressData == undefined && pathname == "/success") {
-    //   router.push({
-    //     pathname: "/",
-    //   });
-    // }
+    if (query.query.compressData == undefined && pathname == "/success") {
+      router.push({
+        pathname: "/",
+      });
+    }
   }, [query]);
 
-  console.log(compressData, "compressData", orignalData);
+
   return (
     <div className={styles.container}>
     <div className={styles.main} id="mainPage">
@@ -71,7 +63,6 @@ export default function success() {
         <Image src="/Logo.jpg" alt="Logo" width={190} height={63}></Image>
       </div>
 
-      <h1>Can AnyOne Tell Diffenrce</h1>
 <div className={styles.imageContainer}>
       <Grid
         container
@@ -81,17 +72,52 @@ export default function success() {
         justifyContent="center"
         alignItems="center"
       >
-        {compressData !== undefined &&
+        {compressData !== undefined &&orignalData!==undefined&&
           compressData.length > 0 &&
           compressData.map((item, index) => {
+
+          
+            const Odata=orignalData.length>0 && orignalData.find((o)=>o.orignalName===item.orignalName && o.id ===item.id)
+           
+
+
             return (
               <Grid key={index}>
+                <div style={{display:'flex',flexDirection:"column"}}>
+                  <p>Orignal Image</p>
+                  <Card
+                  sx={{ maxWidth: 350 }}
+                  style={{
+                    width: "220px",
+                    margin: "30px 20px 10px 0px",
+                    minHeight: "300px",
+                  }}
+                >
+                  <Image
+                    src={Odata.name}
+                    alt="Picture of the author"
+                    width={500}
+                    height={500}
+                    // blurDataURL="data:..." automatically provided
+                    // placeholder="blur" // Optional blur-up while loading
+                  />
+                  <CardContent style={{ padding: "5px" }}>
+                    <div key={Odata.orignalName} className={styles.fileName}>
+                      <p  className={styles.flexClass}>
+                        {" "}
+                        {Odata.orignalName} <b>[{bytesToSize(Odata.size)}]</b>
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+               
+                <p>Compress Image</p>
                 <Card
                   sx={{ maxWidth: 350 }}
                   style={{
                     width: "220px",
                     margin: "30px 20px 10px 0px",
-                    height: "320px",
+                    minHeight: "300px",
                   }}
                 >
                   <Image
@@ -104,63 +130,22 @@ export default function success() {
                   />
                   <CardContent style={{ padding: "5px" }}>
                     <div key={item.orignalName} className={styles.fileName}>
-                      <p>
+                      <p className={styles.flexClass}>
                         {" "}
                         {item.orignalName} <b>[{bytesToSize(item.size)}]</b>
                       </p>
                     </div>
                   </CardContent>
                 </Card>
+                </div>
               </Grid>
             );
-            <p>VS</p>
+          
           })}{" "}
       </Grid>
 
    
 
-      <Grid
-        container
-        spacing={{ xs: 2, md: 3 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-      >
-        {orignalData !== undefined &&
-          orignalData.length > 0 &&
-          orignalData.map((item, index) => {
-            return (
-              <Grid key={index}>
-                <Card
-                  sx={{ maxWidth: 350 }}
-                  style={{
-                    width: "220px",
-                    margin: "30px 20px 10px 0px",
-                    height: "320px",
-                  }}
-                >
-                  <Image
-                    src={item.name}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    // blurDataURL="data:..." automatically provided
-                    // placeholder="blur" // Optional blur-up while loading
-                  />
-                  <CardContent style={{ padding: "5px" }}>
-                    <div key={item.orignalName} className={styles.fileName}>
-                      <p>
-                        {" "}
-                        {item.orignalName} <b>[{bytesToSize(item.size)}]</b>
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Grid>
-            );
-          })}{" "}
-      </Grid>
       </div>
       {compressData.length > 0 && (
         <button

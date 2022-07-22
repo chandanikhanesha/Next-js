@@ -54,7 +54,7 @@ const FilePreview = ({ fileData, dispatch }) => {
                   style={{
                     width: "220px",
                     margin: "30px 20px 10px 0px",
-                    height: "320px",
+                    minHeight: "300px",
                   }}
                   onMouseOver={() => setShow([...show, index])}
                   onMouseOut={() => setShow(show.filter((s) => s !== index))}
@@ -92,7 +92,7 @@ const FilePreview = ({ fileData, dispatch }) => {
                   />
                   <CardContent style={{ padding: "5px" }}>
                     <div key={f.name} className={styles.fileName}>
-                      <p>
+                      <p  className={styles.flexClass}>
                         {" "}
                         {f.name} <b>[{size}]</b>
                       </p>
