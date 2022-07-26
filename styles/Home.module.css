@@ -214,7 +214,7 @@
   color: #192033;
     font-size: medium;
   
-    transform: rotate(-20deg);
+    /* transform: rotate(-20deg); */
     position: relative;
     z-index: 9;
     font-family: sans-serif;
