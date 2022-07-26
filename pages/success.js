@@ -84,7 +84,7 @@ export default function success() {
             return (
               <Grid key={index}>
                 <div style={{display:'flex',flexDirection:"column"}}>
-                  <p>Orignal Image</p>
+           
                   <Card
                   sx={{ maxWidth: 350 }}
                   style={{
@@ -93,6 +93,7 @@ export default function success() {
                     minHeight: "300px",
                   }}
                 >
+                         <p className={styles.underText}>Orignal Image</p>
                   <Image
                     src={Odata.name}
                     alt="Picture of the author"
@@ -111,7 +112,7 @@ export default function success() {
                   </CardContent>
                 </Card>
                
-                <p>Compress Image</p>
+               
                 <Card
                   sx={{ maxWidth: 350 }}
                   style={{
@@ -120,6 +121,7 @@ export default function success() {
                     minHeight: "300px",
                   }}
                 >
+                   <p className={styles.underText}>Compress Image</p>
                   <Image
                     src={item.name}
                     alt="Picture of the author"

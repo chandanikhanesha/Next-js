@@ -71,6 +71,7 @@ const DropZone = ({ data, dispatch }) => {
       const options = {
         maxWidthOrHeight: 1920,
         useWebWorker: true,
+        initialQuality:0.4  
       };
       imageCompression(imageFile, options)
         .then(function (compressedFile, a) {
@@ -83,7 +84,7 @@ const DropZone = ({ data, dispatch }) => {
             orignalName: compressedFile.name,
           });
 
-          console.log(sendCompress.length, "sendCompress");
+        
           if (sendCompress.length === data.fileList.length) {
             setisLoad(false);
           }
@@ -103,7 +104,7 @@ const DropZone = ({ data, dispatch }) => {
   };
 
   const router = useRouter();
-  console.log(isLoad, "isLoad");
+
   if (isLoad === false) {
     const { pathname } = Router;
     if (pathname == "/") {
@@ -123,7 +124,7 @@ const DropZone = ({ data, dispatch }) => {
 
   return (
     <>
-      {isLoad !== true && (
+      {isLoad ===undefined && (
         <div
           className={styles.dropzone}
           onDrop={(e) => handleDrop(e)}
@@ -166,9 +167,9 @@ const DropZone = ({ data, dispatch }) => {
           </div>
         </div>
       )}
-      {isLoad !== true && <FilePreview fileData={data} dispatch={dispatch} />}
+      {isLoad === undefined && <FilePreview fileData={data} dispatch={dispatch} />}
 
-      {isLoad !== true && data.fileList.length > 0 && (
+      {isLoad === undefined && data.fileList.length > 0 && (
         <button
           onClick={async () => {
             setisLoad(true);
