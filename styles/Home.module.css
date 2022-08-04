@@ -213,11 +213,11 @@
 .underText{
   color: #192033;
     font-size: medium;
-  
+  padding-left: 8px;
     /* transform: rotate(-20deg); */
     position: relative;
     z-index: 9;
     font-family: sans-serif;
     box-shadow: 0px 16px 40px rgb(21 67 113 / 16%);
-background-color: white;
+/* background-color: white; */
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import FilePreview from "./FilePreview";
 import Loader from "./loader";
@@ -43,8 +43,9 @@ const DropZone = ({ data, dispatch }) => {
 
     if (files && files.length > 0) {
       const existingFiles = data.fileList.map((f) => f.name);
-
-      files = files.filter((f) => !existingFiles.includes(f.name));
+console.log(files,"existingFiles")
+      files = files.filter((f) => !existingFiles.includes(f.name) );
+      // && ( f.type==="image/jpeg"|| f.type==="image/jpg"||f.type==="image/png")
 
       dispatch({ type: "ADD_FILE_TO_LIST", files });
 
@@ -57,6 +58,7 @@ const DropZone = ({ data, dispatch }) => {
 
     if (files && files.length > 0) {
       const existingFiles = data.fileList.map((f) => f.name);
+      console.log(files,"existingFiles")
 
       files = files.filter((f) => !existingFiles.includes(f.name));
 
@@ -90,6 +92,19 @@ const DropZone = ({ data, dispatch }) => {
           }
         })
         .catch(function (error) {
+
+          alert(error.message)
+          setisLoad(false);
+          setTimeout(() => {
+            router.push(
+              {
+                pathname: "/",
+              }
+            
+            );
+          }, 500);
+         
+
           console.log(error.message); // output: I just want to stop
         });
       const filePreview = URL.createObjectURL(f);
@@ -160,7 +175,9 @@ const DropZone = ({ data, dispatch }) => {
                 type="file"
                 multiple
                 className={styles.files}
+                accept="image/png, image/gif, image/jpeg"
                 onChange={(e) => handleFileSelect(e)}
+
               />
               <label htmlFor="fileSelect">Upload your files</label>
             </div>
