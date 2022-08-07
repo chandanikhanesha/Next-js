@@ -97,8 +97,8 @@ export default function Success() {
                         <Image
                           src={Odata.name}
                           alt="Picture of the author"
-                          width={500}
-                          height={500}
+                          width={600}
+                          height={600}
                           // blurDataURL="data:..." automatically provided
                           // placeholder="blur" // Optional blur-up while loading
                         />
@@ -128,8 +128,8 @@ export default function Success() {
                         <Image
                           src={item.name}
                           alt="Picture of the author"
-                          width={500}
-                          height={500}
+                          width={600}
+                          height={600}
                           // blurDataURL="data:..." automatically provided
                           // placeholder="blur" // Optional blur-up while loading
                         />

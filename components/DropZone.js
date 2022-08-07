@@ -10,8 +10,10 @@ import imageCompression from "browser-image-compression";
 
 let sendOrignal = [];
 let sendCompress = [];
+let isShow=false;
 const DropZone = ({ data, dispatch }) => {
   const [isLoad, setisLoad] = useState();
+  const [errormsg, seterror] = useState('');
 
   const handleDragEnter = (e) => {
     e.preventDefault();
@@ -26,7 +28,6 @@ const DropZone = ({ data, dispatch }) => {
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: false });
   };
 
- 
   const handleDragOver = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -35,7 +36,6 @@ const DropZone = ({ data, dispatch }) => {
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: true });
   };
 
-
   const handleDrop = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -43,8 +43,8 @@ const DropZone = ({ data, dispatch }) => {
 
     if (files && files.length > 0) {
       const existingFiles = data.fileList.map((f) => f.name);
-console.log(files,"existingFiles")
-      files = files.filter((f) => !existingFiles.includes(f.name) );
+
+      files = files.filter((f) => !existingFiles.includes(f.name));
       // && ( f.type==="image/jpeg"|| f.type==="image/jpg"||f.type==="image/png")
 
       dispatch({ type: "ADD_FILE_TO_LIST", files });
@@ -58,7 +58,7 @@ console.log(files,"existingFiles")
 
     if (files && files.length > 0) {
       const existingFiles = data.fileList.map((f) => f.name);
-      console.log(files,"existingFiles")
+      console.log(files, "existingFiles");
 
       files = files.filter((f) => !existingFiles.includes(f.name));
 
@@ -68,49 +68,49 @@ console.log(files,"existingFiles")
 
   // to handle file uploads
   const uploadFiles = async () => {
-    await data.fileList.map(async (f,index) => {
+
+    let show=true;
+    await data.fileList.map(async (f, index) => {
       const imageFile = f;
       const options = {
         maxWidthOrHeight: 1920,
         useWebWorker: true,
-        initialQuality:0.4  
+        initialQuality: 0.4,
       };
       imageCompression(imageFile, options)
         .then(function (compressedFile, a) {
           const filePreview = URL.createObjectURL(compressedFile);
           sendCompress.push({
-            id:index,
+            id: index,
             name: filePreview,
             size: compressedFile.size,
             type: compressedFile.type,
             orignalName: compressedFile.name,
           });
 
-        
           if (sendCompress.length === data.fileList.length) {
             setisLoad(false);
           }
         })
         .catch(function (error) {
-
-          alert(error.message)
-          setisLoad(false);
-          setTimeout(() => {
-            router.push(
-              {
-                pathname: "/",
-              }
-            
-            );
-          }, 500);
          
-
-          console.log(error.message); // output: I just want to stop
+          if (  window.confirm(error.message)) {
+ 
+    
+   
+            Router.reload(window.location.pathname);
+          
+        }
+     
+      
+          setisLoad(undefined);
+          
+       
         });
       const filePreview = URL.createObjectURL(f);
 
       sendOrignal.push({
-        id:index,
+        id: index,
         name: filePreview,
         size: f.size,
         orignalName: f.name,
@@ -137,9 +137,12 @@ console.log(files,"existingFiles")
     }
   }
 
+
+
+
   return (
     <>
-      {isLoad ===undefined && (
+      {isLoad === undefined && (
         <div
           className={styles.dropzone}
           onDrop={(e) => handleDrop(e)}
@@ -177,14 +180,15 @@ console.log(files,"existingFiles")
                 className={styles.files}
                 accept="image/png, image/gif, image/jpeg"
                 onChange={(e) => handleFileSelect(e)}
-
               />
               <label htmlFor="fileSelect">Upload your files</label>
             </div>
           </div>
         </div>
       )}
-      {isLoad === undefined && <FilePreview fileData={data} dispatch={dispatch} />}
+      {isLoad === undefined && (
+        <FilePreview fileData={data} dispatch={dispatch} />
+      )}
 
       {isLoad === undefined && data.fileList.length > 0 && (
         <button
