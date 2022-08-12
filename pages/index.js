@@ -22,7 +22,7 @@ export default function Home() {
   };
 
   const [data, dispatch] = useReducer(reducer, {
-    inDropZone: false,
+    inDropZoneinDropZone: false,
     fileList: [],
   });
 
@@ -48,10 +48,10 @@ export default function Home() {
       <footer className={styles.footer}>
         <div className={styles.likeText}>Like It ! Share It</div>
         <div className={styles.footerText}>
-          All uploaded data is deleted after 1 hour
+          All uploaded data is deleted after Refreshing
         </div>
         <div className={styles.copyrightText}>
-          Copyright @ compressssor {new Date().getFullYear()}. All Rights
+          Copyright @ Image Compressor  {new Date().getFullYear()}. All Rights
           Reserved.
         </div>
       </footer>

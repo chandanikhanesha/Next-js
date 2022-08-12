@@ -168,11 +168,11 @@ const DropZone = ({ data, dispatch }) => {
             <div style={{ display: "flex", alignItems: "center" }}>
               <div className={styles.line1}></div>
               <p className={styles.lineCenterText}>
-                Up to 20 images, max 5 MB Each
+                Up to 20 Images 
               </p>
               <div className={styles.line2}></div>
             </div>
-            <div className={styles.uploadBtn}>
+            <div  className={styles.uploadBtn}>
               <input
                 id="fileSelect"
                 type="file"
