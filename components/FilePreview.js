@@ -66,36 +66,41 @@ const FilePreview = ({ fileData, dispatch }) => {
                       width: "inherit",
                     }}
                     action={
-                      show.includes(index) && (
-                        <IconButton
-                          aria-label="settings"
-                          onClick={() => deleteImage(index)}
-                          style={{
-                            backgroundColor: "white",
-                            height: "30px",
-                            width: "30px",
-                            boxShadow: " 0px 16px 40px #19203330",
-                          }}
-                        >
-                          <ClearIcon style={{ fontSize: "17px" }} />
-                        </IconButton>
-                      )
+                      show.includes(index) &&
+                      <IconButton
+                        aria-label="settings"
+                        onClick={() => deleteImage(index)}
+                        style={{
+                          backgroundColor: "white",
+                          height: "30px",
+                          width: "30px",
+
+                          marginTop: "2px",
+                          marginRight: "6px",
+
+                          boxShadow: " 0px 16px 40px #19203330",
+                        }}
+                      >
+                        <ClearIcon style={{ fontSize: "17px" }} />
+                      </IconButton>
                     }
                   ></CardHeader>
                   <Image
                     src={filePreview}
                     alt="Picture of the author"
-                    width={500}
-                    height={500}
+                    width={650}
+                    height={700}
+                    className={styles.Image}
                     // blurDataURL="data:..." automatically provided
                     // placeholder="blur" // Optional blur-up while loading
                   />
                   <CardContent style={{ padding: "5px" }}>
                     <div key={f.name} className={styles.fileName}>
-                      <p  className={styles.flexClass}>
+                      <p className={styles.flexClass}>
                         {" "}
-                        {f.name} <b>[{size}]</b>
+                        {f.name} 
                       </p>
+                      <b>[{size}]</b>
                     </div>
                   </CardContent>
                 </Card>

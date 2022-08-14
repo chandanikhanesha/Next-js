@@ -289,3 +289,18 @@ border-radius: 9px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+
+@media (max-width: 600px) {
+  .dropzone {
+    width: auto;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 100%;
+  
+  }
+}

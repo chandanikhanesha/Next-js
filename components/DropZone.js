@@ -3,18 +3,34 @@ import Image from "next/image";
 import FilePreview from "./FilePreview";
 import Loader from "./loader";
 import styles from "../styles/DropZone.module.css";
-
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 import Router from "next/router";
 import { useRouter } from "next/router";
 import imageCompression from "browser-image-compression";
 
 let sendOrignal = [];
 let sendCompress = [];
-let isShow=false;
+
+let isShow = false;
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 const DropZone = ({ data, dispatch }) => {
   const [isLoad, setisLoad] = useState();
-  const [errormsg, seterror] = useState('');
+  const [errormsg, seterror] = useState("");
+  const [open, setopen] = useState(false);
 
+  const [vertical, setvertical] = useState("top");
+  const [horizontal, sethorizontal] = useState("center");
+
+  const handleClose = () => {
+    setopen(false);
+  };
   const handleDragEnter = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -44,7 +60,9 @@ const DropZone = ({ data, dispatch }) => {
     if (files && files.length > 0) {
       const existingFiles = data.fileList.map((f) => f.name);
 
-      files = files.filter((f) => !existingFiles.includes(f.name));
+      files = files.filter(
+        (f) => !existingFiles.includes(f.name) && f.type.match("image.*")
+      );
       // && ( f.type==="image/jpeg"|| f.type==="image/jpg"||f.type==="image/png")
 
       dispatch({ type: "ADD_FILE_TO_LIST", files });
@@ -58,9 +76,17 @@ const DropZone = ({ data, dispatch }) => {
 
     if (files && files.length > 0) {
       const existingFiles = data.fileList.map((f) => f.name);
-      console.log(files, "existingFiles");
+      // console.log(files, "existingFiles");
 
-      files = files.filter((f) => !existingFiles.includes(f.name));
+      files.map((f) => {
+        if (!f.type.match("image.*")) {
+          setopen(true);
+        }
+      });
+
+      files = files.filter(
+        (f) => !existingFiles.includes(f.name) && f.type.match("image.*")
+      );
 
       dispatch({ type: "ADD_FILE_TO_LIST", files });
     }
@@ -68,8 +94,7 @@ const DropZone = ({ data, dispatch }) => {
 
   // to handle file uploads
   const uploadFiles = async () => {
-
-    let show=true;
+    let show = true;
     await data.fileList.map(async (f, index) => {
       const imageFile = f;
       const options = {
@@ -93,19 +118,7 @@ const DropZone = ({ data, dispatch }) => {
           }
         })
         .catch(function (error) {
-         
-          if (  window.confirm(error.message)) {
- 
-    
-   
-            Router.reload(window.location.pathname);
-          
-        }
-     
-      
           setisLoad(undefined);
-          
-       
         });
       const filePreview = URL.createObjectURL(f);
 
@@ -137,9 +150,6 @@ const DropZone = ({ data, dispatch }) => {
     }
   }
 
-
-
-
   return (
     <>
       {isLoad === undefined && (
@@ -167,12 +177,10 @@ const DropZone = ({ data, dispatch }) => {
             </div>
             <div style={{ display: "flex", alignItems: "center" }}>
               <div className={styles.line1}></div>
-              <p className={styles.lineCenterText}>
-                Up to 20 Images 
-              </p>
+              <p className={styles.lineCenterText}>Up to 20 Images</p>
               <div className={styles.line2}></div>
             </div>
-            <div  className={styles.uploadBtn}>
+            <div className={styles.uploadBtn}>
               <input
                 id="fileSelect"
                 type="file"
@@ -184,6 +192,21 @@ const DropZone = ({ data, dispatch }) => {
               <label htmlFor="fileSelect">Upload your files</label>
             </div>
           </div>
+          <Snackbar
+            open={open}
+            autoHideDuration={8000}
+            onClose={handleClose}
+            key={vertical + horizontal}
+            anchorOrigin={{ vertical, horizontal }}
+          >
+            <Alert
+              onClose={handleClose}
+              severity="error"
+              sx={{ width: "100%" }}
+            >
+              Uploaded file is not a image type!
+            </Alert>
+          </Snackbar>
         </div>
       )}
       {isLoad === undefined && (
