@@ -198,8 +198,7 @@ export default function Success() {
             onClick={() => download(compressData)}
             className={styles.downloadBtn}
           >
-            Download Image
-          </button>
+            Download          </button>
         )}
         <footer className={styles.footer}>
           <div className={styles.likeText}>Like It ! Share It</div>
@@ -207,7 +206,7 @@ export default function Success() {
             All uploaded data is deleted after refreshing
           </div>
           <div className={styles.copyrightText}>
-            Copyright @ compressssor {new Date().getFullYear()}. All Rights
+            Copyright @ compressor {new Date().getFullYear()}. All Rights
             Reserved.
           </div>
         </footer>
@@ -216,10 +215,4 @@ export default function Success() {
   );
 }
 
-
-//back btn issue
-//zip issue
-//remove line shadoww
-//remove zip file
-//new pop up issue
-//scroll image when 
+ 
