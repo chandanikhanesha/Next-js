@@ -14,7 +14,6 @@ import imageCompression from "browser-image-compression";
 let sendOrignal = [];
 let sendCompress = [];
 
-let isShow = false;
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -94,6 +93,7 @@ const DropZone = ({ data, dispatch }) => {
 
   // to handle file uploads
   const uploadFiles = async () => {
+    sendCompress=[];
     let show = true;
     await data.fileList.map(async (f, index) => {
       const imageFile = f;
@@ -113,7 +113,7 @@ const DropZone = ({ data, dispatch }) => {
             orignalName: compressedFile.name,
           });
 
-          if (sendCompress.length === data.fileList.length) {
+          if (sendCompress.length >= data.fileList.length) {
             setisLoad(false);
           }
         })
@@ -149,7 +149,6 @@ const DropZone = ({ data, dispatch }) => {
       );
     }
   }
-
   return (
     <>
       {isLoad === undefined && (
@@ -186,7 +185,7 @@ const DropZone = ({ data, dispatch }) => {
                 type="file"
                 multiple
                 className={styles.files}
-                accept="image/png, image/gif, image/jpeg"
+                accept="image/png, image/jpg, image/jpeg"
                 onChange={(e) => handleFileSelect(e)}
               />
               <label htmlFor="fileSelect">Upload your files</label>

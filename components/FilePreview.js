@@ -31,7 +31,7 @@ const FilePreview = ({ fileData, dispatch }) => {
 
     dispatch({ type: "REMOVE_FILE_TO_LIST", i });
   };
-  return (
+return (
     <div className={styles.fileList}>
       <Grid
         container

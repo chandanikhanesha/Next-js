@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
-import JSZip from 'jszip';
-import { saveAs } from 'file-saver';
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
 import imageCompression from "browser-image-compression";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import JSZipUtils from 'jszip-utils';
+import JSZipUtils from "jszip-utils";
 import Router from "next/router";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -19,49 +19,38 @@ export default function Success() {
   const query = useRouter();
   const router = useRouter();
   function download(source) {
-
-    
-    source.length<3 ? source.filter((sourceData) => {
-      const filePreview = sourceData.name;
-      const fileName = filePreview.split("/").pop();
-      var el = document.createElement("a");
-      el.setAttribute("href", filePreview);
-      el.setAttribute("download", `compress-${sourceData.orignalName}`);
-      document.body.appendChild(el);
-      el.click();
-      el.remove();
-    }):
-
-  
-    downloadAll(source)
-
-
+    source.length < 3
+      ? source.filter((sourceData) => {
+          const filePreview = sourceData.name;
+          const fileName = filePreview.split("/").pop();
+          var el = document.createElement("a");
+          el.setAttribute("href", filePreview);
+          el.setAttribute("download", `compress-${sourceData.orignalName}`);
+          document.body.appendChild(el);
+          el.click();
+          el.remove();
+        })
+      : downloadAll(source);
   }
- 
-  
+
   const downloadAll = (source) => {
     var count = 0;
 
-    source.forEach(function(url){
- JSZipUtils.getBinaryContent(url.name, function (err, data) {
-         if(err) {
-            throw err; 
-         }
-         zip.file(url.orignalName, data, {binary:true});
-         count++;
-         if (count == source.length) {
-           zip.generateAsync({type:'blob'}).then(function(content) {
-              saveAs(content, "ImageCompressor.zip");
-           });
+    source.forEach(function (url) {
+      JSZipUtils.getBinaryContent(url.name, function (err, data) {
+        if (err) {
+          throw err;
+        }
+        zip.file(url.orignalName, data, { binary: true });
+        count++;
+        if (count == source.length) {
+          zip.generateAsync({ type: "blob" }).then(function (content) {
+            saveAs(content, "ImageCompressor.zip");
+          });
         }
       });
     });
-
-
-      
-};
-
-
+  };
 
   function bytesToSize(bytes) {
     var sizes = ["Bytes", "KB", "MB", "GB", "TB"];
@@ -80,9 +69,7 @@ export default function Success() {
       JSON.parse(query.query.orignalData);
     setorignalData(odata);
     setcompressData(cdata);
-    
 
-   
     const { pathname } = Router;
     if (query.query.compressData == undefined && pathname == "/success") {
       router.push({
@@ -94,7 +81,14 @@ export default function Success() {
   return (
     <div className={styles.container}>
       <div className={styles.main} id="mainPage">
-        <div className={styles.logodiv}>
+        <div
+          className={styles.logodiv}
+          onClick={() => {
+            router.push({
+              pathname: "/",
+            });
+          }}
+        >
           <Image src="/Logo.jpg" alt="Logo" width={190} height={63}></Image>
         </div>
 
@@ -120,7 +114,10 @@ export default function Success() {
 
                 return (
                   <Grid key={index}>
-                    <div style={{ display: "flex",marginLeft:"30px" }} className={compressData.length>1&& styles.isOneImage}>
+                    <div
+                      style={{ display: "flex", marginLeft: "30px" }}
+                      className={compressData.length > 1 && styles.isOneImage}
+                    >
                       <Card
                         sx={{ maxWidth: 370 }}
                         style={{
@@ -147,7 +144,7 @@ export default function Success() {
                           >
                             <p className={styles.flexClass}>
                               {" "}
-                              {Odata.orignalName}{" "}  
+                              {Odata.orignalName}{" "}
                             </p>
                             <b>[{bytesToSize(Odata.size)}]</b>
                           </div>
@@ -183,7 +180,6 @@ export default function Success() {
                               {item.orignalName}{" "}
                             </p>
                             <b>[{bytesToSize(item.size)}]</b>
-
                           </div>
                         </CardContent>
                       </Card>
@@ -198,7 +194,8 @@ export default function Success() {
             onClick={() => download(compressData)}
             className={styles.downloadBtn}
           >
-            Download          </button>
+            Download{" "}
+          </button>
         )}
         <footer className={styles.footer}>
           <div className={styles.likeText}>Like It ! Share It</div>
@@ -214,5 +211,3 @@ export default function Success() {
     </div>
   );
 }
-
- 

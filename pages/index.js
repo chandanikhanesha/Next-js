@@ -4,8 +4,12 @@ import Head from "next/head";
 import DropZone from "../components/DropZone";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import Router from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
   // reducer function to handle state changes
   const reducer = (state, action) => {
     switch (action.type) {
@@ -13,16 +17,18 @@ export default function Home() {
         return { ...state, inDropZone: action.inDropZone };
       case "ADD_FILE_TO_LIST":
         return { ...state, fileList: state.fileList.concat(action.files) };
-        case "REMOVE_FILE_TO_LIST":
-
-          return {...state ,fileList:state.fileList.filter((f,index)=> index !==action.i)}
+      case "REMOVE_FILE_TO_LIST":
+        return {
+          ...state,
+          fileList: state.fileList.filter((f, index) => index !== action.i),
+        };
       default:
         return state;
     }
   };
 
   const [data, dispatch] = useReducer(reducer, {
-    inDropZoneinDropZone: false,
+    inDropZone: false,
     fileList: [],
   });
 
@@ -36,7 +42,16 @@ export default function Home() {
       </Head>
 
       <main className={styles.main} id="mainPage">
-        <div className={styles.logodiv}>
+        <div
+          className={styles.logodiv}
+          onClick={() => 
+          
+
+            router.push({
+              pathname: "/",
+            })
+          }
+        >
           <Image src="/Logo.jpg" alt="Logo" width={190} height={63}></Image>
         </div>
 
@@ -51,7 +66,7 @@ export default function Home() {
           All uploaded data is deleted after refreshing
         </div>
         <div className={styles.copyrightText}>
-          Copyright @ Image Compressor  {new Date().getFullYear()}. All Rights
+          Copyright @ Image Compressor {new Date().getFullYear()}. All Rights
           Reserved.
         </div>
       </footer>
