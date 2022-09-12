@@ -290,6 +290,14 @@ border-radius: 9px;
   margin-bottom: 10px;
 }
 
+.warn{
+  display: flex;
+  margin-top: 35px;
+  color: #e40c0c;
+  font-size: 13px;
+  font-family: revert;
+  font-weight: 600;
+}
 
 @media (max-width: 600px) {
   .dropzone {

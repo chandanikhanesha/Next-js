@@ -199,9 +199,9 @@ export default function Success() {
         )}
         <footer className={styles.footer}>
           <div className={styles.likeText}>Like It ! Share It</div>
-          <div className={styles.footerText}>
+          {/* <div className={styles.footerText}>
             All uploaded data is deleted after refreshing
-          </div>
+          </div> */}
           <div className={styles.copyrightText}>
             Copyright @ compressor {new Date().getFullYear()}. All Rights
             Reserved.

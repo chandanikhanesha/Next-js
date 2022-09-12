@@ -197,6 +197,8 @@ const DropZone = ({ data, dispatch }) => {
               />
               <label htmlFor="fileSelect">Upload your files</label>
             </div>
+            <span className={styles.warn}>Warning :-  <p style={{display:'contents'}}>You will lost the data if you will refresh the page</p></span>
+
           </div>
 
           <Snackbar
