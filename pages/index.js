@@ -36,17 +36,26 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Drag And Drop File Upload</title>
-        <meta name="description" content="Nextjs drag and drop file upload" />
+        <title>Compress High-Quality Images Online in Less than a Second - Reduce by 80%</title>
+        <meta name="description" content="Compress unlimited images for free in any format like jpg, png, jpeg, webp, gif..., ilovecompress is an online image compressor that helps you to compress images by more than 80% maintaining the original color quality of the picture. Try Now" />
         <link rel="icon" href="/favicon.ico" />
+        <script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KJ6QQWD');`,
+          }}
+        ></script>
       </Head>
 
       <main className={styles.main} id="mainPage">
         <div
           className={styles.logodiv}
-          onClick={() => 
-          
-
+          onClick={() =>
             router.push({
               pathname: "/",
             })
