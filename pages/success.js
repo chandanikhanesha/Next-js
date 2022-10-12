@@ -11,6 +11,7 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+import DrawerAppBar from "./navbar"
 const zip = new JSZip();
 export default function Success() {
   const [compressData, setcompressData] = useState([]);
@@ -25,7 +26,7 @@ export default function Success() {
           const fileName = filePreview.split("/").pop();
           var el = document.createElement("a");
           el.setAttribute("href", filePreview);
-          el.setAttribute("download", `compress-${sourceData.orignalName}`);
+          el.setAttribute("download", `${sourceData.orignalName}`);
           document.body.appendChild(el);
           el.click();
           el.remove();
@@ -45,7 +46,7 @@ export default function Success() {
         count++;
         if (count == source.length) {
           zip.generateAsync({ type: "blob" }).then(function (content) {
-            saveAs(content, "ImageCompressor.zip");
+            saveAs(content, "ILoveCompressor.zip");
           });
         }
       });
@@ -81,16 +82,8 @@ export default function Success() {
   return (
     <div className={styles.container}>
       <div className={styles.main} id="mainPage">
-        <div
-          className={styles.logodiv}
-          onClick={() => {
-            router.push({
-              pathname: "/",
-            });
-          }}
-        >
-          <Image src="/Logo.jpg" alt="Logo" width={190} height={63}></Image>
-        </div>
+      <DrawerAppBar/>
+
 
         <div className={styles.imageContainer}>
           <Grid

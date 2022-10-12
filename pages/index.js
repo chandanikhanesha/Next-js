@@ -6,8 +6,9 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Router from "next/router";
-
+import DrawerAppBar from "./navbar"
 export default function Home() {
+
   const router = useRouter();
 
   // reducer function to handle state changes
@@ -53,7 +54,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main} id="mainPage">
-        <div
+        <DrawerAppBar/>
+        {/* <div
           className={styles.logodiv}
           onClick={() =>
             router.push({
@@ -62,7 +64,7 @@ export default function Home() {
           }
         >
           <Image src="/Logo.jpg" alt="Logo" width={190} height={63}></Image>
-        </div>
+        </div> */}
 
         {/* <h1 className={styles.title}>Drag And Drop File Upload</h1> */}
         {/* Pass state data and dispatch to the DropZone component */}
