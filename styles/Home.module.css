@@ -26,8 +26,8 @@
 }
 .navBtn{
  
-  font-weight: 600;
-  margin-right: 20px;
+  font-weight: 600 !important;
+  margin-right: 20px !important;
 }
 
 .navbar{
@@ -196,8 +196,8 @@
     margin-top: 50px;
   }
   .navbar{
-    background-color: #192033 !important;
-    color: white !important;
+    /* background-color: #192033 !important; */
+    color: #192033 !important;
     height: 70px !important;
     padding-top: 5px !important;
 
@@ -287,4 +287,11 @@ justify-content: center;
   word-break: break-word;
   font-family: sans-serif;
  
+}
+.mediaNav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
 }

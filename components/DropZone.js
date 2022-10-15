@@ -166,7 +166,7 @@ const DropZone = ({ data, dispatch }) => {
               to the drop area. Wait for the compression to finish.
             </p>
 
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div className={styles.zoneContainer}>
               <p className={styles.btnLineText}> Drag Your</p>
               <div className={styles.btnjpg}>.JPG</div>
               <div className={styles.btnjpeg}>.JPEG</div>

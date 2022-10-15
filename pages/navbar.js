@@ -62,15 +62,35 @@ function DrawerAppBar(props) {
     <Box sx={{ display: 'flex' }}>
       <AppBar component="nav" className={styles.navbar}>
         <Toolbar>
+        
+      
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
+            style={{width:"100%"}}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <MenuIcon />
+            <div className={styles.mediaNav}>
+            
+            <div
+          className={styles.logodiv}
+          onClick={() =>
+            router.push({
+              pathname: "/",
+            })
+          }
+        >
+          <Image src="/Logo.jpg" alt="Logo" width={190} height={63}></Image>
+        </div>
+        <MenuIcon />
+            </div>
+          
+        
           </IconButton>
+
+      
           <Typography
             variant="h6"
             component="div"
@@ -91,7 +111,7 @@ function DrawerAppBar(props) {
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#192033', }}      onClick={() =>
                 router.push({
-                  pathname: "/",
+                  pathname:item=="Home"? "/":`/${item.toLowerCase()}`,
                 })
               }  className={styles.navBtn} >
                 {item}

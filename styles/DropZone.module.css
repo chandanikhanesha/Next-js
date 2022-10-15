@@ -1,10 +1,10 @@
 .dropzone {
 
   width: 980px;
-  height: 420px;
+  height: 450px;
   /* left: 230px;
   top: 234px; */
-  
+  /* padding: 20px; */
   background: #FFFFFF;
   box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.16);
   border-radius: 10px;
@@ -20,6 +20,7 @@
   width: 100%;
   align-items: center;
   flex-direction: column;
+  padding:10px 10px 20px 10px;
 }
 .uploadMessage h3 {
   margin-top: 1rem;
@@ -67,7 +68,7 @@ width: 185px;
 
 .headerText{
   /* position: absolute; */
-  width: 283px;
+  max-width: 283px;
   height: 38px;
   /* left: 579px;
   top: 175px; */
@@ -87,7 +88,7 @@ color: #192033;
 }
 .headerNote{
   /* position: absolute; */
-width: 577px;
+max-width: 577px;
 height: 42px;
 /* left: 432px;
 top: 245px; */
@@ -173,6 +174,11 @@ letter-spacing: 0.02em;
 color: #0C3F9F;
 }
 
+.zoneContainer{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
 .btnLineText{
   /* position: absolute; */
 width: 83px;
@@ -183,14 +189,14 @@ top: 315px; */
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
-font-size: 18px;
+/* font-size: 18px; */
 line-height: 21px;
 /* identical to box height */
-margin-right: 15px;
+
 display: flex;
 align-items: flex-end;
 letter-spacing: 0.02em;
-
+margin-right: 15px;
 color: #192033;
 }
 
@@ -204,7 +210,7 @@ margin-right: 15px;
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
-font-size: 18px;
+/* font-size: 18px; */
 line-height: 21px;
 /* identical to box height */
 
@@ -294,22 +300,53 @@ border-radius: 9px;
 .warn{
   display: flex;
   margin-top: 35px;
+  margin-bottom: 30px;
+
   color: #e40c0c;
   font-size: 13px;
   font-family: revert;
   font-weight: 600;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
   .dropzone {
     width: auto;
     flex-direction: column;
+    height: auto;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
   }
+  .btnjpg,.btnjpeg ,.btnpng{
+    width:50px
+  }
+  .zoneContainer{
+    font-size: 14px;
+  }
+
+  .btnLineText{
+    margin-right: 10px;
+    width: 65px;
+  }
+  .headerNote{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+  }
+  .lineCenterText{
+    font-size: 14px;
+line-height: 17px;
+
 }
+}
+
 
 @media (min-width: 1024px) {
   .container {
     width: 100%;
   
   }
+  
+
 }
