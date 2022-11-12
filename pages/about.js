@@ -6,10 +6,10 @@ function about() {
     <div>   <DrawerAppBar/>
     <div className={styles.outerCard}>
     <div className={styles.anothercard}>
-<h4>
+<h2>
 
 About Us
-</h4>
+</h2>
 <p>I Love Compress is easy to use tool that compress your photos and reduce their size quickly. As we all know that compress jpeg images with multiple images can be time consuming and sometimes it becomes very frustrating.
 </p>
 <p>That’s how I Love Compress comes in light, we provide easy to use and most efficient image compression service. We do not store your data to our servers that’s how we respect your privacy. This process will drastically improve speed of the compress jpg and that help you to reduce image size also.
