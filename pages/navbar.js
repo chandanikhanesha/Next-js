@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React ,{useEffect} from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -18,7 +18,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact','Privacy&Policy','Blog'];
+const navItems = ['Home', 'About','PrivacyPolicy','Blog'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -28,6 +28,18 @@ function DrawerAppBar(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  useEffect(() => {
+
+const url=router.pathname.split("/")[1]
+  if(url){
+    document.getElementById(url).style.backgroundColor = '#192033' ; 
+    document.getElementById(url).style.color = 'white' ; 
+  }
+  
+
+  }, [])
+  
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -109,7 +121,7 @@ function DrawerAppBar(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }} className={styles.navList}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#192033', }}      onClick={() =>
+              <Button key={item} sx={{ color: '#192033', }} id={item.toLowerCase()}     onClick={() =>
                 router.push({
                   pathname:item=="Home"? "/":`/${item.toLowerCase()}`,
                 })
