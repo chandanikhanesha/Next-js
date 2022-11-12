@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
-import imageCompression from "browser-image-compression";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import JSZipUtils from "jszip-utils";

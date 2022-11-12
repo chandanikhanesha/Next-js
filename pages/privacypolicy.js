@@ -1,4 +1,4 @@
-import  React from 'react';
+import React from 'react';
 import DrawerAppBar from "./navbar";
 import styles from "../styles/Home.module.css";
 function Privacypolicy() {
@@ -40,7 +40,7 @@ function Privacypolicy() {
 
 
 <h2>Third Party Privacy Policies</h2>
-<p>I Love Compresss Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
+<p>I Love Compress Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
 <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers respective websites.
 </p>
 
