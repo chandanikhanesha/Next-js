@@ -1,5 +1,5 @@
-import React from 'react'
-import DrawerAppBar from "./navbar"
+import React from 'react';
+import DrawerAppBar from "./navbar";
 import styles from "../styles/Home.module.css";
 function about() {
   return (
@@ -12,10 +12,10 @@ About Us
 </h2>
 <p>I Love Compress is easy to use tool that compress your photos and reduce their size quickly. As we all know that compress jpeg images with multiple images can be time consuming and sometimes it becomes very frustrating.
 </p>
-<p>That’s how I Love Compress comes in light, we provide easy to use and most efficient image compression service. We do not store your data to our servers that’s how we respect your privacy. This process will drastically improve speed of the compress jpg and that help you to reduce image size also.
+<p>Thats how I Love Compress comes in light, we provide easy to use and most efficient image compression service. We do not store your data to our servers that’s how we respect your privacy. This process will drastically improve speed of the compress jpg and that help you to reduce image size also.
 </p>
 <p>
-We strongly believe in improving user experience while using our website that’s how our small engineers team actively working to improve features and performance of the website. Even though, we want to hear your thoughts and suggestions about improving the performance of the website. Please contact us without hesitating and give us your valuable suggestions and improvement ideas.
+We strongly believe in improving user experience while using our website thats how our small engineers team actively working to improve features and performance of the website. Even though, we want to hear your thoughts and suggestions about improving the performance of the website. Please contact us without hesitating and give us your valuable suggestions and improvement ideas.
 </p>
       </div>
       </div>
