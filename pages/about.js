@@ -1,7 +1,7 @@
 import React from 'react';
 import DrawerAppBar from "./navbar";
 import styles from "../styles/Home.module.css";
-function about() {
+function About() {
   return (
     <div>   <DrawerAppBar/>
     <div className={styles.outerCard}>
@@ -33,4 +33,4 @@ We strongly believe in improving user experience while using our website thats h
   )
 }
 
-export default about
+export default About

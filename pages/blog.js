@@ -1,12 +1,12 @@
-import React from "react";
+import React, {useEffect,useState} from "react";
 import DrawerAppBar from "./navbar";
 import styles from "../styles/Home.module.css";
 import Axios from "axios";
 import Loader from "../components/loader";
 
-export default function blog() {
-  const [blogData, setblogData] = React.useState("");
-  React.useEffect(() => {
+export default function Blog() {
+  const [blogData, setblogData] = useState("");
+  useEffect(() => {
     Axios.get("http://admin.ilovecompress.appskym.com/api/blogs").then(
       (res) => {
         // console.log(res.data.data.data[0], "res");
