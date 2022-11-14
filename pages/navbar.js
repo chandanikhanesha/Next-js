@@ -32,7 +32,8 @@ function DrawerAppBar(props) {
   useEffect(() => {
 
 const url=router.pathname.split("/")[1]
-  if(url){
+console.log(url,"url");
+  if(url !=="success" &&url){
     document.getElementById(url).style.backgroundColor = '#192033' ; 
     document.getElementById(url).style.color = 'white' ; 
   }
@@ -59,7 +60,10 @@ const url=router.pathname.split("/")[1]
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'center' }} id={item.toLowerCase()}     onClick={() =>
+                router.push({
+                  pathname:item=="Home"? "/":`/${item.toLowerCase()}`,
+                })}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
