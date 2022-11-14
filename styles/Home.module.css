@@ -11,6 +11,14 @@
   min-height: 485px;
   
 }
+.blogCard{
+  width: 100%;
+ 
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  min-height: 485px;
+}
 .main {
   height: 100%;
   width: 100%;
