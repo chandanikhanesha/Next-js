@@ -1,20 +1,29 @@
 import React, {useEffect,useState} from "react";
 import DrawerAppBar from "./navbar";
 import styles from "../styles/Home.module.css";
-import Axios from "axios";
+
 import Loader from "../components/loader";
 
 export default function Blog() {
   const [blogData, setblogData] = useState("");
   useEffect(() => {
-    Axios.get("http://admin.ilovecompress.appskym.com/api/blogs").then(
-      (res) => {
-        // console.log(res.data.data.data[0], "res");
-        setblogData(res.data.data.data[0].description);
-      }
-    );
+    callAPI()
   }, []);
 
+
+  const callAPI = async () => {
+		try {
+			const res = await fetch(
+				`http://admin.ilovecompress.appskym.com/api/blogs`
+			);
+			const data = await res.json();
+      // console.log(data,"data-");
+		  setblogData(data.data.data[0].description);
+
+		} catch (err) {
+			console.log(err,"error from api");
+		}
+	};
   return (
     <div>
       <DrawerAppBar />
