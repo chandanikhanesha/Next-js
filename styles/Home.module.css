@@ -219,6 +219,12 @@
     width: 100%;
     flex-direction: column;
   }
+.outerCard{
+  width: fit-content;
+}
+.anothercard{
+  width: auto;
+}
   .footer{
     margin-top: 50px;
   }
