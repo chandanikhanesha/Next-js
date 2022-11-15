@@ -7,10 +7,22 @@ import Loader from "../components/loader";
 export default function Blog() {
   const [blogData, setblogData] = useState("");
   useEffect(() => {
-    callAPI()
+    callAPI();
+    callAPI2();
+    
   }, []);
 
-
+	const callAPI2 = async () => {
+		try {
+			const res = await fetch(
+				`https://jsonplaceholder.typicode.com/posts/1`
+			);
+			const data = await res.json();
+			console.log(data);
+		} catch (err) {
+			console.log(err);
+		}
+	};
   const callAPI = async () => {
 		try {
 			const res = await fetch(
