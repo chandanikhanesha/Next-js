@@ -17,7 +17,7 @@ export default function Blog() {
 				`http://admin.ilovecompress.appskym.com/api/blogs`
 			);
 			const data = await res.json();
-      console.log(data.data.data[0].description,"data-");
+      // console.log(data.data.data[0].description,"data-");
 		  setblogData("");
 
 		} catch (err) {
