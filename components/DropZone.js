@@ -22,6 +22,7 @@ const DropZone = ({ data, dispatch }) => {
   const [isLoad, setisLoad] = useState();
   const [errormsg, seterror] = useState("");
   const [open, setopen] = useState(false);
+  const [snackMsg,setsnackMsg]=useState('')
 
   const [vertical, setvertical] = useState("top");
   const [horizontal, sethorizontal] = useState("center");
@@ -71,13 +72,14 @@ const DropZone = ({ data, dispatch }) => {
 
   const handleFileSelect = (e) => {
     let files = [...e.target.files];
-
-    if (files && files.length > 0) {
+console.log("files",files)
+    if (files && files.length > 0 && files.length<=25) {
       const existingFiles = data.fileList.map((f) => f.name);
       // console.log(files, "existingFiles");
 
       files.map((f) => {
         if (!f.type.match("image.*")) {
+          setsnackMsg('Uploaded file is not a image type!')
           setopen(true);
         }
       });
@@ -88,10 +90,17 @@ const DropZone = ({ data, dispatch }) => {
 
       dispatch({ type: "ADD_FILE_TO_LIST", files });
     }
+    if(files.length>=25){
+        setsnackMsg('Max upload of the image is 25')
+         setopen(true);
+}
+
   };
 
   // to handle file uploads
   const uploadFiles = async () => {
+
+    console.log(data.fileList,"data.fileLists");
     sendCompress = [];
     let show = true;
     await data.fileList.map(async (f, index) => {
@@ -176,7 +185,7 @@ const DropZone = ({ data, dispatch }) => {
             </div>
             <div style={{ display: "flex", alignItems: "center" }}>
               <div className={styles.line1}></div>
-              <p className={styles.lineCenterText}>Up to 20 Images</p>
+              <p className={styles.lineCenterText}>Up to 25 Images</p>
               <div className={styles.line2}></div>
             </div>
             <div
@@ -213,7 +222,8 @@ const DropZone = ({ data, dispatch }) => {
               severity="error"
               sx={{ width: "100%" }}
             >
-              Uploaded file is not a image type!
+              {snackMsg}
+              
             </Alert>
           </Snackbar>
         </div>
