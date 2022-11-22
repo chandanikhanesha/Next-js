@@ -9,7 +9,18 @@
   align-items: center;
   padding: 15px;
   min-height: 485px;
+  color: #192033;
+  text-align: center;
   
+}
+.contentText{
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    /* margin: 58px; */
+    margin-top: 40px;
+    margin-bottom: 70px;
+    text-align: center;
 }
 .blogCard{
   width: 100%;

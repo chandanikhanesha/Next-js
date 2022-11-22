@@ -69,7 +69,10 @@ export default function Home() {
         {/* <h1 className={styles.title}>Drag And Drop File Upload</h1> */}
         {/* Pass state data and dispatch to the DropZone component */}
         <DropZone data={data} dispatch={dispatch} />
-        <h1>Smart JPEG, PNG and JPG compressions</h1>
+
+        <div className={styles.outerCard}>
+        <div className={styles.anothercard} >
+        <h1 className={styles.contentText}>Smart JPEG, PNG and JPG compressions</h1>
 
 <div>
   <div>
@@ -80,10 +83,6 @@ export default function Home() {
     <h2>Why should I use ILoveCompress?</h2>
     <p>PNG is useful because it’s the only widely supported format that can store partially transparent images. The format uses compression, but the files can still be large. Use ILoveCompress to shrink images for your apps and sites. It will use less bandwidth and load faster.</p>
     <p>I Love Compress is providing service to compress your high resolution images with same quality without losing it and also it will compress your images within a seconds.</p>
-  </div>
-  <div>
-    <h2>Can anyone distinguish between them?</h2>
-    <p>I'll compare them side by side for you. Two pictures of my cousin are shown below. The left image is immediately saved from Adobe Photoshop as a 24-bit PNG. The same image, altered by ILoveCompress, can be seen on the right. Can you find a difference?</p>
   </div>
   <div>
     <h2>How does it function?</h2>
@@ -99,6 +98,10 @@ export default function Home() {
     <p>We frequently use JPEG images, but were frustrated with the load times. We created ILoveCompress in our quest to make our own websites faster and more fun to use with the best compression. Compressing images with the website is free for everyone and we like to keep it that way! If you like ILoveCompress please support us.</p>
   </div>
 </div>
+          
+          </div>
+          </div>
+     
       </main>
 
       <footer className={styles.footer}>
