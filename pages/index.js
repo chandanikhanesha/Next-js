@@ -86,7 +86,7 @@ export default function Home() {
   </div>
   <div>
     <h2>How does it function?</h2>
-    <p> Similar colours in your image are blended when a PNG (Portable Network Graphics) file is uploaded. The term "quantization" refers to this method. 24-bit PNG files can be reduced to substantially smaller 8-bit indexed colour images by lowering the amount of colours.</p>
+    <p> Similar colours in your image are blended when a PNG Portable Network Graphics file is uploaded. The term quantization refers to this method. 24-bit PNG files can be reduced to substantially smaller 8-bit indexed colour images by lowering the amount of colours.</p>
      <p>In the above image the file size is reduced by more than 70%. I have excellent eyesight but cant spot the difference either! Use the optimized image to save bandwidth and loading time and your website visitors will thank you.</p> 
   </div>
   <div>
