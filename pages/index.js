@@ -81,13 +81,13 @@ export default function Home() {
   </div>
   <div>
     <h2>Why should I use ILoveCompress?</h2>
-    <p>PNG is useful because it’s the only widely supported format that can store partially transparent images. The format uses compression, but the files can still be large. Use ILoveCompress to shrink images for your apps and sites. It will use less bandwidth and load faster.</p>
+    <p>PNG is useful because its the only widely supported format that can store partially transparent images. The format uses compression, but the files can still be large. Use ILoveCompress to shrink images for your apps and sites. It will use less bandwidth and load faster.</p>
     <p>I Love Compress is providing service to compress your high resolution images with same quality without losing it and also it will compress your images within a seconds.</p>
   </div>
   <div>
     <h2>How does it function?</h2>
     <p> Similar colours in your image are blended when a PNG (Portable Network Graphics) file is uploaded. The term "quantization" refers to this method. 24-bit PNG files can be reduced to substantially smaller 8-bit indexed colour images by lowering the amount of colours.</p>
-     <p>In the above image the file size is reduced by more than 70%. I have excellent eyesight but can’t spot the difference either! Use the optimized image to save bandwidth and loading time and your website visitors will thank you.</p> 
+     <p>In the above image the file size is reduced by more than 70%. I have excellent eyesight but cant spot the difference either! Use the optimized image to save bandwidth and loading time and your website visitors will thank you.</p> 
   </div>
   <div>
 <h2>Is it supported everywhere?</h2>
