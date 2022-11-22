@@ -171,7 +171,7 @@ console.log("files",files)
           <div className={styles.mainCard}>
             <p className={styles.headerText}>Image Compressor </p>
             <p className={styles.headerNote}>
-              Select up to 20 JPG or JPEG images from you device. Or drag files
+              Select up to 25 JPG or JPEG images from your device. Or drag files
               to the drop area. Wait for the compression to finish.
             </p>
 
