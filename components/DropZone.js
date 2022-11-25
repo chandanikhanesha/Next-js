@@ -27,18 +27,37 @@ const DropZone = ({ data, dispatch }) => {
   const [vertical, setvertical] = useState("top");
   const [horizontal, sethorizontal] = useState("center");
 
+
+  // function gtag_report_conversion(url) {
+  //   var callback = function () {
+  //     if (typeof (url) != 'undefined' && typeof window !== 'undefined') {
+  //       window.location = url;
+  //     }
+  //   };
+
+  //   if (typeof window !== 'undefined') {
+  //     window.gtag('event', 'conversion', {
+  //       'send_to': 'AW-10835311766/S_BWCNDCj4MYEJb51q4o',
+  //       'event_callback': callback
+  //     });
+  //   }
+
+  //   return false;
+  // }
   const handleClose = () => {
     setopen(false);
   };
   const handleDragEnter = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    // gtag_report_conversion()
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: true });
   };
 
   const handleDragLeave = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    // gtag_report_conversion()
 
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: false });
   };
@@ -46,6 +65,7 @@ const DropZone = ({ data, dispatch }) => {
   const handleDragOver = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    // gtag_report_conversion()
 
     e.dataTransfer.dropEffect = "copy";
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: true });
@@ -54,6 +74,8 @@ const DropZone = ({ data, dispatch }) => {
   const handleDrop = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    // gtag_report_conversion()
+
     let files = [...e.dataTransfer.files];
 
     if (files && files.length > 0) {
@@ -71,6 +93,8 @@ const DropZone = ({ data, dispatch }) => {
   };
 
   const handleFileSelect = (e) => {
+    // gtag_report_conversion()
+
     let files = [...e.target.files];
 console.log("files",files)
     if (files && files.length > 0 && files.length<=25) {

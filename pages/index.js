@@ -74,7 +74,7 @@ export default function Home() {
         <div className={styles.anothercard} >
         <h1 className={styles.contentText}>Smart JPEG, PNG and JPG compressions</h1>
 
-<div>
+        <div>
   <div>
     <h2>What is the purpose of ILoveCompress?</h2>
     <p>The smart lossy compression techniques used by ILoveCompress will result in lower WEBP, JPEG, and PNG files. By deliberately lowering the number of colours in the image, fewer bytes are required to store the data. Despite the effect being barely invisible, the difference in file size is significant.</p>
