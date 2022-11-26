@@ -3,7 +3,6 @@ import DrawerAppBar from "./navbar";
 import styles from "../styles/Home.module.css";
 
 import Loader from "../components/loader";
-import axios from "axios";
 export default function Blog() {
   const [blogData, setblogData] = useState("");
   useEffect(() => {
@@ -12,11 +11,14 @@ export default function Blog() {
 
   const callAPI = async () => {
     try {
-      const res = await axios.get(
-        "http://admin.ilovecompress.appskym.com/api/blogs"
+      await fetch("http://admin.ilovecompress.appskym.com/api/blogs").then(
+        (data) => {
+          console.log(data.json());
+        }
       );
-      const data = await res;
-      console.log(data.data, "data-");
+      // console.log(res);
+      // console.log(res.body);
+      // console.log(res.data, "data-");
       setblogData("");
     } catch (err) {
       console.log(err, "error from api");

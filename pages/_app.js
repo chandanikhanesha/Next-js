@@ -36,40 +36,8 @@ function MyApp({ Component, pageProps }) {
       })(window,document,'script','dataLayer','GTM-KJ6QQWD');`,
           }}
         ></script>
-
-        <script     strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: `function gtag_report_conversion(url) {
-            var callback = function () {
-              if (typeof (url) != 'undefined') {
-                window.location = url;
-              }
-            };
-            gtag('event', 'conversion', {
-              'send_to': 'AW-10835311766/S_BWCNDCj4MYEJb51q4o',
-              'event_callback': callback
-            });
-            return false;
-          }
-        `}}>
-
-
-        </script>
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10835311766"></script>
-        <script  strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html:
-          ` window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
-
-          gtag('config', 'AW-10835311766')`
-          }}>
-         
-        </script>
-      
       </Helmet>
 
-      {/* <Script strategy="lazyOnload"></Script> */}
       <Component key={router.asPath} {...pageProps} />
     </>
   );

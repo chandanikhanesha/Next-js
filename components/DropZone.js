@@ -10,6 +10,7 @@ import MuiAlert from "@mui/material/Alert";
 import Router from "next/router";
 import { useRouter } from "next/router";
 import imageCompression from "browser-image-compression";
+import gtag_report_conversion from "../lib/trackings";
 
 let sendOrignal = [];
 let sendCompress = [];
@@ -22,42 +23,27 @@ const DropZone = ({ data, dispatch }) => {
   const [isLoad, setisLoad] = useState();
   const [errormsg, seterror] = useState("");
   const [open, setopen] = useState(false);
-  const [snackMsg,setsnackMsg]=useState('')
+  const [snackMsg, setsnackMsg] = useState("");
 
   const [vertical, setvertical] = useState("top");
   const [horizontal, sethorizontal] = useState("center");
 
-
-  // function gtag_report_conversion(url) {
-  //   var callback = function () {
-  //     if (typeof (url) != 'undefined' && typeof window !== 'undefined') {
-  //       window.location = url;
-  //     }
-  //   };
-
-  //   if (typeof window !== 'undefined') {
-  //     window.gtag('event', 'conversion', {
-  //       'send_to': 'AW-10835311766/S_BWCNDCj4MYEJb51q4o',
-  //       'event_callback': callback
-  //     });
-  //   }
-
-  //   return false;
-  // }
   const handleClose = () => {
     setopen(false);
   };
   const handleDragEnter = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    // gtag_report_conversion()
+    gtag_report_conversion();
+    // gtag_report_conversion();
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: true });
   };
 
   const handleDragLeave = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    // gtag_report_conversion()
+    gtag_report_conversion();
+    // gtag_report_conversion();
 
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: false });
   };
@@ -65,7 +51,8 @@ const DropZone = ({ data, dispatch }) => {
   const handleDragOver = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    // gtag_report_conversion()
+    gtag_report_conversion();
+    // gtag_report_conversion();
 
     e.dataTransfer.dropEffect = "copy";
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: true });
@@ -74,7 +61,8 @@ const DropZone = ({ data, dispatch }) => {
   const handleDrop = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    // gtag_report_conversion()
+    gtag_report_conversion();
+    // gtag_report_conversion();
 
     let files = [...e.dataTransfer.files];
 
@@ -93,17 +81,18 @@ const DropZone = ({ data, dispatch }) => {
   };
 
   const handleFileSelect = (e) => {
-    // gtag_report_conversion()
+    gtag_report_conversion();
+    // gtag_report_conversion();
 
     let files = [...e.target.files];
-console.log("files",files)
-    if (files && files.length > 0 && files.length<=25) {
+    // console.log("files", files);
+    if (files && files.length > 0 && files.length <= 25) {
       const existingFiles = data.fileList.map((f) => f.name);
       // console.log(files, "existingFiles");
 
       files.map((f) => {
         if (!f.type.match("image.*")) {
-          setsnackMsg('Uploaded file is not a image type!')
+          setsnackMsg("Uploaded file is not a image type!");
           setopen(true);
         }
       });
@@ -114,17 +103,15 @@ console.log("files",files)
 
       dispatch({ type: "ADD_FILE_TO_LIST", files });
     }
-    if(files.length>=25){
-        setsnackMsg('Max upload of the image is 25')
-         setopen(true);
-}
-
+    if (files.length >= 25) {
+      setsnackMsg("Max upload of the image is 25");
+      setopen(true);
+    }
   };
 
   // to handle file uploads
   const uploadFiles = async () => {
-
-    console.log(data.fileList,"data.fileLists");
+    console.log(data.fileList, "data.fileLists");
     sendCompress = [];
     let show = true;
     await data.fileList.map(async (f, index) => {
@@ -230,8 +217,12 @@ console.log("files",files)
               />
               <label htmlFor="fileSelect">Upload your files</label>
             </div>
-            <span className={styles.warn}>Warning :-  <p style={{display:'contents'}}>You will lost the data if you will refresh the page</p></span>
-
+            <span className={styles.warn}>
+              Warning :-{" "}
+              <p style={{ display: "contents" }}>
+                You will lost the data if you will refresh the page
+              </p>
+            </span>
           </div>
 
           <Snackbar
@@ -247,7 +238,6 @@ console.log("files",files)
               sx={{ width: "100%" }}
             >
               {snackMsg}
-              
             </Alert>
           </Snackbar>
         </div>
