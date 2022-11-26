@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.7",
+    "axios": "^1.2.0",
     "browser-image-compression": "^2.0.0",
     "file-saver": "^2.0.5",
     "jszip": "^3.10.1",
