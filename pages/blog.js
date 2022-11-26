@@ -11,15 +11,12 @@ export default function Blog() {
 
   const callAPI = async () => {
     try {
-      await fetch("http://admin.ilovecompress.appskym.com/api/blogs").then(
-        (data) => {
-          console.log(data.json());
-        }
-      );
-      // console.log(res);
-      // console.log(res.body);
-      // console.log(res.data, "data-");
-      setblogData("");
+      const res = await fetch(
+				`http://admin.ilovecompress.appskym.com/api/blogs`
+			);
+			const data = await res.json();
+      console.log(data.data,"data-");
+		  setblogData("");
     } catch (err) {
       console.log(err, "error from api");
     }
