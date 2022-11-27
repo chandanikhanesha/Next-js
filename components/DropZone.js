@@ -35,7 +35,6 @@ const DropZone = ({ data, dispatch }) => {
     e.preventDefault();
     e.stopPropagation();
     gtag_report_conversion();
-    // gtag_report_conversion();
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: true });
   };
 
@@ -43,7 +42,6 @@ const DropZone = ({ data, dispatch }) => {
     e.preventDefault();
     e.stopPropagation();
     gtag_report_conversion();
-    // gtag_report_conversion();
 
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: false });
   };
@@ -52,7 +50,6 @@ const DropZone = ({ data, dispatch }) => {
     e.preventDefault();
     e.stopPropagation();
     gtag_report_conversion();
-    // gtag_report_conversion();
 
     e.dataTransfer.dropEffect = "copy";
     dispatch({ type: "SET_IN_DROP_ZONE", inDropZone: true });
@@ -62,7 +59,6 @@ const DropZone = ({ data, dispatch }) => {
     e.preventDefault();
     e.stopPropagation();
     gtag_report_conversion();
-    // gtag_report_conversion();
 
     let files = [...e.dataTransfer.files];
 
@@ -82,7 +78,6 @@ const DropZone = ({ data, dispatch }) => {
 
   const handleFileSelect = (e) => {
     gtag_report_conversion();
-    // gtag_report_conversion();
 
     let files = [...e.target.files];
     // console.log("files", files);

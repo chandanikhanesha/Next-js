@@ -69,6 +69,8 @@ export default function Home() {
       })(window,document,'script','dataLayer','GTM-KJ6QQWD');`,
           }}
         ></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5974406592904832" crossorigin="anonymous"></script>
       </Head>
 
       <main className={styles.main} id="mainPage">
