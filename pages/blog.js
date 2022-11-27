@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import DrawerAppBar from "./navbar";
 import styles from "../styles/Home.module.css";
 
 import Loader from "../components/loader";
+import Head from "next/head";
 export default function Blog() {
   const [blogData, setblogData] = useState("");
   useEffect(() => {
@@ -22,7 +23,11 @@ export default function Blog() {
     }
   };
   return (
+    
     <div>
+    <Head>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    </Head>
       <DrawerAppBar />
       <div className={styles.outerCard}>
         <div className={styles.anothercard}>
