@@ -36,7 +36,6 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <title>
           Compress High-Quality Images Online in Less than a Second - Reduce by
           80%
@@ -45,6 +44,7 @@ export default function Home() {
           name="description"
           content="Compress unlimited images for free in any format like jpg, png, jpeg, webp, gif..., ilovecompress is an online image compressor that helps you to compress images by more than 80% maintaining the original color quality of the picture. Try Now"
         />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <link rel="icon" href="/favicon.ico" />
         <script
           async
