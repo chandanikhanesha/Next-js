@@ -1,9 +1,15 @@
 import React from 'react';
 import DrawerAppBar from "./navbar";
 import styles from "../styles/Home.module.css";
+import Head from "next/head";
+
 function Privacypolicy() {
   return (
          <div>
+          <Head>
+            <title>I Love Compress - Privacy Policy</title>
+            <link rel="canonical" href="https://www.ilovecompress.com/privacypolicy/"/>
+          </Head>
           <DrawerAppBar/>
           <div className={styles.outerCard}>
           <div className={styles.anothercard}>

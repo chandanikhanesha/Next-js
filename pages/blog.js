@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import DrawerAppBar from "./navbar";
 import styles from "../styles/Home.module.css";
-
 import Loader from "../components/loader";
 import Head from "next/head";
 export default function Blog() {
@@ -13,7 +12,7 @@ export default function Blog() {
   const callAPI = async () => {
     try {
       const res = await fetch(
-				`http://admin.ilovecompress.appskym.com/api/blogs`
+				``
 			);
 			const data = await res.json();
       console.log(data.data,"data-");
@@ -26,7 +25,8 @@ export default function Blog() {
     
     <div>
     <Head>
-      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+      <title>I Love Compress - Blogs</title>
+      <link rel="canonical" href="https://www.ilovecompress.com/blog/"/>
     </Head>
       <DrawerAppBar />
       <div className={styles.outerCard}>

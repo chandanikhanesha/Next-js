@@ -1,9 +1,17 @@
 import React from 'react';
 import DrawerAppBar from "./navbar";
 import styles from "../styles/Home.module.css";
+import Head from "next/head";
+
 function About() {
+  
   return (
-    <div>   <DrawerAppBar/>
+    <div>   
+      <Head>
+        <title>I Love Compress - About Us</title>
+        <link rel="canonical" href="https://www.ilovecompress.com/about/"/>
+      </Head>
+      <DrawerAppBar/>
     <div className={styles.outerCard}>
     <div className={styles.anothercard}>
 <h2>
