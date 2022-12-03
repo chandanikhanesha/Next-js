@@ -48,9 +48,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <script
           async
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=AW-10835311766"
         ></script>
         <script
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
   function gtag(){window.dataLayer.push(arguments);}
@@ -71,7 +73,8 @@ export default function Home() {
           }}
         ></script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5974406592904832" crossorigin="anonymous"></script>
+    <script async strategy="afterInteractive" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5974406592904832" crossorigin="anonymous"></script>
+    
       </Head>
 
       <main className={styles.main} id="mainPage">
