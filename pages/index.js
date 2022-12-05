@@ -73,7 +73,7 @@ export default function Home() {
           }}
         ></script>
 
-    <script async strategy="afterInteractive" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5974406592904832" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849" crossorigin="anonymous"></script>
     
       </Head>
 
