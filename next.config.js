@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  images: {
+    domains: ["ilovecompress.appskym.com", "localhost", "picsum.photos"], // <== Domain name
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

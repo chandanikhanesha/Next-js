@@ -31,12 +31,12 @@ const FilePreview = ({ fileData, dispatch }) => {
 
     dispatch({ type: "REMOVE_FILE_TO_LIST", i });
   };
-return (
+  return (
     <div className={styles.fileList}>
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
+        columns={{ xs: 2, sm: 8, md: 12 }}
         direction="row"
         justifyContent="center"
         alignItems="center"
@@ -66,23 +66,24 @@ return (
                       width: "inherit",
                     }}
                     action={
-                      show.includes(index) &&
-                      <IconButton
-                        aria-label="settings"
-                        onClick={() => deleteImage(index)}
-                        style={{
-                          backgroundColor: "white",
-                          height: "30px",
-                          width: "30px",
+                      show.includes(index) && (
+                        <IconButton
+                          aria-label="settings"
+                          onClick={() => deleteImage(index)}
+                          style={{
+                            backgroundColor: "white",
+                            height: "30px",
+                            width: "30px",
 
-                          marginTop: "2px",
-                          marginRight: "6px",
+                            marginTop: "2px",
+                            marginRight: "6px",
 
-                          boxShadow: " 0px 16px 40px #19203330",
-                        }}
-                      >
-                        <ClearIcon style={{ fontSize: "17px" }} />
-                      </IconButton>
+                            boxShadow: " 0px 16px 40px #19203330",
+                          }}
+                        >
+                          <ClearIcon style={{ fontSize: "17px" }} />
+                        </IconButton>
+                      )
                     }
                   ></CardHeader>
                   <Image
@@ -96,10 +97,7 @@ return (
                   />
                   <CardContent style={{ padding: "5px" }}>
                     <div key={f.name} className={styles.fileName}>
-                      <p className={styles.flexClass}>
-                        {" "}
-                        {f.name} 
-                      </p>
+                      <p className={styles.flexClass}> {f.name}</p>
                       <b>[{size}]</b>
                     </div>
                   </CardContent>
