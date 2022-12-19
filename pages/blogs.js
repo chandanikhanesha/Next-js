@@ -123,13 +123,15 @@ export default function Blog() {
                               <h5 className={styles.blogLastCard}>
                                 {item.short_description}
                               </h5>
-                              <Link
-                                className={styles.readMore}
-                                onClick={() =>
-                                  localStorage.setItem("subBlogId", item.id)
-                                }
-                                href="/subBlogs"
-                              >{`Read More ->`}</Link>
+                              <div style={{ color: "blue" }}>
+                                <Link
+                                  className={styles.readMore}
+                                  onClick={() =>
+                                    localStorage.setItem("subBlogId", item.id)
+                                  }
+                                  href="/subBlogs"
+                                >{`Read More ->`}</Link>
+                              </div>
                             </CardContent>
                           </Card>
                         </Grid>
