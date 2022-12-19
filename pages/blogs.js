@@ -17,6 +17,7 @@ import CardHeader from "@mui/material/CardHeader";
 import Grid from "@mui/material/Grid";
 import Pagination from "@mui/material/Pagination";
 import { useRouter } from "next/router";
+import Link from "next/link";
 export default function Blog() {
   const [blogData, setblogData] = useState([]);
   const [count, setcount] = useState(0);
@@ -122,13 +123,13 @@ export default function Blog() {
                               <h5 className={styles.blogLastCard}>
                                 {item.short_description}
                               </h5>
-                              <a
+                              <Link
                                 className={styles.readMore}
                                 onClick={() =>
                                   localStorage.setItem("subBlogId", item.id)
                                 }
                                 href="/subBlogs"
-                              >{`Read More ->`}</a>
+                              >{`Read More ->`}</Link>
                             </CardContent>
                           </Card>
                         </Grid>

@@ -17,7 +17,7 @@ import CardHeader from "@mui/material/CardHeader";
 import Grid from "@mui/material/Grid";
 
 import { useRouter } from "next/router";
-export default function subBlogs() {
+export default function SubBlogs() {
   const [blogData, setblogData] = useState([]);
 
   const query = useRouter();
