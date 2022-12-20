@@ -39,6 +39,10 @@ export default function Blog() {
       console.log(err, "error from api");
     }
   };
+  const handleClick = (e, path, item) => {
+    localStorage.setItem("subBlogId", item.slug);
+    router.push("/subBlogs");
+  };
 
   const handleChange = async (event, value) => {
     setcurrentPage(value);
@@ -124,17 +128,12 @@ export default function Blog() {
                                 {item.short_description}
                               </h5>
                               <div style={{ color: "blue" }}>
-                                <Link
+                                <div
                                   className={styles.readMore}
-                                  onClick={() =>
-                                    localStorage.setItem("subBlogId",item.id)
+                                  onClick={(e) =>
+                                    handleClick(e, "/subBlogs", item)
                                   }
-                                  // href="/subBlogs"
-                                  href={{
-                                    pathname: "/subBlogs",
-                                    query: {slug: item.slug},
-                                  }}
-                                >{`Read More ->`}</Link>
+                                >{`Read More ->`}</div>
                               </div>
                             </CardContent>
                           </Card>

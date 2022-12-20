@@ -18,23 +18,18 @@ import Grid from "@mui/material/Grid";
 
 import { useRouter } from "next/router";
 
-
 export default function SubBlogs() {
   const context = useRouter();
-  const slug = context.query.slug;
   const [blogData, setblogData] = useState([]);
   const [id, setId] = useState();
 
-  
   useEffect(() => {
-    console.log("CONTEXT", context.query.slug);
     callAPI();
   }, []);
 
   const callAPI = async () => {
-
     // const [id,setID] = useState(localStorage.getItem("subBlogId"));
-    // console.log(localStorage.getItem("subBlogId"), "query");
+    const slug = localStorage.getItem("subBlogId");
 
     try {
       const res = await fetch(
@@ -58,7 +53,7 @@ export default function SubBlogs() {
 
       <div className={styles.outerCard}>
         <div className={styles.anothercard}>
-          {blogData &&blogData.length == 0 ? (
+          {blogData && blogData.length == 0 ? (
             <div
               style={{
                 display: "flex",
