@@ -17,21 +17,28 @@ import CardHeader from "@mui/material/CardHeader";
 import Grid from "@mui/material/Grid";
 
 import { useRouter } from "next/router";
-export default function SubBlogs() {
-  const [blogData, setblogData] = useState([]);
 
-  const query = useRouter();
+
+export default function SubBlogs() {
+  const context = useRouter();
+  const slug = context.query.slug;
+  const [blogData, setblogData] = useState([]);
+  const [id, setId] = useState();
+
+  
   useEffect(() => {
+    console.log("CONTEXT", context.query.slug);
     callAPI();
   }, []);
 
   const callAPI = async () => {
-    const id = localStorage.getItem("subBlogId");
-    console.log(id, "query");
+
+    // const [id,setID] = useState(localStorage.getItem("subBlogId"));
+    // console.log(localStorage.getItem("subBlogId"), "query");
 
     try {
       const res = await fetch(
-        `https://ilovecompress.appskym.com/api/blog-by-id?blog_id=${id}`
+        `https://ilovecompress.appskym.com/api/blog-by-slug?slug=${slug}`
       );
       const data = await res.json();
       //   console.log(data, "data-");
@@ -51,7 +58,7 @@ export default function SubBlogs() {
 
       <div className={styles.outerCard}>
         <div className={styles.anothercard}>
-          {blogData.length == 0 ? (
+          {blogData &&blogData.length == 0 ? (
             <div
               style={{
                 display: "flex",
@@ -63,10 +70,10 @@ export default function SubBlogs() {
             </div>
           ) : (
             <div>
-              <h2>{blogData.title}</h2>
+              <h2>{blogData && blogData.title}</h2>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: blogData.description,
+                  __html: blogData && blogData.description,
                 }}
               />
             </div>

@@ -12,7 +12,6 @@
 import "../styles/globals.css";
 import Script from "next/script";
 import { Helmet } from "react-helmet";
-
 import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
@@ -23,7 +22,7 @@ function MyApp({ Component, pageProps }) {
       strategy="lazyOnload"
       src={`https://www.googletagmanager.com/gtag/js?id=G-G98H7F44RG`}
     /> */}
-
+   
       <Helmet>
         <script
           id="gtm-script"

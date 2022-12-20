@@ -18,7 +18,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "PrivacyPolicy"];
+const navItems = ["Home", "About", "PrivacyPolicy", "Blogs"];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -32,7 +32,7 @@ function DrawerAppBar(props) {
   useEffect(() => {
     const url = router.pathname.split("/")[1];
     console.log(url, "url");
-    if (url !== "success" && url !== "subBlogs" && url !== "blogs" && url) {
+    if (url !== "success" && url !== "subBlogs" && url) {
       document.getElementById(url).style.backgroundColor = "#192033";
       document.getElementById(url).style.color = "white";
     }

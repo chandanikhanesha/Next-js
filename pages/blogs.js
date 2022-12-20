@@ -127,9 +127,13 @@ export default function Blog() {
                                 <Link
                                   className={styles.readMore}
                                   onClick={() =>
-                                    localStorage.setItem("subBlogId", item.id)
+                                    localStorage.setItem("subBlogId",item.id)
                                   }
-                                  href="/subBlogs"
+                                  // href="/subBlogs"
+                                  href={{
+                                    pathname: "/subBlogs",
+                                    query: {slug: item.slug},
+                                  }}
                                 >{`Read More ->`}</Link>
                               </div>
                             </CardContent>
