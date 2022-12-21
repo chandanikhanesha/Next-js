@@ -54,9 +54,11 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+        <ListItemButton>Laggo</ListItemButton>
+        {/* {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton
+              href="http://www.google.com/"
               sx={{ textAlign: "center" }}
               id={item.toLowerCase()}
               onClick={() =>
@@ -68,7 +70,7 @@ function DrawerAppBar(props) {
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
-        ))}
+        ))} */}
       </List>
     </Box>
   );
@@ -130,6 +132,9 @@ function DrawerAppBar(props) {
           >
             {navItems.map((item) => (
               <Button
+                href={`https://www.ilovecompress.com${
+                  item == "Home" ? "/" : `/${item.toLowerCase()}`
+                }`}
                 key={item}
                 sx={{ color: "#192033" }}
                 id={item.toLowerCase()}
