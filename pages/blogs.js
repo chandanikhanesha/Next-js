@@ -41,7 +41,7 @@ export default function Blog() {
   };
   const handleClick = (e, path, item) => {
     localStorage.setItem("subBlogId", item.slug);
-    router.push("/subBlogs");
+    router.push(`/subBlogs?slug=${item.slug}`);
   };
 
   const handleChange = async (event, value) => {
@@ -127,13 +127,17 @@ export default function Blog() {
                               <h5 className={styles.blogLastCard}>
                                 {item.short_description}
                               </h5>
-                              <div style={{ color: "blue" }}>
+                              <div style={{ color: "blue", cursor: "pointer" }}>
                                 <div
                                   className={styles.readMore}
                                   onClick={(e) =>
                                     handleClick(e, "/subBlogs", item)
                                   }
-                                >{`Read More ->`}</div>
+                                >
+                                  <a
+                                    href={`https://www.ilovecompress.com/subBlogs?slug=${item.slug}`}
+                                  >{`Read More ->`}</a>
+                                </div>
                               </div>
                             </CardContent>
                           </Card>
