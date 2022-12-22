@@ -38,6 +38,8 @@ function DrawerAppBar(props) {
     }
   }, []);
 
+  
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -54,23 +56,26 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        <ListItemButton>Laggo</ListItemButton>
-        {/* {navItems.map((item) => (
+        {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton
-              href="http://www.google.com/"
+
+              href={`http://localhost:3000${
+                item == "Home" ? "/" : `/${item.toLowerCase()}`
+              }`}
+
               sx={{ textAlign: "center" }}
               id={item.toLowerCase()}
-              onClick={() =>
-                router.push({
-                  pathname: item == "Home" ? "/" : `/${item.toLowerCase()}`,
-                })
-              }
+              // onClick={() =>
+              //   router.push({
+              //     pathname: item == "Home" ? "/" : `/${item.toLowerCase()}`,
+              //   })
+              // }
             >
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
-        ))} */}
+        ))}
       </List>
     </Box>
   );
@@ -132,17 +137,17 @@ function DrawerAppBar(props) {
           >
             {navItems.map((item) => (
               <Button
-                href={`https://www.ilovecompress.com${
+                href={`http://localhost:3000${
                   item == "Home" ? "/" : `/${item.toLowerCase()}`
                 }`}
                 key={item}
                 sx={{ color: "#192033" }}
                 id={item.toLowerCase()}
-                onClick={() =>
-                  router.push({
-                    pathname: item == "Home" ? "/" : `/${item.toLowerCase()}`,
-                  })
-                }
+                // onClick={() =>
+                //   router.push({
+                //     pathname: item == "Home" ? "/" : `/${item.toLowerCase()}`,
+                //   })
+                // }
                 className={styles.navBtn}
               >
                 {item}

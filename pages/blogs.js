@@ -41,7 +41,7 @@ export default function Blog() {
   };
   const handleClick = (e, path, item) => {
     localStorage.setItem("subBlogId", item.slug);
-    router.push(`/subBlogs?slug=${item.slug}`);
+    // router.push(`/subBlogs?slug=${item.slug}`);
   };
 
   const handleChange = async (event, value) => {
