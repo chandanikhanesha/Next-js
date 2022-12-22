@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <!--  created with sitemap generator https://octopus.do  -->
 
-  <sitemap>
+  <urlset >
         <loc>https://www.ilovecompress.com</loc>
         <lastmod>2022-12-22</lastmod>
-  </sitemap>
-    <sitemap>
+  </urlset >
+    <urlset >
         <loc>https://www.ilovecompress.com/about</loc>
         <lastmod>2022-12-22</lastmod>
-  </sitemap>
-    <sitemap>
+  </urlset >
+    <urlset >
         <loc>https://www.ilovecompress.com/privacypolicy</loc>
         <lastmod>2022-12-22</lastmod>
-  </sitemap>
-    <sitemap>
+  </urlset >
+    <urlset >
         <loc>https://www.ilovecompress.com/blogs</loc>
         <lastmod>2022-12-22</lastmod>
-  </sitemap>
-</sitemapindex>
+  </urlset >
+</urlset >
