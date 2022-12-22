@@ -2,20 +2,20 @@
 <urlset  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <!--  created with sitemap generator https://octopus.do  -->
 
-  <urlset >
+  <url >
         <loc>https://www.ilovecompress.com</loc>
         <lastmod>2022-12-22</lastmod>
-  </urlset >
-    <urlset >
+  </url >
+    <url >
         <loc>https://www.ilovecompress.com/about</loc>
         <lastmod>2022-12-22</lastmod>
-  </urlset >
-    <urlset >
+  </url >
+    <url >
         <loc>https://www.ilovecompress.com/privacypolicy</loc>
         <lastmod>2022-12-22</lastmod>
-  </urlset >
-    <urlset >
+  </url >
+    <url >
         <loc>https://www.ilovecompress.com/blogs</loc>
         <lastmod>2022-12-22</lastmod>
-  </urlset >
+  </url >
 </urlset >
