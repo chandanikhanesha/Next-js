@@ -60,7 +60,7 @@ function DrawerAppBar(props) {
           <ListItem key={item} disablePadding>
             <ListItemButton
 
-              href={`http://localhost:3000${
+              href={`https://ilovecompress.appskym.com${
                 item == "Home" ? "/" : `/${item.toLowerCase()}`
               }`}
 
@@ -137,7 +137,7 @@ function DrawerAppBar(props) {
           >
             {navItems.map((item) => (
               <Button
-                href={`http://localhost:3000${
+                href={`https://ilovecompress.appskym.com${
                   item == "Home" ? "/" : `/${item.toLowerCase()}`
                 }`}
                 key={item}
