@@ -3,9 +3,7 @@ import React, { useReducer } from "react";
 import Head from "next/head";
 import DropZone from "../components/DropZone";
 import styles from "../styles/Home.module.css";
-import Image from "next/image";
 import { useRouter } from "next/router";
-import Router from "next/router";
 import DrawerAppBar from "./navbar";
 export default function Home() {
   const router = useRouter();

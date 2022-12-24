@@ -3,19 +3,6 @@ import DrawerAppBar from "./navbar";
 import styles from "../styles/Home.module.css";
 import Loader from "../components/loader";
 import Head from "next/head";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
-import ListSubheader from "@mui/material/ListSubheader";
-import IconButton from "@mui/material/IconButton";
-import InfoIcon from "@mui/icons-material/Info";
-import Image from "next/image";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
-import Grid from "@mui/material/Grid";
-
 import { useRouter } from "next/router";
 
 export default function SubBlogs() {
