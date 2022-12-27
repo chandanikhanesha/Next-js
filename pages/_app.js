@@ -1,11 +1,14 @@
 import "../styles/globals.css";
 import { Helmet } from "react-helmet";
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  
   return (
     <>
+    
       {/* <Script
       strategy="lazyOnload"
       src={`https://www.googletagmanager.com/gtag/js?id=G-G98H7F44RG`}

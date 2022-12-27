@@ -32,7 +32,7 @@ function DrawerAppBar(props) {
   useEffect(() => {
     const url = router.pathname.split("/")[1];
     console.log(url, "url");
-    if (url !== "success" && url !== "subBlogs" && url) {
+    if (url !== "success" && url !== "subblogs" && url) {
       document.getElementById(url).style.backgroundColor = "#192033";
       document.getElementById(url).style.color = "white";
     }

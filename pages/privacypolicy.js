@@ -8,7 +8,7 @@ function Privacypolicy() {
          <div>
           <Head>
             <title>I Love Compress - Privacy Policy</title>
-            <link rel="canonical" href="https://www.ilovecompress.com/privacypolicy/"/>
+            <link rel="canonical" href="https://www.ilovecompress.com/privacypolicy"/>
           </Head>
           <DrawerAppBar/>
           <div className={styles.outerCard}>

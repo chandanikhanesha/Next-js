@@ -35,7 +35,7 @@ export default function Blog({ blogData, count }) {
     <div>
       <Head>
         <title>I Love Compress - Blogs</title>
-        <link rel="canonical" href="https://www.ilovecompress.com/blog/" />
+        <link rel="canonical" href="https://www.ilovecompress.com/blogs"/>
       </Head>
       <DrawerAppBar />
       <div className={styles.main}>
@@ -81,7 +81,7 @@ export default function Blog({ blogData, count }) {
                           </p>
 
                           <a
-                            href={`https://www.ilovecompress.com/subBlogs?slug=${item.slug}`}
+                            href={`https://www.ilovecompress.com/subblogs/${item.slug}`}
                           >
                             <Image
                               src={item.thumbnail_image}
@@ -90,7 +90,7 @@ export default function Blog({ blogData, count }) {
                               width={700}
                               height={400}
                               className={styles.Image}
-                              onClick={(e) => handleClick(e, "/subBlogs", item)}
+                              onClick={(e) => handleClick(e, "/subBlog", item)}
                               // blurDataURL="data:..." automatically provided
                               // placeholder="blur" // Optional blur-up while loading
                             />

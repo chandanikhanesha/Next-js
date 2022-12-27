@@ -9,7 +9,7 @@ function About() {
     <div>   
       <Head>
         <title>I Love Compress - About Us</title>
-        <link rel="canonical" href="https://www.ilovecompress.com/about/"/>
+        <link rel="canonical" href="https://www.ilovecompress.com/about"/>
       </Head>
       <DrawerAppBar/>
     <div className={styles.outerCard}>

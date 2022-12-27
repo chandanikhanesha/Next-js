@@ -38,11 +38,12 @@ export default function Home() {
           Compress High-Quality Images Online in Less than a Second - Reduce by
           80%
         </title>
+          <link rel="canonical" href="https://www.ilovecompress.com"/>
         <meta
           name="description"
           content="Compress unlimited images for free in any format like jpg, png, jpeg, webp, gif..., ilovecompress is an online image compressor that helps you to compress images by more than 80% maintaining the original color quality of the picture. Try Now"
         />
-        <link rel="canonical" href="https://www.ilovecompress.com/" />
+        {/* <link rel="canonical" href="https://www.ilovecompress.com/" /> */}
         <link rel="icon" href="/favicon.ico" />
         <script
           async
@@ -74,7 +75,7 @@ export default function Home() {
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
       </Head>
 

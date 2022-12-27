@@ -2,20 +2,40 @@
 <urlset  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <!--  created with sitemap generator https://octopus.do  -->
 
-  <url >
+  <urlset >
         <loc>https://www.ilovecompress.com</loc>
         <lastmod>2022-12-22</lastmod>
-  </url >
-    <url >
+  </urlset >
+    <urlset >
         <loc>https://www.ilovecompress.com/about</loc>
         <lastmod>2022-12-22</lastmod>
-  </url >
-    <url >
+  </urlset >
+    <urlset >
         <loc>https://www.ilovecompress.com/privacypolicy</loc>
         <lastmod>2022-12-22</lastmod>
-  </url >
-    <url >
+  </urlset >
+    <urlset >
         <loc>https://www.ilovecompress.com/blogs</loc>
         <lastmod>2022-12-22</lastmod>
-  </url >
+  </urlset >
+   <urlset >
+        <loc>https://www.ilovecompress.com/subBlogs?slug=top-7-automation-testing-software-in-2023</loc>
+        <lastmod>2022-12-22</lastmod>
+  </urlset >
+   <urlset >
+        <loc>https://www.ilovecompress.com/subBlogs?slug=top-video-editing-software-2023</loc>
+        <lastmod>2022-12-22</lastmod>
+  </urlset >
+   <urlset >
+        <loc>https://www.ilovecompress.com/subBlogs?slug=top-photo-editin-software-2023</loc>
+        <lastmod>2022-12-22</lastmod>
+  </urlset >
+   <urlset >
+        <loc>https://www.ilovecompress.com/subBlogs?slug=things-to-know-about-an-image</loc>
+        <lastmod>2022-12-22</lastmod>
+  </urlset >
+   <urlset >
+        <loc>https://www.ilovecompress.com/subBlogs?slug=10-best-image-compressor-tools</loc>
+        <lastmod>2022-12-22</lastmod>
+  </urlset >
 </urlset >

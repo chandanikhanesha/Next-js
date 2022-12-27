@@ -1,11 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
-import DrawerAppBar from "./navbar";
-import styles from "../styles/Home.module.css";
-import Loader from "../components/loader";
+import DrawerAppBar from "../navbar";
+import styles from "../../styles/Home.module.css";
+import Loader from "../../components/loader";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-export default function SubBlogs() {
+export default function SubBlogs({slug}) {
   const context = useRouter();
   const [blogData, setblogData] = useState([]);
   const [id, setId] = useState();
@@ -23,7 +23,7 @@ export default function SubBlogs() {
         `https://ilovecompress.appskym.com/api/blog-by-slug?slug=${slug}`
       );
       const data = await res.json();
-      //   console.log(data, "data-");
+
       setblogData(data.data);
     } catch (err) {
       console.log(err, "error from api");
@@ -34,7 +34,7 @@ export default function SubBlogs() {
     <div>
       <Head>
         <title>I Love Compress - Blogs</title>
-        <link rel="canonical" href="https://www.ilovecompress.com/blog/" />
+        <link rel="canonical" href={`https://www.ilovecompress.com/subblogs/${slug}`} />
       </Head>
       <DrawerAppBar />
 
@@ -55,7 +55,7 @@ export default function SubBlogs() {
               <h2>{blogData && blogData.title}</h2>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: blogData && blogData.description,
+                  __html: blogData?.description,
                 }}
               />
             </div>
@@ -71,4 +71,10 @@ export default function SubBlogs() {
       </footer>
     </div>
   );
+}
+
+
+export async function getServerSideProps(context) {
+  const { slug } = context;
+  return { props: { slug: context.query.slug } };
 }
