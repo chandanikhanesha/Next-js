@@ -1,41 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
-<urlset  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<!--  created with sitemap generator https://octopus.do  -->
-
-  <urlset >
-        <loc>https://www.ilovecompress.com</loc>
-        <lastmod>2022-12-22</lastmod>
-  </urlset >
-    <urlset >
-        <loc>https://www.ilovecompress.com/about</loc>
-        <lastmod>2022-12-22</lastmod>
-  </urlset >
-    <urlset >
-        <loc>https://www.ilovecompress.com/privacypolicy</loc>
-        <lastmod>2022-12-22</lastmod>
-  </urlset >
-    <urlset >
-        <loc>https://www.ilovecompress.com/blogs</loc>
-        <lastmod>2022-12-22</lastmod>
-  </urlset >
-   <urlset >
-        <loc>https://www.ilovecompress.com/subBlogs?slug=top-7-automation-testing-software-in-2023</loc>
-        <lastmod>2022-12-22</lastmod>
-  </urlset >
-   <urlset >
-        <loc>https://www.ilovecompress.com/subBlogs?slug=top-video-editing-software-2023</loc>
-        <lastmod>2022-12-22</lastmod>
-  </urlset >
-   <urlset >
-        <loc>https://www.ilovecompress.com/subBlogs?slug=top-photo-editin-software-2023</loc>
-        <lastmod>2022-12-22</lastmod>
-  </urlset >
-   <urlset >
-        <loc>https://www.ilovecompress.com/subBlogs?slug=things-to-know-about-an-image</loc>
-        <lastmod>2022-12-22</lastmod>
-  </urlset >
-   <urlset >
-        <loc>https://www.ilovecompress.com/subBlogs?slug=10-best-image-compressor-tools</loc>
-        <lastmod>2022-12-22</lastmod>
-  </urlset >
-</urlset >
+<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://www.ilovecompress.com/</loc>
+	<lastmod>2022-12-28T18:21:44+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://www.ilovecompress.com/about</loc>
+	<lastmod>2022-12-28T18:21:44+01:00</lastmod>
+	<priority>0.2</priority>
+</url>
+<url>
+	<loc>https://www.ilovecompress.com/privacypolicy</loc>
+	<lastmod>2022-12-28T18:21:44+01:00</lastmod>
+	<priority>0.2</priority>
+</url>
+<url>
+	<loc>https://www.ilovecompress.com/blogs</loc>
+	<lastmod>2022-12-28T18:21:44+01:00</lastmod>
+	<priority>0.2</priority>
+</url>
+<url>
+	<loc>https://www.ilovecompress.com/subblogs/top-7-automation-testing-software-in-2023</loc>
+	<lastmod>2022-12-28T18:21:49+01:00</lastmod>
+	<priority>0.1</priority>
+</url>
+<url>
+	<loc>https://www.ilovecompress.com/subblogs/top-video-editing-software-2023</loc>
+	<lastmod>2022-12-28T18:21:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://www.ilovecompress.com/subblogs/top-photo-editin-software-2023</loc>
+	<lastmod>2022-12-28T18:21:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://www.ilovecompress.com/subblogs/things-to-know-about-an-image</loc>
+	<lastmod>2022-12-28T18:21:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://www.ilovecompress.com/subblogs/10-best-image-compressor-tools</loc>
+	<lastmod>2022-12-28T18:21:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+</urlset>
