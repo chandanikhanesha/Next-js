@@ -117,7 +117,7 @@ export default function Blog({ blogData, count }) {
                       </div>
                     );
                   })}
-                <div style={{ display: "flex", justifyContent: "center" }}>
+                <div style={{ display: "flex", justifyContent: "center",marginTop:"10px" }}>
                   {" "}
                   <Pagination
                     count={Math.ceil(count)}

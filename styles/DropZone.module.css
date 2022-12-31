@@ -1,7 +1,6 @@
 .dropzone {
 
-  width: 980px;
-  height: 450px;
+  width: 850px;
   /* left: 230px;
   top: 234px; */
   /* padding: 20px; */
@@ -300,7 +299,7 @@ border-radius: 9px;
 .warn{
   display: flex;
   margin-top: 35px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 
   color: #e40c0c;
   font-size: 13px;

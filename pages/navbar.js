@@ -107,8 +107,9 @@ function DrawerAppBar(props) {
                 <Image
                   src="/Logo.jpg"
                   alt="Logo"
-                  width={190}
-                  height={63}
+                  width={140}
+                  height={40}
+                style={{marginTop:"-20px"}}
                 ></Image>
               </div>
               <MenuIcon />
@@ -128,7 +129,7 @@ function DrawerAppBar(props) {
                 })
               }
             >
-              <Image src="/Logo.jpg" alt="Logo" width={190} height={63}></Image>
+              <Image src="/Logo.jpg"  width={190} height={63} alt="mobileLogo"></Image>
             </div>
           </Typography>
           <Box
