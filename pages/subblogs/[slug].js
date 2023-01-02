@@ -5,13 +5,21 @@ import Loader from "../../components/loader";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-export default function SubBlogs({slug}) {
+export default function SubBlogs({ slug }) {
   const context = useRouter();
   const [blogData, setblogData] = useState([]);
   const [id, setId] = useState();
 
   useEffect(() => {
     callAPI();
+
+    var ads = document.getElementsByClassName("adsbygoogle").length;
+    for (var i = 0; i < ads; i++) {
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {}
+    }
+
   }, []);
 
   const callAPI = async () => {
@@ -34,37 +42,126 @@ export default function SubBlogs({slug}) {
     <div>
       <Head>
         <title>I Love Compress - Blogs</title>
-        <link rel="canonical" href={`https://www.ilovecompress.com/subblogs/${slug}`} />
+        <link
+          rel="canonical"
+          href={`https://www.ilovecompress.com/subblogs/${slug}`}
+        />
       </Head>
       <DrawerAppBar />
+      <div style={{ marginTop: "15px" }}>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
+          crossorigin="anonymous"
+        ></script>
 
+        <ins
+          class="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-3035659895284849"
+          data-ad-slot="8148464089"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+      </div>
       <div className={styles.outerCard}>
-       
-          {blogData && blogData.length != 0 ? (
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width:"370px"
-              }}
-            >
-              <Loader></Loader>
-            </div>
-          ) : (
+        <div style={{ display: "flex" }}>
+          <div>
             <div>
-               <div className={styles.anothercard}>
-              <h2>{blogData && blogData.title}</h2>
+              <script
+                async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
+                crossorigin="anonymous"
+              ></script>
+
+              <ins
+                class="adsbygoogle"
+                style={{ display: "block" }}
+                data-ad-client="ca-pub-3035659895284849"
+                data-ad-slot="1816658324"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
+            </div>
+            <div>
+              <script
+                async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
+                crossorigin="anonymous"
+              ></script>
+
+              <ins
+                class="adsbygoogle"
+                style={{ display: "block" }}
+                data-ad-client="ca-pub-3035659895284849"
+                data-ad-slot="1816658324"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
+            </div>
+          </div>
+          <div>
+            {blogData && blogData.length == 0 ? (
               <div
-                dangerouslySetInnerHTML={{
-                  __html: blogData?.description,
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "370px",
                 }}
-              />
+              >
+                <Loader></Loader>
+              </div>
+            ) : (
+              <div>
+                <div className={styles.anothercard}>
+                  <h2>{blogData && blogData.title}</h2>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: blogData?.description,
+                    }}
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+          <div>
+            <div>
+              <script
+                async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
+                crossorigin="anonymous"
+              ></script>
+
+              <ins
+                class="adsbygoogle"
+                style={{ display: "block" }}
+                data-ad-client="ca-pub-3035659895284849"
+                data-ad-slot="1816658324"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
             </div>
+            <div>
+              <script
+                async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
+                crossorigin="anonymous"
+              ></script>
+
+              <ins
+                class="adsbygoogle"
+                style={{ display: "block" }}
+                data-ad-client="ca-pub-3035659895284849"
+                data-ad-slot="1816658324"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
             </div>
-          )}
+          </div>
         </div>
-      
+      </div>
+
       <footer className={styles.footer}>
         <div className={styles.likeText}>Like It ! Share It</div>
         <div className={styles.copyrightText}>
@@ -75,7 +172,6 @@ export default function SubBlogs({slug}) {
     </div>
   );
 }
-
 
 export async function getServerSideProps(context) {
   const { slug } = context;

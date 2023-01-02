@@ -9,6 +9,15 @@ import Pagination from "@mui/material/Pagination";
 import { useRouter } from "next/router";
 
 export default function Blog({ blogData, count }) {
+  useEffect(() => {
+    var ads = document.getElementsByClassName("adsbygoogle").length;
+    for (var i = 0; i < ads; i++) {
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {}
+    }
+  }, []);
+
   const [currentPage, setcurrentPage] = useState(1);
 
   const callAPI = async () => {
@@ -35,72 +44,109 @@ export default function Blog({ blogData, count }) {
     <div>
       <Head>
         <title>I Love Compress - Blogs</title>
-        <link rel="canonical" href="https://www.ilovecompress.com/blogs"/>
+        <link rel="canonical" href="https://www.ilovecompress.com/blogs" />
       </Head>
       <DrawerAppBar />
       <div className={styles.main}>
         <div className={styles.outerCard}>
-          <div className={styles.anothercard}>
-            {blogData.length == 0 ? (
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Loader></Loader>
-              </div>
-            ) : (
+          <div style={{ display: "flex" }}>
+            <div>
               <div>
-                {blogData.length > 0 &&
-                  blogData.map((item, i) => {
-                    return (
-                      <div
-                        style={{
-                          boxShadow: "0px 16px 40px rgb(112 144 176 / 16%)",
-                          // marginRight: "20px",
-                        }}
-                        key={i}
-                      >
-                        <div>
-                          <h2 style={{ padding: "20px 0px 0px 10px" }}>
-                            {" "}
-                            {item.title}
-                          </h2>
-                          <p style={{ padding: "5px 0px 0px 10px" }}>
-                            {new Date(item.created_at).toLocaleDateString(
-                              "en-us",
-                              {
-                                weekday: "long",
-                                year: "numeric",
-                                month: "short",
-                                day: "numeric",
-                              }
-                            )}
-                          </p>
+                <script
+                  async
+                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
+                  crossorigin="anonymous"
+                ></script>
 
-                          <a
-                            href={`https://www.ilovecompress.com/subblogs/${item.slug}`}
-                          >
-                            <Image
-                              src={item.thumbnail_image}
-                              alt={item.title}
-                              loading="lazy"
-                              width={700}
-                              height={400}
-                              className={styles.Image}
-                              onClick={(e) => handleClick(e, "/subBlog", item)}
-                              // blurDataURL="data:..." automatically provided
-                              // placeholder="blur" // Optional blur-up while loading
-                            />
-                          </a>
+                <ins
+                  class="adsbygoogle"
+                  style={{ display: "block" }}
+                  data-ad-client="ca-pub-3035659895284849"
+                  data-ad-slot="1816658324"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"
+                ></ins>
+              </div>
+              <div>
+                <script
+                  async
+                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
+                  crossorigin="anonymous"
+                ></script>
 
-                          <CardContent style={{ padding: "5px" }}>
-                            <h4 className={styles.blogLastCard}>
-                              {item.short_description}
-                            </h4>
-                            {/* <div style={{ color: "blue", cursor: "pointer" }}>
+                <ins
+                  class="adsbygoogle"
+                  style={{ display: "block" }}
+                  data-ad-client="ca-pub-3035659895284849"
+                  data-ad-slot="1816658324"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"
+                ></ins>
+              </div>
+            </div>
+            <div className={styles.anothercard}>
+              {blogData.length == 0 ? (
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Loader></Loader>
+                </div>
+              ) : (
+                <div>
+                  {blogData.length > 0 &&
+                    blogData.map((item, i) => {
+                      return (
+                        <div
+                          style={{
+                            boxShadow: "0px 16px 40px rgb(112 144 176 / 16%)",
+                            // marginRight: "20px",
+                          }}
+                          key={i}
+                        >
+                          <div>
+                            <h2 style={{ padding: "20px 0px 0px 10px" }}>
+                              {" "}
+                              {item.title}
+                            </h2>
+                            <p style={{ padding: "5px 0px 0px 10px" }}>
+                              {new Date(item.created_at).toLocaleDateString(
+                                "en-us",
+                                {
+                                  weekday: "long",
+                                  year: "numeric",
+                                  month: "short",
+                                  day: "numeric",
+                                }
+                              )}
+                            </p>
+
+                            <a
+                              href={`https://www.ilovecompress.com/subblogs/${item.slug}`}
+                            >
+                              <Image
+                                src={item.thumbnail_image}
+                                alt={item.title}
+                                loading="lazy"
+                                width={700}
+                                height={400}
+                                className={styles.Image}
+                                onClick={(e) =>
+                                  handleClick(e, "/subBlog", item)
+                                }
+                                // blurDataURL="data:..." automatically provided
+                                // placeholder="blur" // Optional blur-up while loading
+                              />
+                            </a>
+
+                            <CardContent style={{ padding: "5px" }}>
+                              <h4 className={styles.blogLastCard}>
+                                {item.short_description}
+                              </h4>
+                              {/* <div style={{ color: "blue", cursor: "pointer" }}>
                               <div
                                 className={styles.readMore}
                                 onClick={(e) =>
@@ -112,21 +158,27 @@ export default function Blog({ blogData, count }) {
                                 >{`Read More ->`}</a>
                               </div>
                             </div> */}
-                          </CardContent>
+                            </CardContent>
+                          </div>
                         </div>
-                      </div>
-                    );
-                  })}
-                <div style={{ display: "flex", justifyContent: "center",marginTop:"10px" }}>
-                  {" "}
-                  <Pagination
-                    count={Math.ceil(count)}
-                    onChange={(e, v) => handleChange(e, v)}
-                  />
+                      );
+                    })}
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      marginTop: "10px",
+                    }}
+                  >
+                    {" "}
+                    <Pagination
+                      count={Math.ceil(count)}
+                      onChange={(e, v) => handleChange(e, v)}
+                    />
+                  </div>
                 </div>
-              </div>
-            )}
-            {/* 
+              )}
+              {/* 
           router.push(
                                 {
                                   pathname: "/subBlogs",
@@ -135,6 +187,41 @@ export default function Blog({ blogData, count }) {
                                 "/subBlogs",
                                 { shallow: true }
                               ) */}
+            </div>
+            <div>
+              <div>
+                <script
+                  async
+                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
+                  crossorigin="anonymous"
+                ></script>
+
+                <ins
+                  class="adsbygoogle"
+                  style={{ display: "block" }}
+                  data-ad-client="ca-pub-3035659895284849"
+                  data-ad-slot="1816658324"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"
+                ></ins>
+              </div>
+              <div>
+                <script
+                  async
+                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
+                  crossorigin="anonymous"
+                ></script>
+
+                <ins
+                  class="adsbygoogle"
+                  style={{ display: "block" }}
+                  data-ad-client="ca-pub-3035659895284849"
+                  data-ad-slot="1816658324"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"
+                ></ins>
+              </div>
+            </div>
           </div>
         </div>
 
