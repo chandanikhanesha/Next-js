@@ -5,7 +5,6 @@ import DropZone from "../components/DropZone";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import DrawerAppBar from "./navbar";
-import Script from "next/script";
 
 export default function Home() {
   useEffect(() => {
