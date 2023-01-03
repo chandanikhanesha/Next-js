@@ -60,9 +60,9 @@ export default function Blog({ blogData, count }) {
 
                 <ins
                   class="adsbygoogle"
-                  style={{ display: "block" }}
+                  style="display:block"
                   data-ad-client="ca-pub-3035659895284849"
-                  data-ad-slot="1816658324"
+                  data-ad-slot="6253585024"
                   data-ad-format="auto"
                   data-full-width-responsive="true"
                 ></ins>
@@ -76,9 +76,9 @@ export default function Blog({ blogData, count }) {
 
                 <ins
                   class="adsbygoogle"
-                  style={{ display: "block" }}
+                  style="display:block"
                   data-ad-client="ca-pub-3035659895284849"
-                  data-ad-slot="1816658324"
+                  data-ad-slot="6062013335"
                   data-ad-format="auto"
                   data-full-width-responsive="true"
                 ></ins>
@@ -198,9 +198,9 @@ export default function Blog({ blogData, count }) {
 
                 <ins
                   class="adsbygoogle"
-                  style={{ display: "block" }}
+                  style="display:block"
                   data-ad-client="ca-pub-3035659895284849"
-                  data-ad-slot="1816658324"
+                  data-ad-slot="2588838037"
                   data-ad-format="auto"
                   data-full-width-responsive="true"
                 ></ins>
@@ -214,9 +214,9 @@ export default function Blog({ blogData, count }) {
 
                 <ins
                   class="adsbygoogle"
-                  style={{ display: "block" }}
+                  style="display:block"
                   data-ad-client="ca-pub-3035659895284849"
-                  data-ad-slot="1816658324"
+                  data-ad-slot="1350943831"
                   data-ad-format="auto"
                   data-full-width-responsive="true"
                 ></ins>

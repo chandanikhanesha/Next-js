@@ -13,7 +13,7 @@ function About() {
       <DrawerAppBar />
       <div className={styles.outerCard}>
         <div style={{display:"flex"}}>
-          <div id="advertise" style={{ height: "200px", width: "300px" }}></div>
+          {/* <div id="advertise" style={{ height: "200px", width: "300px" }}></div> */}
           <div className={styles.anothercard}>
             <h2>About Us</h2>
             <p>
@@ -38,7 +38,7 @@ function About() {
               and give us your valuable suggestions and improvement ideas.
             </p>
           </div>
-          <div id="advertise" style={{ height: "200px", width: "300px" }}></div>
+          {/* <div id="advertise" style={{ height: "200px", width: "300px" }}></div> */}
         </div>
       </div>
       <footer className={styles.footer}>

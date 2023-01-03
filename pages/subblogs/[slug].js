@@ -19,7 +19,6 @@ export default function SubBlogs({ slug }) {
         (adsbygoogle = window.adsbygoogle || []).push({});
       } catch (e) {}
     }
-
   }, []);
 
   const callAPI = async () => {
@@ -48,7 +47,14 @@ export default function SubBlogs({ slug }) {
         />
       </Head>
       <DrawerAppBar />
-      <div style={{ marginTop: "15px" }}>
+      <div
+        style={{
+          marginTop: "15px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
@@ -57,9 +63,9 @@ export default function SubBlogs({ slug }) {
 
         <ins
           class="adsbygoogle"
-          style={{ display: "block" }}
+          style="display:block"
           data-ad-client="ca-pub-3035659895284849"
-          data-ad-slot="8148464089"
+          data-ad-slot="9220312107"
           data-ad-format="auto"
           data-full-width-responsive="true"
         ></ins>
@@ -76,9 +82,9 @@ export default function SubBlogs({ slug }) {
 
               <ins
                 class="adsbygoogle"
-                style={{ display: "block" }}
+                style="display:block"
                 data-ad-client="ca-pub-3035659895284849"
-                data-ad-slot="1816658324"
+                data-ad-slot="8962674694"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
               ></ins>
@@ -92,9 +98,9 @@ export default function SubBlogs({ slug }) {
 
               <ins
                 class="adsbygoogle"
-                style={{ display: "block" }}
+                style="display:block"
                 data-ad-client="ca-pub-3035659895284849"
-                data-ad-slot="1816658324"
+                data-ad-slot="7724780498"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
               ></ins>
@@ -135,9 +141,9 @@ export default function SubBlogs({ slug }) {
 
               <ins
                 class="adsbygoogle"
-                style={{ display: "block" }}
+                style="display:block"
                 data-ad-client="ca-pub-3035659895284849"
-                data-ad-slot="1816658324"
+                data-ad-slot="5870441642"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
               ></ins>
@@ -151,9 +157,9 @@ export default function SubBlogs({ slug }) {
 
               <ins
                 class="adsbygoogle"
-                style={{ display: "block" }}
+                style="display:block"
                 data-ad-client="ca-pub-3035659895284849"
-                data-ad-slot="1816658324"
+                data-ad-slot="1632061150"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
               ></ins>

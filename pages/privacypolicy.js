@@ -18,7 +18,7 @@ function Privacypolicy() {
 
         <div style={{display:"flex"}}>
           <div>
-        <div id="advertise" style={{ height: "200px", width: "300px" }}></div>
+        {/* <div id="advertise" style={{ height: "200px", width: "300px" }}></div> */}
           </div>
         <div className={styles.anothercard}>
           <h2>Privacy Policy for I Love Compress</h2>
@@ -200,7 +200,7 @@ function Privacypolicy() {
           </p>
         </div>
         <div>
-        <div id="advertise" style={{ height: "200px", width: "300px" }}></div>
+        {/* <div id="advertise" style={{ height: "200px", width: "300px" }}></div> */}
           </div>
         </div>
       </div>

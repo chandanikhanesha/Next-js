@@ -105,7 +105,13 @@ export default function Home() {
 
         {/* <h1 className={styles.title}>Drag And Drop File Upload</h1> */}
         {/* Pass state data and dispatch to the DropZone component */}
-        <div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
@@ -122,7 +128,13 @@ export default function Home() {
           ></ins>
         </div>
         <DropZone data={data} dispatch={dispatch} />
-        <div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
@@ -131,9 +143,9 @@ export default function Home() {
 
           <ins
             class="adsbygoogle"
-            style={{ display: "block" }}
+            style="display:block"
             data-ad-client="ca-pub-3035659895284849"
-            data-ad-slot="8148464089"
+            data-ad-slot="5108271731"
             data-ad-format="auto"
             data-full-width-responsive="true"
           ></ins>
@@ -173,9 +185,9 @@ export default function Home() {
 
                   <ins
                     class="adsbygoogle"
-                    style={{ display: "block" }}
+                    style="display:block"
                     data-ad-client="ca-pub-3035659895284849"
-                    data-ad-slot="1816658324"
+                    data-ad-slot="2664025504"
                     data-ad-format="auto"
                     data-full-width-responsive="true"
                   ></ins>
@@ -254,9 +266,9 @@ export default function Home() {
 
                   <ins
                     class="adsbygoogle"
-                    style={{ display: "block" }}
+                    style="display:block"
                     data-ad-client="ca-pub-3035659895284849"
-                    data-ad-slot="1816658324"
+                    data-ad-slot="6211005388"
                     data-ad-format="auto"
                     data-full-width-responsive="true"
                   ></ins>
@@ -271,9 +283,9 @@ export default function Home() {
 
                   <ins
                     class="adsbygoogle"
-                    style={{ display: "block" }}
+                    style="display:block"
                     data-ad-client="ca-pub-3035659895284849"
-                    data-ad-slot="1816658324"
+                    data-ad-slot="3584842040"
                     data-ad-format="auto"
                     data-full-width-responsive="true"
                   ></ins>
