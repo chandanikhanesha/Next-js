@@ -38,8 +38,6 @@ function DrawerAppBar(props) {
     }
   }, []);
 
-  
-
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -59,11 +57,9 @@ function DrawerAppBar(props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton
-
               href={`https://ilovecompress.com${
                 item == "Home" ? "/" : `/${item.toLowerCase()}`
               }`}
-
               sx={{ textAlign: "center" }}
               id={item.toLowerCase()}
               // onClick={() =>
@@ -109,7 +105,7 @@ function DrawerAppBar(props) {
                   alt="Logo"
                   width={140}
                   height={40}
-                style={{marginTop:"-20px"}}
+                  style={{ marginTop: "-20px" }}
                 ></Image>
               </div>
               <MenuIcon />
@@ -129,7 +125,12 @@ function DrawerAppBar(props) {
                 })
               }
             >
-              <Image src="/Logo.jpg"  width={190} height={63} alt="mobileLogo"></Image>
+              <Image
+                src="/Logo.jpg"
+                width={190}
+                height={63}
+                alt="mobileLogo"
+              ></Image>
             </div>
           </Typography>
           <Box

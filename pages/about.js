@@ -12,7 +12,7 @@ function About() {
       </Head>
       <DrawerAppBar />
       <div className={styles.outerCard}>
-        <div style={{display:"flex"}}>
+        <div style={{ display: "flex" }}>
           {/* <div id="advertise" style={{ height: "200px", width: "300px" }}></div> */}
           <div className={styles.anothercard}>
             <h2>About Us</h2>

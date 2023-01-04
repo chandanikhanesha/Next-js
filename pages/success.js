@@ -10,7 +10,7 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import DrawerAppBar from "./navbar"
+import DrawerAppBar from "./navbar";
 const zip = new JSZip();
 export default function Success() {
   const [compressData, setcompressData] = useState([]);
@@ -81,8 +81,7 @@ export default function Success() {
   return (
     <div className={styles.container}>
       <div className={styles.main} id="mainPage">
-      <DrawerAppBar/>
-
+        <DrawerAppBar />
 
         <div className={styles.imageContainer}>
           <Grid

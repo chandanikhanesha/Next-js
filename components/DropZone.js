@@ -241,8 +241,6 @@ const DropZone = ({ data, dispatch }) => {
         <FilePreview fileData={data} dispatch={dispatch} />
       )}
 
-      
-
       {isLoad === undefined && data.fileList.length > 0 && (
         <button
           onClick={async () => {

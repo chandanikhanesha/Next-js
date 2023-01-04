@@ -78,7 +78,7 @@ const FilePreview = ({ fileData, dispatch }) => {
                             marginTop: "2px",
                             marginRight: "6px",
 
-                            boxShadow: " 0px 16px 40px #19203330",
+                            boxShadow: "0px 16px 40px #19203330",
                           }}
                         >
                           <ClearIcon style={{ fontSize: "17px" }} />
