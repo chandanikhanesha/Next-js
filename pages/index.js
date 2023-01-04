@@ -105,11 +105,11 @@ export default function Home() {
         {/* <h1 className={styles.title}>Drag And Drop File Upload</h1> */}
         {/* Pass state data and dispatch to the DropZone component */}
         <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
+          // style={{
+          //   display: "flex",
+          //   flexDirection: "column",
+          //   alignItems: "center",
+          // }}
         >
           <script
             async
@@ -128,11 +128,11 @@ export default function Home() {
         </div>
         <DropZone data={data} dispatch={dispatch} />
         <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
+          // style={{
+          //   display: "flex",
+          //   flexDirection: "column",
+          //   alignItems: "center",
+          // }}
         >
           <script
             async

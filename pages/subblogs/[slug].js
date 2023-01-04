@@ -48,12 +48,12 @@ export default function SubBlogs({ slug }) {
       </Head>
       <DrawerAppBar />
       <div
-        style={{
-          marginTop: "15px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+        // style={{
+        //   marginTop: "15px",
+        //   display: "flex",
+        //   flexDirection: "column",
+        //   alignItems: "center",
+        // }}
       >
         <script
           async
