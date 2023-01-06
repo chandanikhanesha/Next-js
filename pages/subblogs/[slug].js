@@ -55,7 +55,7 @@ export default function SubBlogs({ slug }) {
         //   alignItems: "center",
         // }}
       >
-        <script
+        {/* <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
           crossorigin="anonymous"
@@ -68,13 +68,13 @@ export default function SubBlogs({ slug }) {
           data-ad-slot="9220312107"
           data-ad-format="auto"
           data-full-width-responsive="true"
-        ></ins>
+        ></ins> */}
       </div>
       <div className={styles.outerCard}>
         <div style={{ display: "flex" }}>
           <div>
             <div>
-              <script
+              {/* <script
                 async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                 crossorigin="anonymous"
@@ -87,10 +87,10 @@ export default function SubBlogs({ slug }) {
                 data-ad-slot="8962674694"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
-              ></ins>
+              ></ins> */}
             </div>
             <div>
-              <script
+              {/* <script
                 async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                 crossorigin="anonymous"
@@ -103,7 +103,7 @@ export default function SubBlogs({ slug }) {
                 data-ad-slot="7724780498"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
-              ></ins>
+              ></ins> */}
             </div>
           </div>
           <div>
@@ -133,7 +133,7 @@ export default function SubBlogs({ slug }) {
           </div>
           <div>
             <div>
-              <script
+              {/* <script
                 async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                 crossorigin="anonymous"
@@ -146,10 +146,10 @@ export default function SubBlogs({ slug }) {
                 data-ad-slot="5870441642"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
-              ></ins>
+              ></ins> */}
             </div>
             <div>
-              <script
+              {/* <script
                 async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                 crossorigin="anonymous"
@@ -162,7 +162,7 @@ export default function SubBlogs({ slug }) {
                 data-ad-slot="1632061150"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
-              ></ins>
+              ></ins> */}
             </div>
           </div>
         </div>
