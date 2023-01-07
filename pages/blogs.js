@@ -60,7 +60,7 @@ export default function Blog({ blogData, count }) {
                 ></Script>
 
                 <ins
-                  class="adsbygoogle"
+                  className="adsbygoogle"
                   style={{ display: "block" }}
                   data-ad-client="ca-pub-3035659895284849"
                   data-ad-slot="6253585024"
@@ -76,7 +76,7 @@ export default function Blog({ blogData, count }) {
                 ></Script>
 
                 <ins
-                  class="adsbygoogle"
+                  className="adsbygoogle"
                   style={{ display: "block" }}
                   data-ad-client="ca-pub-3035659895284849"
                   data-ad-slot="6062013335"
@@ -198,7 +198,7 @@ export default function Blog({ blogData, count }) {
                 ></Script>
 
                 <ins
-                  class="adsbygoogle"
+                  className="adsbygoogle"
                   style={{ display: "block" }}
                   data-ad-client="ca-pub-3035659895284849"
                   data-ad-slot="2588838037"
@@ -214,7 +214,7 @@ export default function Blog({ blogData, count }) {
                 ></Script>
 
                 <ins
-                  class="adsbygoogle"
+                  className="adsbygoogle"
                   style={{ display: "block" }}
                   data-ad-client="ca-pub-3035659895284849"
                   data-ad-slot="1350943831"

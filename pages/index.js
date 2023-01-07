@@ -118,7 +118,7 @@ export default function Home() {
           ></Script>
 
           <ins
-            class="adsbygoogle"
+            className="adsbygoogle"
             style={{ display: "block" }}
             data-ad-client="ca-pub-3035659895284849"
             data-ad-slot="8148464089"
@@ -141,7 +141,7 @@ export default function Home() {
           ></Script>
 
           <ins
-            class="adsbygoogle"
+            className="adsbygoogle"
             style={{ display: "block" }}
             data-ad-client="ca-pub-3035659895284849"
             data-ad-slot="5108271731"
@@ -166,7 +166,7 @@ export default function Home() {
                   ></Script>
 
                   <ins
-                    class="adsbygoogle"
+                    className="adsbygoogle"
                     style={{ display: "block" }}
                     data-ad-client="ca-pub-3035659895284849"
                     data-ad-slot="1816658324"
@@ -183,7 +183,7 @@ export default function Home() {
                   ></Script>
 
                   <ins
-                    class="adsbygoogle"
+                    className="adsbygoogle"
                     style={{ display: "block" }}
                     data-ad-client="ca-pub-3035659895284849"
                     data-ad-slot="2664025504"
@@ -264,7 +264,7 @@ export default function Home() {
                   ></Script>
 
                   <ins
-                    class="adsbygoogle"
+                    className="adsbygoogle"
                     style={{ display: "block" }}
                     data-ad-client="ca-pub-3035659895284849"
                     data-ad-slot="6211005388"
@@ -281,7 +281,7 @@ export default function Home() {
                   ></Script>
 
                   <ins
-                    class="adsbygoogle"
+                    className="adsbygoogle"
                     style={{ display: "block" }}
                     data-ad-client="ca-pub-3035659895284849"
                     data-ad-slot="3584842040"

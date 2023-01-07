@@ -63,7 +63,7 @@ export default function SubBlogs({ slug }) {
         ></Script>
 
         <ins
-          class="adsbygoogle"
+          className="adsbygoogle"
           style={{ display: "block" }}
           data-ad-client="ca-pub-3035659895284849"
           data-ad-slot="9220312107"
@@ -82,7 +82,7 @@ export default function SubBlogs({ slug }) {
               ></Script>
 
               <ins
-                class="adsbygoogle"
+                className="adsbygoogle"
                 style={{ display: "block" }}
                 data-ad-client="ca-pub-3035659895284849"
                 data-ad-slot="8962674694"
@@ -98,7 +98,7 @@ export default function SubBlogs({ slug }) {
               ></Script>
 
               <ins
-                class="adsbygoogle"
+                className="adsbygoogle"
                 style={{ display: "block" }}
                 data-ad-client="ca-pub-3035659895284849"
                 data-ad-slot="7724780498"
@@ -141,7 +141,7 @@ export default function SubBlogs({ slug }) {
               ></Script>
 
               <ins
-                class="adsbygoogle"
+                className="adsbygoogle"
                 style={{ display: "block" }}
                 data-ad-client="ca-pub-3035659895284849"
                 data-ad-slot="5870441642"
@@ -157,7 +157,7 @@ export default function SubBlogs({ slug }) {
               ></Script>
 
               <ins
-                class="adsbygoogle"
+                className="adsbygoogle"
                 style={{ display: "block" }}
                 data-ad-client="ca-pub-3035659895284849"
                 data-ad-slot="1632061150"
