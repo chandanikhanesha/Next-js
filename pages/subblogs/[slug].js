@@ -4,6 +4,7 @@ import styles from "../../styles/Home.module.css";
 import Loader from "../../components/loader";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 export default function SubBlogs({ slug }) {
   const context = useRouter();
@@ -48,62 +49,62 @@ export default function SubBlogs({ slug }) {
       </Head>
       <DrawerAppBar />
       <div
-        // style={{
-        //   marginTop: "15px",
-        //   display: "flex",
-        //   flexDirection: "column",
-        //   alignItems: "center",
-        // }}
+      // style={{
+      //   marginTop: "15px",
+      //   display: "flex",
+      //   flexDirection: "column",
+      //   alignItems: "center",
+      // }}
       >
-        {/* <script
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
           crossorigin="anonymous"
-        ></script>
+        ></Script>
 
         <ins
           class="adsbygoogle"
-          style="display:block"
+          style={{ display: "block" }}
           data-ad-client="ca-pub-3035659895284849"
           data-ad-slot="9220312107"
           data-ad-format="auto"
           data-full-width-responsive="true"
-        ></ins> */}
+        ></ins>
       </div>
       <div className={styles.outerCard}>
         <div style={{ display: "flex" }}>
           <div>
             <div>
-              {/* <script
+              <Script
                 async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                 crossorigin="anonymous"
-              ></script>
+              ></Script>
 
               <ins
                 class="adsbygoogle"
-                style="display:block"
+                style={{ display: "block" }}
                 data-ad-client="ca-pub-3035659895284849"
                 data-ad-slot="8962674694"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
-              ></ins> */}
+              ></ins>
             </div>
             <div>
-              {/* <script
+              <Script
                 async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                 crossorigin="anonymous"
-              ></script>
+              ></Script>
 
               <ins
                 class="adsbygoogle"
-                style="display:block"
+                style={{ display: "block" }}
                 data-ad-client="ca-pub-3035659895284849"
                 data-ad-slot="7724780498"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
-              ></ins> */}
+              ></ins>
             </div>
           </div>
           <div>
@@ -133,36 +134,36 @@ export default function SubBlogs({ slug }) {
           </div>
           <div>
             <div>
-              {/* <script
+              <Script
                 async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                 crossorigin="anonymous"
-              ></script>
+              ></Script>
 
               <ins
                 class="adsbygoogle"
-                style="display:block"
+                style={{ display: "block" }}
                 data-ad-client="ca-pub-3035659895284849"
                 data-ad-slot="5870441642"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
-              ></ins> */}
+              ></ins>
             </div>
             <div>
-              {/* <script
+              <Script
                 async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                 crossorigin="anonymous"
-              ></script>
+              ></Script>
 
               <ins
                 class="adsbygoogle"
-                style="display:block"
+                style={{ display: "block" }}
                 data-ad-client="ca-pub-3035659895284849"
                 data-ad-slot="1632061150"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
-              ></ins> */}
+              ></ins>
             </div>
           </div>
         </div>

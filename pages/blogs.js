@@ -7,6 +7,7 @@ import Image from "next/image";
 import CardContent from "@mui/material/CardContent";
 import Pagination from "@mui/material/Pagination";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 export default function Blog({ blogData, count }) {
   useEffect(() => {
@@ -52,36 +53,36 @@ export default function Blog({ blogData, count }) {
           <div style={{ display: "flex" }}>
             <div>
               <div>
-                {/* <script
+                <Script
                   async
                   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                   crossorigin="anonymous"
-                ></script>
+                ></Script>
 
                 <ins
                   class="adsbygoogle"
-                  style="display:block"
+                  style={{ display: "block" }}
                   data-ad-client="ca-pub-3035659895284849"
                   data-ad-slot="6253585024"
                   data-ad-format="auto"
                   data-full-width-responsive="true"
-                ></ins> */}
+                ></ins>
               </div>
               <div>
-                {/* <script
+                <Script
                   async
                   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                   crossorigin="anonymous"
-                ></script>
+                ></Script>
 
                 <ins
                   class="adsbygoogle"
-                  style="display:block"
+                  style={{ display: "block" }}
                   data-ad-client="ca-pub-3035659895284849"
                   data-ad-slot="6062013335"
                   data-ad-format="auto"
                   data-full-width-responsive="true"
-                ></ins> */}
+                ></ins>
               </div>
             </div>
             <div className={styles.anothercard}>
@@ -190,36 +191,36 @@ export default function Blog({ blogData, count }) {
             </div>
             <div>
               <div>
-                {/* <script
+                <Script
                   async
                   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                   crossorigin="anonymous"
-                ></script>
+                ></Script>
 
                 <ins
                   class="adsbygoogle"
-                  style="display:block"
+                  style={{ display: "block" }}
                   data-ad-client="ca-pub-3035659895284849"
                   data-ad-slot="2588838037"
                   data-ad-format="auto"
                   data-full-width-responsive="true"
-                ></ins> */}
+                ></ins>
               </div>
               <div>
-                {/* <script
+                <Script
                   async
                   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                   crossorigin="anonymous"
-                ></script>
+                ></Script>
 
                 <ins
                   class="adsbygoogle"
-                  style="display:block"
+                  style={{ display: "block" }}
                   data-ad-client="ca-pub-3035659895284849"
                   data-ad-slot="1350943831"
                   data-ad-format="auto"
                   data-full-width-responsive="true"
-                ></ins> */}
+                ></ins>
               </div>
             </div>
           </div>

@@ -5,6 +5,7 @@ import DropZone from "../components/DropZone";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import DrawerAppBar from "./navbar";
+import Script from "next/script";
 
 export default function Home() {
   useEffect(() => {
@@ -55,12 +56,13 @@ export default function Home() {
         />
         {/* <link rel="canonical" href="https://www.ilovecompress.com/" /> */}
         <link rel="icon" href="/favicon.ico" />
-        <script
+        <Script
           async
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-10835311766"
-        ></script>
-        <script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10835311766">
+          </Script>
+        <Script
+          id="show-html"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
@@ -69,8 +71,8 @@ export default function Home() {
 
   gtag('config', 'AW-10835311766');`,
           }}
-        ></script>
-        <script
+        ></Script>
+        <Script
           id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -80,15 +82,13 @@ export default function Home() {
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-KJ6QQWD');`,
           }}
-        ></script>
-
-        <script
+        ></Script>
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
           crossOrigin="anonymous"
-        ></script>
-      </Head>
-
+        ></Script>
+      </Head>{" "}
       <main className={styles.main} id="mainPage">
         <DrawerAppBar />
         {/* <div
@@ -105,17 +105,17 @@ export default function Home() {
         {/* <h1 className={styles.title}>Drag And Drop File Upload</h1> */}
         {/* Pass state data and dispatch to the DropZone component */}
         <div
-          // style={{
-          //   display: "flex",
-          //   flexDirection: "column",
-          //   alignItems: "center",
-          // }}
+        // style={{
+        //   display: "flex",
+        //   flexDirection: "column",
+        //   alignItems: "center",
+        // }}
         >
-          {/* <script
+          <Script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
             crossorigin="anonymous"
-          ></script>
+          ></Script>
 
           <ins
             class="adsbygoogle"
@@ -124,30 +124,30 @@ export default function Home() {
             data-ad-slot="8148464089"
             data-ad-format="auto"
             data-full-width-responsive="true"
-          ></ins> */}
+          ></ins>
         </div>
         <DropZone data={data} dispatch={dispatch} />
         <div
-          // style={{
-          //   display: "flex",
-          //   flexDirection: "column",
-          //   alignItems: "center",
-          // }}
+        // style={{
+        //   display: "flex",
+        //   flexDirection: "column",
+        //   alignItems: "center",
+        // }}
         >
-          {/* <script
+          <Script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
             crossorigin="anonymous"
-          ></script>
+          ></Script>
 
           <ins
             class="adsbygoogle"
-            style="display:block"
+            style={{ display: "block" }}
             data-ad-client="ca-pub-3035659895284849"
             data-ad-slot="5108271731"
             data-ad-format="auto"
             data-full-width-responsive="true"
-          ></ins> */}
+          ></ins>
         </div>
 
         <div className={styles.outerCard}>
@@ -159,11 +159,11 @@ export default function Home() {
             <div style={{ display: "flex" }}>
               <div>
                 <div id="vertical_display1">
-                  {/* <script
+                  <Script
                     async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                     crossorigin="anonymous"
-                  ></script>
+                  ></Script>
 
                   <ins
                     class="adsbygoogle"
@@ -172,24 +172,24 @@ export default function Home() {
                     data-ad-slot="1816658324"
                     data-ad-format="auto"
                     data-full-width-responsive="true"
-                  ></ins> */}
+                  ></ins>
                 </div>
 
                 <div>
-                  {/* <script
+                  <Script
                     async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                     crossorigin="anonymous"
-                  ></script>
+                  ></Script>
 
                   <ins
                     class="adsbygoogle"
-                    style="display:block"
+                    style={{ display: "block" }}
                     data-ad-client="ca-pub-3035659895284849"
                     data-ad-slot="2664025504"
                     data-ad-format="auto"
                     data-full-width-responsive="true"
-                  ></ins> */}
+                  ></ins>
                 </div>
               </div>
               <div style={{ padding: "10px" }}>
@@ -257,44 +257,43 @@ export default function Home() {
               </div>
               <div>
                 <div>
-                  {/* <script
+                  <Script
                     async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                     crossorigin="anonymous"
-                  ></script>
+                  ></Script>
 
                   <ins
                     class="adsbygoogle"
-                    style="display:block"
+                    style={{ display: "block" }}
                     data-ad-client="ca-pub-3035659895284849"
                     data-ad-slot="6211005388"
                     data-ad-format="auto"
                     data-full-width-responsive="true"
-                  ></ins> */}
+                  ></ins>
                 </div>
 
                 <div>
-                  {/* <script
+                  <Script
                     async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
                     crossorigin="anonymous"
-                  ></script>
+                  ></Script>
 
                   <ins
                     class="adsbygoogle"
-                    style="display:block"
+                    style={{ display: "block" }}
                     data-ad-client="ca-pub-3035659895284849"
                     data-ad-slot="3584842040"
                     data-ad-format="auto"
                     data-full-width-responsive="true"
-                  ></ins> */}
+                  ></ins>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </main>
-
       <footer className={styles.footer}>
         <div className={styles.likeText}>Like It ! Share It</div>
         {/* <div className={styles.footerText}>
