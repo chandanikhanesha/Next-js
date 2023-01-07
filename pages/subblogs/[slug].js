@@ -5,6 +5,8 @@ import Loader from "../../components/loader";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
+import AdsenseHorizontal from "../adsense-horizontal";
+import AdsenseVertical from "../adsense-vertical";
 
 export default function SubBlogs({ slug }) {
   const context = useRouter();
@@ -56,55 +58,16 @@ export default function SubBlogs({ slug }) {
       //   alignItems: "center",
       // }}
       >
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-          crossorigin="anonymous"
-        ></Script>
-
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-client="ca-pub-3035659895284849"
-          data-ad-slot="9220312107"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
+        <AdsenseHorizontal/>
       </div>
       <div className={styles.outerCard}>
         <div style={{ display: "flex" }}>
           <div>
             <div>
-              <Script
-                async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                crossorigin="anonymous"
-              ></Script>
-
-              <ins
-                className="adsbygoogle"
-                style={{ display: "block" }}
-                data-ad-client="ca-pub-3035659895284849"
-                data-ad-slot="8962674694"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              ></ins>
+            <AdsenseVertical/>
             </div>
             <div>
-              <Script
-                async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                crossorigin="anonymous"
-              ></Script>
-
-              <ins
-                className="adsbygoogle"
-                style={{ display: "block" }}
-                data-ad-client="ca-pub-3035659895284849"
-                data-ad-slot="7724780498"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              ></ins>
+            <AdsenseVertical/>
             </div>
           </div>
           <div>
@@ -134,36 +97,10 @@ export default function SubBlogs({ slug }) {
           </div>
           <div>
             <div>
-              <Script
-                async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                crossorigin="anonymous"
-              ></Script>
-
-              <ins
-                className="adsbygoogle"
-                style={{ display: "block" }}
-                data-ad-client="ca-pub-3035659895284849"
-                data-ad-slot="5870441642"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              ></ins>
+            <AdsenseVertical/>
             </div>
             <div>
-              <Script
-                async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                crossorigin="anonymous"
-              ></Script>
-
-              <ins
-                className="adsbygoogle"
-                style={{ display: "block" }}
-                data-ad-client="ca-pub-3035659895284849"
-                data-ad-slot="1632061150"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              ></ins>
+            <AdsenseVertical/>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import Pagination from "@mui/material/Pagination";
 import { useRouter } from "next/router";
 import Script from "next/script";
+import AdsenseVertical from "./adsense-vertical";
 
 export default function Blog({ blogData, count }) {
   useEffect(() => {
@@ -53,36 +54,10 @@ export default function Blog({ blogData, count }) {
           <div style={{ display: "flex" }}>
             <div>
               <div>
-                <Script
-                  async
-                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                  crossorigin="anonymous"
-                ></Script>
-
-                <ins
-                  className="adsbygoogle"
-                  style={{ display: "block" }}
-                  data-ad-client="ca-pub-3035659895284849"
-                  data-ad-slot="6253585024"
-                  data-ad-format="auto"
-                  data-full-width-responsive="true"
-                ></ins>
+              <AdsenseVertical/>
               </div>
               <div>
-                <Script
-                  async
-                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                  crossorigin="anonymous"
-                ></Script>
-
-                <ins
-                  className="adsbygoogle"
-                  style={{ display: "block" }}
-                  data-ad-client="ca-pub-3035659895284849"
-                  data-ad-slot="6062013335"
-                  data-ad-format="auto"
-                  data-full-width-responsive="true"
-                ></ins>
+              <AdsenseVertical/>
               </div>
             </div>
             <div className={styles.anothercard}>
@@ -191,36 +166,10 @@ export default function Blog({ blogData, count }) {
             </div>
             <div>
               <div>
-                <Script
-                  async
-                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                  crossorigin="anonymous"
-                ></Script>
-
-                <ins
-                  className="adsbygoogle"
-                  style={{ display: "block" }}
-                  data-ad-client="ca-pub-3035659895284849"
-                  data-ad-slot="2588838037"
-                  data-ad-format="auto"
-                  data-full-width-responsive="true"
-                ></ins>
+              <AdsenseVertical/>
               </div>
               <div>
-                <Script
-                  async
-                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                  crossorigin="anonymous"
-                ></Script>
-
-                <ins
-                  className="adsbygoogle"
-                  style={{ display: "block" }}
-                  data-ad-client="ca-pub-3035659895284849"
-                  data-ad-slot="1350943831"
-                  data-ad-format="auto"
-                  data-full-width-responsive="true"
-                ></ins>
+              <AdsenseVertical/>
               </div>
             </div>
           </div>

@@ -1,11 +1,12 @@
 import React, { useReducer, useEffect } from "react";
-
 import Head from "next/head";
 import DropZone from "../components/DropZone";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import DrawerAppBar from "./navbar";
 import Script from "next/script";
+import AdsenseHorizontal from "./adsense-horizontal";
+import AdsenseVertical from "./adsense-vertical";
 
 export default function Home() {
   useEffect(() => {
@@ -56,7 +57,7 @@ export default function Home() {
         />
         {/* <link rel="canonical" href="https://www.ilovecompress.com/" /> */}
         <link rel="icon" href="/favicon.ico" />
-        <Script
+        <Script id="gtag-manager"
           async
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=AW-10835311766">
@@ -83,11 +84,13 @@ export default function Home() {
       })(window,document,'script','dataLayer','GTM-KJ6QQWD');`,
           }}
         ></Script>
-        <Script
+
+        <Script id="google-ads-tag"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
           crossOrigin="anonymous"
         ></Script>
+
       </Head>{" "}
       <main className={styles.main} id="mainPage">
         <DrawerAppBar />
@@ -111,20 +114,7 @@ export default function Home() {
         //   alignItems: "center",
         // }}
         >
-          <Script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-            crossorigin="anonymous"
-          ></Script>
-
-          <ins
-            className="adsbygoogle"
-            style={{ display: "block" }}
-            data-ad-client="ca-pub-3035659895284849"
-            data-ad-slot="8148464089"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
+          <AdsenseHorizontal/>
         </div>
         <DropZone data={data} dispatch={dispatch} />
         <div
@@ -134,20 +124,7 @@ export default function Home() {
         //   alignItems: "center",
         // }}
         >
-          <Script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-            crossorigin="anonymous"
-          ></Script>
-
-          <ins
-            className="adsbygoogle"
-            style={{ display: "block" }}
-            data-ad-client="ca-pub-3035659895284849"
-            data-ad-slot="5108271731"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
+          <AdsenseHorizontal/>
         </div>
 
         <div className={styles.outerCard}>
@@ -159,37 +136,11 @@ export default function Home() {
             <div style={{ display: "flex" }}>
               <div>
                 <div id="vertical_display1">
-                  <Script
-                    async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                    crossorigin="anonymous"
-                  ></Script>
-
-                  <ins
-                    className="adsbygoogle"
-                    style={{ display: "block" }}
-                    data-ad-client="ca-pub-3035659895284849"
-                    data-ad-slot="1816658324"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"
-                  ></ins>
+                <AdsenseVertical/>
                 </div>
 
                 <div>
-                  <Script
-                    async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                    crossorigin="anonymous"
-                  ></Script>
-
-                  <ins
-                    className="adsbygoogle"
-                    style={{ display: "block" }}
-                    data-ad-client="ca-pub-3035659895284849"
-                    data-ad-slot="2664025504"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"
-                  ></ins>
+                <AdsenseVertical/>
                 </div>
               </div>
               <div style={{ padding: "10px" }}>
@@ -257,37 +208,11 @@ export default function Home() {
               </div>
               <div>
                 <div>
-                  <Script
-                    async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                    crossorigin="anonymous"
-                  ></Script>
-
-                  <ins
-                    className="adsbygoogle"
-                    style={{ display: "block" }}
-                    data-ad-client="ca-pub-3035659895284849"
-                    data-ad-slot="6211005388"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"
-                  ></ins>
+                <AdsenseVertical/>
                 </div>
 
                 <div>
-                  <Script
-                    async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-                    crossorigin="anonymous"
-                  ></Script>
-
-                  <ins
-                    className="adsbygoogle"
-                    style={{ display: "block" }}
-                    data-ad-client="ca-pub-3035659895284849"
-                    data-ad-slot="3584842040"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"
-                  ></ins>
+                <AdsenseVertical/>
                 </div>
               </div>
             </div>
