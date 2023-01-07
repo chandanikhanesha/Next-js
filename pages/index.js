@@ -57,39 +57,6 @@ export default function Home() {
         />
         {/* <link rel="canonical" href="https://www.ilovecompress.com/" /> */}
         <link rel="icon" href="/favicon.ico" />
-        <Script id="gtag-manager"
-          async
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-10835311766">
-          </Script>
-        <Script
-          id="show-html"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-  function gtag(){window.dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-10835311766');`,
-          }}
-        ></Script>
-        <Script
-          id="gtm-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-KJ6QQWD');`,
-          }}
-        ></Script>
-
-        <Script id="google-ads-tag"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3035659895284849"
-          crossOrigin="anonymous"
-        ></Script>
 
       </Head>{" "}
       <main className={styles.main} id="mainPage">
