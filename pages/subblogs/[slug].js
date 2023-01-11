@@ -51,23 +51,44 @@ export default function SubBlogs({ slug }) {
       </Head>
       <DrawerAppBar />
       <div
-      style={{
-        marginTop: "15px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
+        style={{
+          marginTop: "15px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
       >
-        <AdsenseHorizontal/>
+        {/* <AdsenseHorizontal/> */}
+        <AdSense.Google
+          client="ca-pub-3035659895284849"
+          slot="8148464089"
+          style={{ display: "block" }}
+          layout="in-article"
+          format="fluid"
+        />
       </div>
       <div className={styles.outerCard}>
         <div style={{ display: "flex" }}>
           <div>
             <div>
-            <AdsenseVertical/>
+              {/* <AdsenseVertical/> */}
+              <AdSense.Google
+                client="ca-pub-3035659895284849"
+                slot="2664025504"
+                style={{ display: "block" }}
+                layout="in-article"
+                format="fluid"
+              />
             </div>
             <div>
-            <AdsenseVertical/>
+              {/* <AdsenseVertical/> */}
+              <AdSense.Google
+                client="ca-pub-3035659895284849"
+                slot="9220312107"
+                style={{ display: "block" }}
+                layout="in-article"
+                format="fluid"
+              />
             </div>
           </div>
           <div>
@@ -97,10 +118,24 @@ export default function SubBlogs({ slug }) {
           </div>
           <div>
             <div>
-            <AdsenseVertical/>
+              {/* <AdsenseVertical/> */}
+              <AdSense.Google
+                client="ca-pub-3035659895284849"
+                slot="5108271731"
+                style={{ display: "block" }}
+                layout="in-article"
+                format="fluid"
+              />
             </div>
             <div>
-            <AdsenseVertical/>
+              {/* <AdsenseVertical/> */}
+              <AdSense.Google
+                client="ca-pub-3035659895284849"
+                slot="8148464089"
+                style={{ display: "block" }}
+                layout="in-article"
+                format="fluid"
+              />
             </div>
           </div>
         </div>

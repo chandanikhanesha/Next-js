@@ -54,10 +54,24 @@ export default function Blog({ blogData, count }) {
           <div style={{ display: "flex" }}>
             <div>
               <div>
-              <AdsenseVertical/>
+                {/* <AdsenseVertical/> */}
+                <AdSense.Google
+                  client="ca-pub-3035659895284849"
+                  slot="6253585024"
+                  style={{ display: "block" }}
+                  layout="in-article"
+                  format="fluid"
+                />
               </div>
               <div>
-              <AdsenseVertical/>
+                {/* <AdsenseVertical/> */}
+                <AdSense.Google
+                  client="ca-pub-3035659895284849"
+                  slot="1816658324"
+                  style={{ display: "block" }}
+                  layout="in-article"
+                  format="fluid"
+                />
               </div>
             </div>
             <div className={styles.anothercard}>
@@ -166,10 +180,24 @@ export default function Blog({ blogData, count }) {
             </div>
             <div>
               <div>
-              <AdsenseVertical/>
+                {/* <AdsenseVertical/> */}
+                <AdSense.Google
+                  client="ca-pub-3035659895284849"
+                  slot="3584842040"
+                  style={{ display: "block" }}
+                  layout="in-article"
+                  format="fluid"
+                />
               </div>
               <div>
-              <AdsenseVertical/>
+                {/* <AdsenseVertical/> */}
+                <AdSense.Google
+                  client="ca-pub-3035659895284849"
+                  slot="6211005388"
+                  style={{ display: "block" }}
+                  layout="in-article"
+                  format="fluid"
+                />
               </div>
             </div>
           </div>
