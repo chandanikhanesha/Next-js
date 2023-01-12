@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export default function AdsenseHorizontal() {
+export default function AdsenseSquare() {
   const loadAds = () => {
     try {
       if (typeof window !== "undefined") {
@@ -16,12 +16,11 @@ export default function AdsenseHorizontal() {
   }, []);
 
   return (
-    <ins
-        className="adsbygoogle"
-        style={{ display: "inline-block", width: "740px", height: "100px"}}
+    <ins class="adsbygoogle"
+        style={{ display: "inline-block", width: "250px", height: "250px"}}
         data-ad-client="ca-pub-3035659895284849"
-        data-ad-slot="8148464089"
-    ></ins>
+        data-ad-slot="5960561669">
+    </ins>
   );
 
 }

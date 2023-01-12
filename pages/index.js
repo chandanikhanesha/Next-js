@@ -4,9 +4,9 @@ import DropZone from "../components/DropZone";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import DrawerAppBar from "./navbar";
-import AdSense from "react-adsense";
 import Script from "next/script";
 import AdsenseHorizontal from "./adsense-horizontal";
+import AdsenseSquare from "./adsense-square";
 import AdsenseVertical from "./adsense-vertical";
 import { height } from "@mui/system";
 
@@ -82,31 +82,34 @@ export default function Home() {
             alignItems: "center",
           }}
         >
-          {/* <AdsenseHorizontal /> */}
-          <AdSense.Google
-            client="ca-pub-3035659895284849"
-            slot="1632061150"
-            style={{ display: "block" }}
-            layout="in-article"
-            format="fluid"
-          />
+          <AdsenseHorizontal />
         </div>
         <div style={{ display: "flex" }}>
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
+              // flexDirection: "column",
+              // backgroundColor: "black",
+              // height: "600px;",
+              // width: "200px;",
             }}
-          ></div>
+          >
+            <AdsenseVertical />
+          </div>
           <div>
             <DropZone data={data} dispatch={dispatch} />
           </div>
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
+              // flexDirection: "column",
+              // backgroundColor: "black",
+              // height: "600px;",
+              // width: "200px;",
             }}
-          ></div>
+          >
+            <AdsenseVertical />
+          </div>
         </div>
 
         <div
@@ -116,14 +119,7 @@ export default function Home() {
             alignItems: "center",
           }}
         >
-          {/* <AdsenseHorizontal /> */}
-          <AdSense.Google
-            client="ca-pub-3035659895284849"
-            slot="5870441642"
-            style={{ display: "block" }}
-            layout="in-article"
-            format="fluid"
-          />
+          <AdsenseHorizontal />
         </div>
 
         <div className={styles.outerCard}>
@@ -134,26 +130,38 @@ export default function Home() {
 
             <div style={{ display: "flex" }}>
               <div>
-                <div id="vertical_display1">
-                  {/* <AdsenseVertical /> */}
-                  <AdSense.Google
-                    client="ca-pub-3035659895284849"
-                    slot="8962674694"
-                    style={{ display: "block" }}
-                    layout="in-article"
-                    format="fluid"
-                  />
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    // backgroundColor: "black",
+                    // height: "250px;",
+                    // width: "250px;",
+                  }}
+                >
+                  <AdsenseSquare />
                 </div>
-
-                <div>
-                  {/* <AdsenseVertical /> */}
-                  <AdSense.Google
-                    client="ca-pub-3035659895284849"
-                    slot="1350943831"
-                    style={{ display: "block" }}
-                    layout="in-article"
-                    format="fluid"
-                  />
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    // backgroundColor: "green",
+                    // height: "250px;",
+                    // width: "250px;",
+                  }}
+                >
+                  <AdsenseSquare />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    // backgroundColor: "black",
+                    // height: "250px;",
+                    // width: "250px;",
+                  }}
+                >
+                  <AdsenseSquare />
                 </div>
               </div>
               <div style={{ padding: "10px" }}>
@@ -220,38 +228,52 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <div>
-                  {/* <AdsenseVertical /> */}
-                  <AdSense.Google
-                    client="ca-pub-3035659895284849"
-                    slot="2588838037"
-                    style={{ display: "block" }}
-                    layout="in-article"
-                    format="fluid"
-                  />
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    // backgroundColor: "green",
+                    // height: "250px;",
+                    // width: "250px;",
+                  }}
+                >
+                  <AdsenseSquare />
                 </div>
-
-                <div>
-                  {/* <AdsenseVertical /> */}
-                  <AdSense.Google
-                    client="ca-pub-3035659895284849"
-                    slot="6062013335"
-                    style={{ display: "block" }}
-                    layout="in-article"
-                    format="fluid"
-                  />
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    // backgroundColor: "black",
+                    // height: "250px;",
+                    // width: "250px;",
+                  }}
+                >
+                  <AdsenseSquare />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    // backgroundColor: "green",
+                    // height: "250px;",
+                    // width: "250px;",
+                  }}
+                >
+                  <AdsenseSquare />
                 </div>
               </div>
             </div>
           </div>
-          {/* <AdsenseHorizontal /> */}
-          <AdSense.Google
-            client="ca-pub-3035659895284849"
-            slot="7724780498"
-            style={{ display: "block" }}
-            layout="in-article"
-            format="fluid"
-          />
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <AdsenseHorizontal />
+          </div>
         </div>
       </main>
       <footer className={styles.footer}>

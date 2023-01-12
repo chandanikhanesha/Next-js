@@ -18,11 +18,9 @@ export default function AdsenseVertical() {
   return (
     <ins
       className="adsbygoogle"
-      style={{ display: "block" }}
+      style={{ display: "inline-block", width: "250px", height: "600px"}}
       data-ad-client="ca-pub-3035659895284849"
-      data-ad-slot="3584842040"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
+      data-ad-slot="1816658324"
     ></ins>
   );
 }
