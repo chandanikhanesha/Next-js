@@ -4,11 +4,9 @@ import DropZone from "../components/DropZone";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import DrawerAppBar from "./navbar";
-import Script from "next/script";
 import AdsenseHorizontal from "./adsense-horizontal";
 import AdsenseSquare from "./adsense-square";
 import AdsenseVertical from "./adsense-vertical";
-import { height } from "@mui/system";
 
 export default function Home() {
   useEffect(() => {
