@@ -9,8 +9,12 @@ import Pagination from "@mui/material/Pagination";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import AdsenseVertical from "./adsense-vertical";
+import AdsenseSquare from "./adsense-square";
+import AdsenseHorizontal from "./adsense-horizontal";
 
 export default function Blog({ blogData, count }) {
+
+  const [isWebsite, setIsWebsite] = useState(false)
   useEffect(() => {
     var ads = document.getElementsByClassName("adsbygoogle").length;
     for (var i = 0; i < ads; i++) {
@@ -18,9 +22,14 @@ export default function Blog({ blogData, count }) {
         (adsbygoogle = window.adsbygoogle || []).push({});
       } catch (e) {}
     }
+
+    const isDesktopSite = (window.navigator.userAgent.includes("Mac") || window.navigator.userAgent.includes('Win'))
+    setIsWebsite(isDesktopSite)
+
   }, []);
 
   const [currentPage, setcurrentPage] = useState(1);
+
 
   const callAPI = async () => {
     try {
@@ -50,16 +59,93 @@ export default function Blog({ blogData, count }) {
       </Head>
       <DrawerAppBar />
       <div className={styles.main}>
-        <div className={styles.outerCard}>
-          <div style={{ display: "flex" }}>
-            <div>
-              <div>
-                {/* <AdsenseVertical/> */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            // backgroundColor:"black",
+          }}
+        >
+          <AdsenseHorizontal />
+        </div>
+        <div className={styles.outerCard} style={{ display:"flex" }}>
+          <div style={{ display: "flex"}}>
+            
+              {/* {isWebsite && <div>
+              <div
+                style={{
+                  display: "flex",
+                  // flexDirection: "column",
+                  // backgroundColor: "black",
+                  // height: "600px;",
+                  // width: "200px;",
+                }}
+              >
+                <AdsenseVertical />
               </div>
-              <div>
-                {/* <AdsenseVertical/> */}
+              <div
+                style={{
+                  display: "flex",
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                  // flexDirection: "column",
+                  // backgroundColor: "green",
+                  // height: "250px;",
+                  // width: "250px;",
+                }}
+              >
+                <AdsenseSquare />
               </div>
-            </div>
+              <div
+                style={{
+                  display: "flex",
+                  // flexDirection: "column",
+                  // backgroundColor: "black",
+                  // height: "600px;",
+                  // width: "200px;",
+                }}
+              >
+                <AdsenseVertical />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                  flexDirection: "column",
+                  // backgroundColor: "green",
+                  // height: "250px;",
+                  // width: "250px;",
+                }}
+              >
+                <AdsenseSquare />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  // backgroundColor: "black",
+                  // marginBottom: "20px",
+                  // height: "600px;",
+                  // width: "200px;",
+                }}
+              >
+                <AdsenseVertical />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  // flexDirection: "column",
+                  // backgroundColor: "black",
+                  // height: "600px;",
+                  // width: "200px;",
+                }}
+              >
+                <AdsenseVertical />
+              </div>
+            </div>} */}
+
             <div className={styles.anothercard}>
               {blogData.length == 0 ? (
                 <div
@@ -142,8 +228,19 @@ export default function Blog({ blogData, count }) {
                   <div
                     style={{
                       display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      marginTop: "20px",
+                      // backgroundColor:"black",
+                    }}
+                  >
+                    <AdsenseHorizontal />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
                       justifyContent: "center",
-                      marginTop: "10px",
+                      marginTop: "20px",
                     }}
                   >
                     {" "}
@@ -164,14 +261,80 @@ export default function Blog({ blogData, count }) {
                                 { shallow: true }
                               ) */}
             </div>
-            <div>
-              <div>
-                {/* <AdsenseVertical/> */}
+            {/* {isWebsite &&<div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  // backgroundColor: "black",
+                  // marginBottom: "20px",
+                  // height: "600px;",
+                  // width: "200px;",
+                }}
+              >
+                <AdsenseVertical />
               </div>
-              <div>
-                {/* <AdsenseVertical/> */}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  // backgroundColor: "black",
+                  // height: "600px;",
+                  // width: "200px;",
+                }}
+              >
+                <AdsenseVertical />
               </div>
-            </div>
+              <div
+                style={{
+                  display: "flex",
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                  // flexDirection: "column",
+                  // backgroundColor: "green",
+                  // height: "250px;",
+                  // width: "250px;",
+                }}
+              >
+                <AdsenseSquare />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  // backgroundColor: "black",
+                  // height: "600px;",
+                  // width: "200px;",
+                }}
+              >
+                <AdsenseVertical />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                  // flexDirection: "column",
+                  // backgroundColor: "green",
+                  // height: "250px;",
+                  // width: "250px;",
+                }}
+              >
+                <AdsenseSquare />
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  // flexDirection: "column",
+                  // backgroundColor: "black",
+                  // height: "600px;",
+                  // width: "200px;",
+                }}
+              >
+                <AdsenseVertical />
+              </div>
+            </div>} */}
           </div>
         </div>
 

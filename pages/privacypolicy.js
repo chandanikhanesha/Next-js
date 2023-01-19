@@ -14,7 +14,7 @@ function Privacypolicy() {
         />
       </Head>
       <DrawerAppBar />
-      <div className={styles.outerCard}>
+      <div className={styles.outerCard} style={{ display: "flex" }}>
         <div style={{ display: "flex" }}>
           <div>
             {/* <div id="advertise" style={{ height: "200px", width: "300px" }}></div> */}

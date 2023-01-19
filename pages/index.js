@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer, useEffect, useState } from "react";
 import Head from "next/head";
 import DropZone from "../components/DropZone";
 import styles from "../styles/Home.module.css";
@@ -9,6 +9,9 @@ import AdsenseSquare from "./adsense-square";
 import AdsenseVertical from "./adsense-vertical";
 
 export default function Home() {
+
+  const [isWebsite, setIsWebsite] = useState(false)
+  
   useEffect(() => {
     var ads = document.getElementsByClassName("adsbygoogle").length;
     for (var i = 0; i < ads; i++) {
@@ -16,6 +19,10 @@ export default function Home() {
         (adsbygoogle = window.adsbygoogle || []).push({});
       } catch (e) {}
     }
+
+    const isDesktopSite = (window.navigator.userAgent.includes("Mac") || window.navigator.userAgent.includes('Win'))
+    setIsWebsite(isDesktopSite)
+
   }, []);
 
   const router = useRouter();
@@ -83,7 +90,7 @@ export default function Home() {
           <AdsenseHorizontal />
         </div>
         <div style={{ display: "flex" }}>
-          <div
+          {isWebsite &&<div
             style={{
               display: "flex",
               // flexDirection: "column",
@@ -93,11 +100,11 @@ export default function Home() {
             }}
           >
             <AdsenseVertical />
-          </div>
+          </div>}
           <div>
             <DropZone data={data} dispatch={dispatch} />
           </div>
-          <div
+          {isWebsite && <div
             style={{
               display: "flex",
               // flexDirection: "column",
@@ -107,7 +114,7 @@ export default function Home() {
             }}
           >
             <AdsenseVertical />
-          </div>
+          </div>}
         </div>
 
         <div
@@ -127,7 +134,7 @@ export default function Home() {
             </h1>
 
             <div style={{ display: "flex" }}>
-              <div>
+              {isWebsite && <div>
                 <div
                   style={{
                     display: "flex",
@@ -161,7 +168,7 @@ export default function Home() {
                 >
                   <AdsenseSquare />
                 </div>
-              </div>
+              </div>}
               <div style={{ padding: "10px" }}>
                 <div>
                   <h2>What is the purpose of ILoveCompress?</h2>
@@ -225,7 +232,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div>
+              {isWebsite && <div>
                 <div
                   style={{
                     display: "flex",
@@ -259,7 +266,7 @@ export default function Home() {
                 >
                   <AdsenseSquare />
                 </div>
-              </div>
+              </div>}
             </div>
           </div>
 

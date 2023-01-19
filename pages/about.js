@@ -11,7 +11,7 @@ function About() {
         <link rel="canonical" href="https://www.ilovecompress.com/about" />
       </Head>
       <DrawerAppBar />
-      <div className={styles.outerCard}>
+      <div className={styles.outerCard} style={{ display: "flex" }}>
         <div style={{ display: "flex" }}>
           {/* <div id="advertise" style={{ height: "200px", width: "300px" }}></div> */}
           <div className={styles.anothercard}>
