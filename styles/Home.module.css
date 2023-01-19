@@ -236,13 +236,15 @@
   }
   .outerCard {
     width: fit-content;
+    margin-left: 105px;
   }
   .anothercard {
-    width: 400px;
+    width: auto;
   }
   .footer {
     margin-top: 50px;
   }
+
   .navbar {
     /* background-color: #192033 !important; */
     color: #192033 !important;
@@ -251,6 +253,12 @@
   }
 }
 
+@media (max-width: 360px) {
+  .outerCard {
+    width: fit-content;
+    margin-left: 155px;
+  }
+}
 @media (min-width: 1024px) {
   .container {
     width: 100%;
