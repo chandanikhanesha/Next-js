@@ -186,8 +186,8 @@ export default function Blog({ blogData, count }) {
                             </p>
 
                             <a
-                              // href={`https://www.ilovecompress.com/subblogs/${item.slug}`}
-                              href={`http://localhost:3000/subblogs/${item.slug}`}
+                              href={`https://www.ilovecompress.com/subblogs/${item.slug}`}
+                              // href={`http://localhost:3000/subblogs/${item.slug}`}
                             >
                               <Image
                                 src={item.thumbnail_image}
