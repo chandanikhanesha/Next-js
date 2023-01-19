@@ -7,7 +7,6 @@ import Image from "next/image";
 import CardContent from "@mui/material/CardContent";
 import Pagination from "@mui/material/Pagination";
 import { useRouter } from "next/router";
-import Script from "next/script";
 import AdsenseVertical from "./adsense-vertical";
 import AdsenseSquare from "./adsense-square";
 import AdsenseHorizontal from "./adsense-horizontal";
@@ -187,7 +186,8 @@ export default function Blog({ blogData, count }) {
                             </p>
 
                             <a
-                              href={`https://www.ilovecompress.com/subblogs/${item.slug}`}
+                              // href={`https://www.ilovecompress.com/subblogs/${item.slug}`}
+                              href={`http://localhost:3000/subblogs/${item.slug}`}
                             >
                               <Image
                                 src={item.thumbnail_image}
