@@ -138,7 +138,7 @@ export default function Home() {
                 <div
                   style={{
                     display: "flex",
-                    flexDirection: "column",
+                    // flexDirection: "column",
                     // backgroundColor: "black",
                     // height: "250px;",
                     // width: "250px;",
@@ -149,7 +149,7 @@ export default function Home() {
                 <div
                   style={{
                     display: "flex",
-                    flexDirection: "column",
+                    // flexDirection: "column",
                     // backgroundColor: "green",
                     // height: "250px;",
                     // width: "250px;",
@@ -160,7 +160,7 @@ export default function Home() {
                 <div
                   style={{
                     display: "flex",
-                    flexDirection: "column",
+                    // flexDirection: "column",
                     // backgroundColor: "black",
                     // height: "250px;",
                     // width: "250px;",
@@ -236,7 +236,7 @@ export default function Home() {
                 <div
                   style={{
                     display: "flex",
-                    flexDirection: "column",
+                    // flexDirection: "column",
                     // backgroundColor: "green",
                     // height: "250px;",
                     // width: "250px;",
@@ -247,7 +247,7 @@ export default function Home() {
                 <div
                   style={{
                     display: "flex",
-                    flexDirection: "column",
+                    // flexDirection: "column",
                     // backgroundColor: "black",
                     // height: "250px;",
                     // width: "250px;",
@@ -258,7 +258,7 @@ export default function Home() {
                 <div
                   style={{
                     display: "flex",
-                    flexDirection: "column",
+                    // flexDirection: "column",
                     // backgroundColor: "green",
                     // height: "250px;",
                     // width: "250px;",
