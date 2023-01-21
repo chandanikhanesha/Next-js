@@ -39,6 +39,16 @@
   padding-top: 1.5em;
   flex-direction: column;
 }
+.mainBlogs {
+  height: 100%;
+
+  width: 780px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-top: 1.5em;
+  flex-direction: column;
+}
 .anothercard {
   width: 850px;
   /* height: 450px; */
@@ -236,6 +246,7 @@
   }
   .outerCard {
     width: fit-content;
+    /* margin-left: 105px; */
   }
   .anothercard {
     width: auto;
@@ -255,7 +266,7 @@
 @media (max-width: 360px) {
   .outerCard {
     width: fit-content;
-    margin-left: 155px;
+    /* margin-left: 155px; */
   }
 }
 @media (min-width: 1024px) {

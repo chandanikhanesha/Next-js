@@ -56,7 +56,7 @@ export default function Blog({ blogData, count }) {
         <link rel="canonical" href="https://www.ilovecompress.com/blogs" />
       </Head>
       <DrawerAppBar />
-      <div className={styles.main}>
+      <div className={styles.mainBlogs}>
         <div
           style={{
             display: "flex",
