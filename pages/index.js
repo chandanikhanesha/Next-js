@@ -9,9 +9,8 @@ import AdsenseSquare from "./adsense-square";
 import AdsenseVertical from "./adsense-vertical";
 
 export default function Home() {
+  const [isWebsite, setIsWebsite] = useState(false);
 
-  const [isWebsite, setIsWebsite] = useState(false)
-  
   useEffect(() => {
     var ads = document.getElementsByClassName("adsbygoogle").length;
     for (var i = 0; i < ads; i++) {
@@ -20,9 +19,10 @@ export default function Home() {
       } catch (e) {}
     }
 
-    const isDesktopSite = (window.navigator.userAgent.includes("Mac") || window.navigator.userAgent.includes('Win'))
-    setIsWebsite(isDesktopSite)
-
+    const isDesktopSite =
+      window.navigator.userAgent.includes("Mac") ||
+      window.navigator.userAgent.includes("Win");
+    setIsWebsite(isDesktopSite);
   }, []);
 
   const router = useRouter();
@@ -85,37 +85,50 @@ export default function Home() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            // backgroundColor:"red",
+            backgroundColor: "black",
           }}
         >
-          <AdsenseHorizontal />
+          <div
+          // style={{
+          //   display: "flex",
+          //   flexDirection: "column",
+          //   alignItems: "center",
+          //   backgroundColor: "red",
+          // }}
+          >
+            <AdsenseHorizontal />
+          </div>
         </div>
         <div style={{ display: "flex" }}>
-          {isWebsite &&<div
-            style={{
-              display: "flex",
-              // flexDirection: "column",
-              // backgroundColor: "black",
-              // height: "600px;",
-              // width: "200px;",
-            }}
-          >
-            <AdsenseVertical />
-          </div>}
+          {isWebsite && (
+            <div
+              style={{
+                display: "flex",
+                // flexDirection: "column",
+                // backgroundColor: "black",
+                // height: "600px;",
+                // width: "200px;",
+              }}
+            >
+              <AdsenseVertical />
+            </div>
+          )}
           <div>
             <DropZone data={data} dispatch={dispatch} />
           </div>
-          {isWebsite && <div
-            style={{
-              display: "flex",
-              // flexDirection: "column",
-              // backgroundColor: "black",
-              // height: "600px;",
-              // width: "200px;",
-            }}
-          >
-            <AdsenseVertical />
-          </div>}
+          {isWebsite && (
+            <div
+              style={{
+                display: "flex",
+                // flexDirection: "column",
+                // backgroundColor: "black",
+                // height: "600px;",
+                // width: "200px;",
+              }}
+            >
+              <AdsenseVertical />
+            </div>
+          )}
         </div>
 
         <div
@@ -123,10 +136,19 @@ export default function Home() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            // backgroundColor:"red",
+            backgroundColor: "red",
           }}
         >
-          <AdsenseHorizontal />
+          <div
+          // style={{
+          //   display: "flex",
+          //   flexDirection: "column",
+          //   alignItems: "center",
+          //   backgroundColor:"red",
+          // }}
+          >
+            <AdsenseHorizontal />
+          </div>
         </div>
 
         <div className={styles.outerCard}>
@@ -136,41 +158,43 @@ export default function Home() {
             </h1>
 
             <div style={{ display: "flex" }}>
-              {isWebsite && <div>
-                <div
-                  style={{
-                    display: "flex",
-                    // flexDirection: "column",
-                    // backgroundColor: "black",
-                    // height: "250px;",
-                    // width: "250px;",
-                  }}
-                >
-                  <AdsenseSquare />
+              {isWebsite && (
+                <div>
+                  <div
+                    style={{
+                      display: "flex",
+                      // flexDirection: "column",
+                      // backgroundColor: "black",
+                      // height: "250px;",
+                      // width: "250px;",
+                    }}
+                  >
+                    <AdsenseSquare />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      // flexDirection: "column",
+                      // backgroundColor: "green",
+                      // height: "250px;",
+                      // width: "250px;",
+                    }}
+                  >
+                    <AdsenseSquare />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      // flexDirection: "column",
+                      // backgroundColor: "black",
+                      // height: "250px;",
+                      // width: "250px;",
+                    }}
+                  >
+                    <AdsenseSquare />
+                  </div>
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    // flexDirection: "column",
-                    // backgroundColor: "green",
-                    // height: "250px;",
-                    // width: "250px;",
-                  }}
-                >
-                  <AdsenseSquare />
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    // flexDirection: "column",
-                    // backgroundColor: "black",
-                    // height: "250px;",
-                    // width: "250px;",
-                  }}
-                >
-                  <AdsenseSquare />
-                </div>
-              </div>}
+              )}
               <div style={{ padding: "10px" }}>
                 <div>
                   <h2>What is the purpose of ILoveCompress?</h2>
@@ -183,21 +207,30 @@ export default function Home() {
                     is significant.
                   </p>
                 </div>
-                {!isWebsite && 
-                  <div>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        // flexDirection: "column",
-                        // backgroundColor: "black",
-                        // height: "250px;",
-                        // width: "250px;",
-                      }}
+                {!isWebsite && (
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      flexDirection: "column",
+                    }}
                   >
-                  <AdsenseSquare />
+                    <div
+                      style={
+                        {
+                          // display: "flex",
+                          // alignItems: "center",
+                          // flexDirection: "column",
+                          // backgroundColor: "black",
+                          // height: "250px;",
+                          // width: "250px;",
+                        }
+                      }
+                    >
+                      <AdsenseSquare />
+                    </div>
                   </div>
-                </div>}
+                )}
                 <div>
                   <h2>Why should I use ILoveCompress?</h2>
                   <p>
@@ -230,21 +263,30 @@ export default function Home() {
                     loading time and your website visitors will thank you.
                   </p>
                 </div>
-                {!isWebsite && 
-                  <div>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        // flexDirection: "column",
-                        // backgroundColor: "black",
-                        // height: "250px;",
-                        // width: "250px;",
-                      }}
+                {!isWebsite && (
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      flexDirection: "column",
+                    }}
                   >
-                  <AdsenseSquare />
+                    <div
+                      style={
+                        {
+                          // display: "flex",
+                          // alignItems: "center",
+                          // flexDirection: "column",
+                          // backgroundColor: "black",
+                          // height: "250px;",
+                          // width: "250px;",
+                        }
+                      }
+                    >
+                      <AdsenseSquare />
+                    </div>
                   </div>
-                </div>}
+                )}
                 <div>
                   <h2>Is it supported everywhere?</h2>
                   <p>
@@ -264,41 +306,43 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              {isWebsite && <div>
-                <div
-                  style={{
-                    display: "flex",
-                    // flexDirection: "column",
-                    // backgroundColor: "green",
-                    // height: "250px;",
-                    // width: "250px;",
-                  }}
-                >
-                  <AdsenseSquare />
+              {isWebsite && (
+                <div>
+                  <div
+                    style={{
+                      display: "flex",
+                      // flexDirection: "column",
+                      // backgroundColor: "green",
+                      // height: "250px;",
+                      // width: "250px;",
+                    }}
+                  >
+                    <AdsenseSquare />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      // flexDirection: "column",
+                      // backgroundColor: "black",
+                      // height: "250px;",
+                      // width: "250px;",
+                    }}
+                  >
+                    <AdsenseSquare />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      // flexDirection: "column",
+                      // backgroundColor: "green",
+                      // height: "250px;",
+                      // width: "250px;",
+                    }}
+                  >
+                    <AdsenseSquare />
+                  </div>
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    // flexDirection: "column",
-                    // backgroundColor: "black",
-                    // height: "250px;",
-                    // width: "250px;",
-                  }}
-                >
-                  <AdsenseSquare />
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    // flexDirection: "column",
-                    // backgroundColor: "green",
-                    // height: "250px;",
-                    // width: "250px;",
-                  }}
-                >
-                  <AdsenseSquare />
-                </div>
-              </div>}
+              )}
             </div>
           </div>
 
@@ -307,10 +351,19 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              // backgroundColor: "red",
+              backgroundColor: "red",
             }}
           >
-            <AdsenseHorizontal />
+            <div
+              // style={{
+              //   display: "flex",
+              //   flexDirection: "column",
+              //   alignItems: "center",
+              //   backgroundColor: "red",
+              // }}
+            >
+              <AdsenseHorizontal />
+            </div>
           </div>
         </div>
       </main>
