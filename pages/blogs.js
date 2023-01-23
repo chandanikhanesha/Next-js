@@ -222,6 +222,22 @@ export default function Blog({ blogData, count }) {
                             </div> */}
                             </CardContent>
                           </div>
+                          {(i+1)%2==0&&!isWebsite && (
+                            <div>
+                              <div
+                                style={{
+                                  display: "flex",
+                                  alignItems: "center",
+                                  // flexDirection: "column",
+                                  // backgroundColor: "black",
+                                  // height: "250px;",
+                                  // width: "250px;",
+                                }}
+                              >
+                                <AdsenseSquare />
+                              </div>
+                            </div>
+                          )}
                         </div>
                       );
                     })}

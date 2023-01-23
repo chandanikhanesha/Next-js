@@ -261,12 +261,18 @@
     height: 70px !important;
     padding-top: 5px !important;
   }
+  .chandudo{
+    width: 440px !important;
+  }
 }
 
 @media (max-width: 360px) {
   .outerCard {
     width: fit-content;
     /* margin-left: 155px; */
+  }
+  .chandudo{
+    width: 440px !important;
   }
 }
 @media (min-width: 1024px) {
@@ -354,4 +360,10 @@
   align-items: center;
   width: 100%;
   margin-top: 25px;
+}
+
+.chandudo{
+  display: inline-block; 
+  width: 740px; 
+  height: 100px;
 }

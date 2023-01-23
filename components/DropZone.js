@@ -240,18 +240,20 @@ const DropZone = ({ data, dispatch }) => {
       {isLoad === undefined && (
         <FilePreview fileData={data} dispatch={dispatch} />
       )}
+      <div style={{display:"flex", justifyContent:"center", width:"100%" }}>
+        {isLoad === undefined && data.fileList.length > 0 && (
+          <button
+            onClick={async () => {
+              setisLoad(true);
+              uploadFiles();
+            }}
+            className={styles.compressBtn}
+          >
+            Compress Image
+          </button>
+        )}
+      </div>
 
-      {isLoad === undefined && data.fileList.length > 0 && (
-        <button
-          onClick={async () => {
-            setisLoad(true);
-            uploadFiles();
-          }}
-          className={styles.compressBtn}
-        >
-          Compress Image
-        </button>
-      )}
       {isLoad === true && <Loader />}
     </>
   );

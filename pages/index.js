@@ -85,6 +85,7 @@ export default function Home() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            // backgroundColor:"red",
           }}
         >
           <AdsenseHorizontal />
@@ -122,6 +123,7 @@ export default function Home() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            // backgroundColor:"red",
           }}
         >
           <AdsenseHorizontal />
@@ -181,6 +183,21 @@ export default function Home() {
                     is significant.
                   </p>
                 </div>
+                {!isWebsite && 
+                  <div>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        // flexDirection: "column",
+                        // backgroundColor: "black",
+                        // height: "250px;",
+                        // width: "250px;",
+                      }}
+                  >
+                  <AdsenseSquare />
+                  </div>
+                </div>}
                 <div>
                   <h2>Why should I use ILoveCompress?</h2>
                   <p>
@@ -213,6 +230,21 @@ export default function Home() {
                     loading time and your website visitors will thank you.
                   </p>
                 </div>
+                {!isWebsite && 
+                  <div>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        // flexDirection: "column",
+                        // backgroundColor: "black",
+                        // height: "250px;",
+                        // width: "250px;",
+                      }}
+                  >
+                  <AdsenseSquare />
+                  </div>
+                </div>}
                 <div>
                   <h2>Is it supported everywhere?</h2>
                   <p>
@@ -275,6 +307,7 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              // backgroundColor: "red",
             }}
           >
             <AdsenseHorizontal />
