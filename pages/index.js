@@ -85,7 +85,7 @@ export default function Home() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            backgroundColor: "black",
+            // backgroundColor: "black",
           }}
         >
           <div
@@ -136,7 +136,7 @@ export default function Home() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            backgroundColor: "red",
+            // backgroundColor: "red",
           }}
         >
           <div
@@ -351,7 +351,7 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              backgroundColor: "red",
+              // backgroundColor: "red",
             }}
           >
             <div
