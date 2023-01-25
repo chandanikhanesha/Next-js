@@ -20,7 +20,7 @@ export default function AdsenseHorizontal() {
   return (
       <ins
           // className="adsbygoogle"
-          className={styles.chandudo}
+          className={styles.horizontalContainer}
           // style={{ display: "inline-block", width: "max-content", height: "100px"}}
           // style={{ display: "inline-block", width: "340px", height: "100px"}}
           // style={{ display: "inline-block", width: "400px", height: "100px"}}

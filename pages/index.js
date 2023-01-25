@@ -96,7 +96,7 @@ export default function Home() {
           //   backgroundColor: "red",
           // }}
           >
-            <AdsenseHorizontal />
+            {/* <AdsenseHorizontal /> */}
           </div>
         </div>
         <div style={{ display: "flex" }}>

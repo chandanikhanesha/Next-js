@@ -261,7 +261,7 @@
     height: 70px !important;
     padding-top: 5px !important;
   }
-  .chandudo{
+  .horizontalContainer{
     width: 440px !important;
   }
 }
@@ -271,7 +271,7 @@
     width: fit-content;
     /* margin-left: 155px; */
   }
-  .chandudo{
+  .horizontalContainer{
     width: 440px !important;
   }
 }
@@ -362,8 +362,9 @@
   margin-top: 25px;
 }
 
-.chandudo{
+.horizontalContainer{
   display: inline-block; 
   width: 740px; 
   height: 100px;
 }
+
