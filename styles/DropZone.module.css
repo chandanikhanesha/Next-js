@@ -308,7 +308,7 @@ border-radius: 9px;
   text-align: center;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .dropzone {
     width: auto;
     flex-direction: column;
@@ -337,7 +337,7 @@ border-radius: 9px;
     font-size: 14px;
     line-height: 17px;
   }
-}
+} */
 
 
 @media (min-width: 1024px) {
